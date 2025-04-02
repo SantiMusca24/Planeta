@@ -5,9 +5,10 @@ using UnityEngine;
 public class RotateVector : MonoBehaviour
 {
     public Transform Target;
+    private float rotation = 20f;
 
     private void Update()
     {
-        transform.RotateAround(Target.position,Vector3.up,50*Time.deltaTime);
+        transform.RotateAround(Target.position,Vector3.up,rotation*Time.deltaTime);
     }
 }
