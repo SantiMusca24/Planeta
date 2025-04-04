@@ -12,6 +12,7 @@ public class Rotatable : MonoBehaviour
     private Vector2 angularVelocity = Vector2.zero; // Velocidad angular (solo X e Y)
     private bool rotateAllowed;
     private Transform cam;
+    private int speedCounter = 0;
 
     private void Awake()
     {
@@ -33,6 +34,14 @@ public class Rotatable : MonoBehaviour
             angularVelocity.y = rotation.x;
             angularVelocity.x = rotation.y;
 
+            // Verificar si la velocidad supera 1 y sumar al contador
+            if (Mathf.Abs(angularVelocity.x) > 1 || Mathf.Abs(angularVelocity.y) > 1)
+            {
+                speedCounter++; // Aumenta el contador
+                Debug.Log("Speed counter: " + speedCounter); // Imprime el contador para ver los cambios
+            }
+
+            // Rotación del objeto
             transform.Rotate(Vector3.up * (inverted ? 1 : -1), angularVelocity.y, Space.World);
             transform.Rotate(cam.right * (inverted ? -1 : 1), angularVelocity.x, Space.World);
 
