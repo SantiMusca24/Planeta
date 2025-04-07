@@ -11,6 +11,11 @@ public class changeScene : MonoBehaviour
     public float transitionTime = 1f;
     public GameObject[] uiImages;
 
+    // DEFINIR structure EN EL INSPECTOR
+    // DEFAULT: 1
+    // TOWN: 2
+    [SerializeField] int structure = 1;
+
     void Start()
     {
         
@@ -22,8 +27,8 @@ public class changeScene : MonoBehaviour
 
     }
     void OnMouseDown()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    {        
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + structure));
     }
     public void ActivateUI()
     {
@@ -53,7 +58,9 @@ public class changeScene : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
+        
         SceneManager.LoadScene(levelIndex);
+
 
 
     }
