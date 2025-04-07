@@ -16,6 +16,7 @@ public class changeScene : MonoBehaviour
     // TOWN: 2
     [SerializeField] int structure = 1;
 
+
     void Start()
     {
         

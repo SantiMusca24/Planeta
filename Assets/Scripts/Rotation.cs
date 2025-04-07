@@ -35,7 +35,7 @@ public class Rotatable : MonoBehaviour
             angularVelocity.x = rotation.y;
 
             // Verificar si la velocidad supera 1 y sumar al contador
-            if (Mathf.Abs(angularVelocity.x) > 1 || Mathf.Abs(angularVelocity.y) > 1)
+            if (Mathf.Abs(angularVelocity.x) > 40 || Mathf.Abs(angularVelocity.y) > 40)
             {
                 speedCounter++; // Aumenta el contador
                 Debug.Log("Speed counter: " + speedCounter); // Imprime el contador para ver los cambios

@@ -30,18 +30,9 @@ public class spinDetect : MonoBehaviour
         {
             case 1:
                 Debug.Log("fuck1");
-                if (other.name == "checkpoint2") currentCheck = 2;
+                if (other.name == "checkpoint3") currentCheck = 2;
                 break;
             case 2:
-                Debug.Log("fuck2");
-                if (other.name == "checkpoint3") currentCheck = 3;
-                break;
-            case 3:
-                Debug.Log("fuck3");
-                if (other.name == "checkpoint4") currentCheck = 4;
-                break;
-            case 4:
-                Debug.Log("fuck4");
                 if (other.name == "checkpoint1")
                 {
                     currentCheck = 1;
@@ -49,6 +40,19 @@ public class spinDetect : MonoBehaviour
                     _spinsTx.text = "GIROS: " + spins;
                 }
                 break;
+                /*case 3:
+                    Debug.Log("fuck3");
+                    if (other.name == "checkpoint4") currentCheck = 4;
+                    break;
+                case 4:
+                    Debug.Log("fuck4");
+                    if (other.name == "checkpoint1")
+                    {
+                        currentCheck = 1;
+                        spins++;
+                        _spinsTx.text = "GIROS: " + spins;
+                    }
+                    break;*/
 
         }
         
