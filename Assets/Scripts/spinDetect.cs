@@ -8,7 +8,7 @@ public class spinDetect : MonoBehaviour
 {
 
     [SerializeField] int currentCheck = 1;
-    [SerializeField] public int spins = 0;
+    [SerializeField] static public int spins = 0;
     [SerializeField] private TMP_Text _spinsTx;
 
     // Start is called before the first frame update
