@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class spinDetect : MonoBehaviour
 {
@@ -11,18 +12,14 @@ public class spinDetect : MonoBehaviour
     [SerializeField] static public int spins = 0;
     [SerializeField] private TMP_Text _spinsTx;
 
-    // Start is called before the first frame update
+    public static event Action OnPlanetRotated;
     void Start()
     {
         currentCheck = 1;
         _spinsTx.text = "GIROS: " + spins;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,6 +35,7 @@ public class spinDetect : MonoBehaviour
                     currentCheck = 1;
                     spins++;
                     _spinsTx.text = "GIROS: " + spins;
+                    OnPlanetRotated?.Invoke();
                 }
                 break;
                 /*case 3:
