@@ -6,8 +6,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     
-    public int count = 0;
+    public float count = 0;
+    float nextTimeCheck = 1;
+
     public static GameManager Instance;
+    [SerializeField] private ContadorUI uiManager;
+    [SerializeField] UpgradeManager[] upgradeManagers;
+    [SerializeField] int updatesPerSecond = 10;
     private void Awake()
     {
         
@@ -19,6 +24,35 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+     void Update()
+    {
+        if (nextTimeCheck< Time.timeSinceLevelLoad)
+        {
+            IdleCalculate();
+            nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
+             
+        }
+    }
+    void IdleCalculate()
+    {
+        float sum = 0;
+        foreach (var upgradeManager in upgradeManagers)
+        {
+            sum += upgradeManager.CalculateIncomePerSecond();
+            upgradeManager.UpdateUI();
+        }
+        count += sum /updatesPerSecond;
+        uiManager.UpdateUI();
+    }
+    public float GetIncomePerSecond()
+    {
+        float sum = 0;
+        foreach (var upgradeManager in upgradeManagers)
+        {
+            sum += upgradeManager.CalculateIncomePerSecond();
+        }
+        return sum;
     }
     public void OnEnable()
     {
@@ -34,7 +68,8 @@ public class GameManager : MonoBehaviour
     public void RotateAction()
     {
         count++;
-        
+        uiManager.UpdateUI(); 
+
     }
 
     
@@ -45,5 +80,37 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f); 
             RotateAction(); 
         }
+    }
+    public bool PurchaseAction(int cost)
+    {
+        if(count >= cost)
+        {
+            count -= cost;
+            uiManager.UpdateUI();
+            return true;
+        }
+        return false;
+    }
+    public void RefreshUI()
+    {
+        uiManager.UpdateUI();
+    }
+    public void SetUIManager(ContadorUI newUIManager)
+    {
+        uiManager = newUIManager;
+    }
+    public void SetUpgradeManagers(UpgradeManager[] newUpgradeManagers)
+    {
+    upgradeManagers = newUpgradeManagers;
+    }
+    public void ForceIncomeUpdate()
+    {
+        IdleCalculate();
+        nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
+    }
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }
