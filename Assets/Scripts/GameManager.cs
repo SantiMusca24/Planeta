@@ -103,14 +103,20 @@ public class GameManager : MonoBehaviour
     {
     upgradeManagers = newUpgradeManagers;
     }
+    
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
     public void ForceIncomeUpdate()
     {
         IdleCalculate();
         nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
     }
-    public void ResetPlayerPrefs()
+    public void RefreshUpgradeManagers()
     {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
+        upgradeManagers = FindObjectsOfType<UpgradeManager>();
+        ForceIncomeUpdate();
     }
 }

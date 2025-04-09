@@ -49,7 +49,7 @@ public string upgradeName;
             }
             UpdateUI();
             gameManager.RefreshUI();
-            gameManager.ForceIncomeUpdate();
+            
         }
 
     }
@@ -57,7 +57,7 @@ public string upgradeName;
     
     public void UpdateUI()
     {
-       priceText.text = CalculatePrice().ToString();
+        priceText.text = CalculatePrice().ToString();
         incomeInfoText.text = level.ToString() + "x" + cookiesPerUpgrade + "/s";
 
         bool canAfford = gameManager.count >= CalculatePrice();

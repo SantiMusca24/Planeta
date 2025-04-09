@@ -14,6 +14,7 @@ public class SceneInicializer : MonoBehaviour
         GameManager.Instance.SetUIManager(contadorUI);
         GameManager.Instance.SetUpgradeManagers(upgradeManagers);
         GameManager.Instance.RefreshUI();
+        GameManager.Instance.RefreshUpgradeManagers();
         foreach (var upgradeManager in upgradeManagers)
         {
             upgradeManager.AssignGameManager(GameManager.Instance);
