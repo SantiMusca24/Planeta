@@ -18,7 +18,7 @@ public class UpgradeManager : MonoBehaviour
     public float upgradePriceMultiplier;
     public float cookiesPerUpgrade = 0.1f;
     [Header("Settings")]
-public string upgradeName;
+    public string upgradeName;
 
 
 
@@ -53,8 +53,9 @@ public string upgradeName;
         }
 
     }
-
     
+
+
     public void UpdateUI()
     {
         priceText.text = CalculatePrice().ToString();

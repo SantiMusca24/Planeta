@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ContadorUI uiManager;
     [SerializeField] UpgradeManager[] upgradeManagers;
     [SerializeField] int updatesPerSecond = 10;
+   
     private void Awake()
     {
         
@@ -68,7 +69,9 @@ public class GameManager : MonoBehaviour
     public void RotateAction()
     {
         count++;
-        uiManager.UpdateUI(); 
+        uiManager.UpdateUI();
+        
+        uiManager.SpawnFloatingText(1);
 
     }
 
@@ -99,10 +102,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager = newUIManager;
     }
-    public void SetUpgradeManagers(UpgradeManager[] newUpgradeManagers)
-    {
-    upgradeManagers = newUpgradeManagers;
-    }
+   
     
     public void ResetPlayerPrefs()
     {
@@ -119,4 +119,5 @@ public class GameManager : MonoBehaviour
         upgradeManagers = FindObjectsOfType<UpgradeManager>();
         ForceIncomeUpdate();
     }
+
 }
