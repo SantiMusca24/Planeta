@@ -46,7 +46,7 @@ public class ContadorUI : MonoBehaviour
         Animator animator = floatingText.GetComponentInParent<Animator>();
         if (animator != null)
         {
-            animator.Play("pop Up");
+            animator.Play("pop up");
         }
 
         Destroy(floatingText.gameObject, 1f);
