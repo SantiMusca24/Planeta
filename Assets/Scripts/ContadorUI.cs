@@ -32,7 +32,6 @@ public class ContadorUI : MonoBehaviour
     }
     public void SpawnFloatingText(int amount)
     {
-        
         Vector3 randomOffset = new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
 
         TMP_Text floatingText = Instantiate(floatingTextPrefab, floatingTextContainer);
@@ -40,10 +39,12 @@ public class ContadorUI : MonoBehaviour
         
         floatingText.rectTransform.anchoredPosition = randomOffset;
 
+       
         floatingText.text = "+" + amount.ToString();
         floatingText.color = Color.green;
+
         
-        Animator animator = floatingText.GetComponentInParent<Animator>();
+        Animator animator = floatingText.GetComponent<Animator>();
         if (animator != null)
         {
             animator.Play("pop up");
