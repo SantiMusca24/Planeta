@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
        spinDetect.OnPlanetRotated += RotateAction;
         StartCoroutine(AutoIncrementCoroutine());
-        RefreshUpgradeManagers();
+        
     }
 
     void OnDisable()
@@ -118,12 +118,6 @@ public class GameManager : MonoBehaviour
     public void RefreshUpgradeManagers()
     {
         upgradeManagers = FindObjectsOfType<UpgradeManager>();
-
-        foreach (var upgrade in upgradeManagers)
-        {
-            upgrade.AssignGameManager(this);
-        }
-
         ForceIncomeUpdate();
     }
 
