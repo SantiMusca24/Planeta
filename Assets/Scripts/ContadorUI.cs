@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ContadorUI : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class ContadorUI : MonoBehaviour
     [SerializeField] Transform floatingTextContainer;
     [SerializeField] TMP_Text floatingTextPrefab;
 
+    [SerializeField] ScrollRect scrollRectToReset;
+
     void Start()
     {
-        
         UpdateUI();
+
+        if (scrollRectToReset != null)
+        {
+            scrollRectToReset.verticalNormalizedPosition = 1f;
+        }
     }
 
     public void UpdateUI()

@@ -4,43 +4,53 @@ using UnityEngine;
 
 public class PanelUI : MonoBehaviour
 {
-    public RectTransform panel; 
+    
+    public RectTransform panel;
     public Vector2 onScreenPosition = Vector2.zero;
-    public Vector2 offScreenPosition = new Vector2(-5000f, 0f); 
+    public Vector2 offScreenPosition = new Vector2(0f, -1000f);
     public float slideSpeed = 500f;
 
+    
+    public RectTransform extraUIElement;
+    public Vector2 extraOnScreenPosition;
+    public Vector2 extraOffScreenPosition;
+
     private bool isVisible = false;
-    private Coroutine currentCoroutine;
+    private Coroutine panelCoroutine;
+    private Coroutine extraCoroutine;
 
     private void Start()
     {
-        
         if (panel != null)
-        {
             panel.anchoredPosition = offScreenPosition;
-        }
+
+        if (extraUIElement != null)
+            extraUIElement.anchoredPosition = extraOffScreenPosition;
     }
+
     public void TogglePanel()
     {
-        if (currentCoroutine != null)
-            StopCoroutine(currentCoroutine);
-
         isVisible = !isVisible;
-        currentCoroutine = StartCoroutine(SlidePanel(isVisible ? onScreenPosition : offScreenPosition));
+
+        if (panelCoroutine != null) StopCoroutine(panelCoroutine);
+        if (extraCoroutine != null) StopCoroutine(extraCoroutine);
+
+        panelCoroutine = StartCoroutine(Slide(panel, isVisible ? onScreenPosition : offScreenPosition));
+        extraCoroutine = StartCoroutine(Slide(extraUIElement, isVisible ? extraOnScreenPosition : extraOffScreenPosition));
     }
 
-    private System.Collections.IEnumerator SlidePanel(Vector2 targetPosition)
+    private System.Collections.IEnumerator Slide(RectTransform target, Vector2 targetPosition)
     {
-        while (Vector2.Distance(panel.anchoredPosition, targetPosition) > 0.1f)
+        while (Vector2.Distance(target.anchoredPosition, targetPosition) > 0.1f)
         {
-            panel.anchoredPosition = Vector2.MoveTowards(
-                panel.anchoredPosition,
+            target.anchoredPosition = Vector2.MoveTowards(
+                target.anchoredPosition,
                 targetPosition,
                 slideSpeed * Time.deltaTime
             );
             yield return null;
         }
 
-        panel.anchoredPosition = targetPosition;
+        target.anchoredPosition = targetPosition;
     }
 }
