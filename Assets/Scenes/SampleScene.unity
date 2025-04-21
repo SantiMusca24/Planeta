@@ -1129,6 +1129,7 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
+  cloudCanvas: {fileID: 1125254295}
   structure: 2
 --- !u!65 &335399864
 BoxCollider:
@@ -5405,6 +5406,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1125254295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125254296}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125254296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125254295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 305.5499, y: 142.36732, z: 0.5704231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133887430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7707273870680323237, guid: dcf633d1049084e4e957d91b93341633,
@@ -6878,6 +6910,7 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
+  cloudCanvas: {fileID: 1125254295}
   structure: 1
 --- !u!65 &1730127111
 BoxCollider:
@@ -7046,6 +7079,7 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
+  cloudCanvas: {fileID: 0}
   structure: 1
 --- !u!65 &1741512412
 BoxCollider:
@@ -7361,6 +7395,7 @@ MonoBehaviour:
   - {fileID: 218816248}
   - {fileID: 728226610}
   - {fileID: 1546432057}
+  cloudCanvas: {fileID: 0}
   structure: 1
 --- !u!1 &1915818469
 GameObject:
@@ -8047,7 +8082,7 @@ PrefabInstance:
     - target: {fileID: 2327475467788772441, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2562115389857424821, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
@@ -8558,3 +8593,4 @@ SceneRoots:
   - {fileID: 7818385375025404555}
   - {fileID: 1377431177}
   - {fileID: 90488136}
+  - {fileID: 1125254296}

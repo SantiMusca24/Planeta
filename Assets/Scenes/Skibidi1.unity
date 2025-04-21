@@ -3026,6 +3026,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c10ab4c9186f14383f7b12c924075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &800520161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2327475467788772441, guid: bfed94928c9d2334ca03c3aea3c70d90,
+    type: 3}
+  m_PrefabInstance: {fileID: 1912900774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &814638071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7772,6 +7778,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3032791287196709191, guid: bfed94928c9d2334ca03c3aea3c70d90,
+        type: 3}
+      propertyPath: cloudCanvas
+      value: 
+      objectReference: {fileID: 800520161}
     - target: {fileID: 5993657895899232404, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8667,11 +8678,11 @@ SceneRoots:
   - {fileID: 380363507}
   - {fileID: 1736520970}
   - {fileID: 764316853}
+  - {fileID: 1912900774}
   - {fileID: 481106718}
   - {fileID: 1970696692}
   - {fileID: 961916035}
   - {fileID: 92655980}
-  - {fileID: 1912900774}
   - {fileID: 1451424509}
   - {fileID: 1000001131}
   - {fileID: 6175393720614953705}
