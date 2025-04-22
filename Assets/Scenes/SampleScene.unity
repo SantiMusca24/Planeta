@@ -1129,7 +1129,6 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
-  cloudCanvas: {fileID: 1125254295}
   structure: 2
 --- !u!65 &335399864
 BoxCollider:
@@ -4804,6 +4803,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1836954604}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf633d1049084e4e957d91b93341633,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1836954605}
     - targetCorrespondingSourceObject: {fileID: 5263570125171439700, guid: dcf633d1049084e4e957d91b93341633,
         type: 3}
       insertIndex: -1
@@ -6910,7 +6913,6 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
-  cloudCanvas: {fileID: 1125254295}
   structure: 1
 --- !u!65 &1730127111
 BoxCollider:
@@ -7079,7 +7081,6 @@ MonoBehaviour:
   extraAnimation: {fileID: 330585548}
   transitionTime: 1
   uiImages: []
-  cloudCanvas: {fileID: 0}
   structure: 1
 --- !u!65 &1741512412
 BoxCollider:
@@ -7326,6 +7327,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
+--- !u!135 &1836954605
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836954600}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.06032772
+  m_Center: {x: -2.3066847e-11, y: 0.0011799294, z: 0.00413532}
 --- !u!114 &1875197998 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3191075085667509115, guid: 844b2e969641b294b803b54c6bc9a630,
@@ -7395,7 +7417,6 @@ MonoBehaviour:
   - {fileID: 218816248}
   - {fileID: 728226610}
   - {fileID: 1546432057}
-  cloudCanvas: {fileID: 0}
   structure: 1
 --- !u!1 &1915818469
 GameObject:
@@ -8082,7 +8103,7 @@ PrefabInstance:
     - target: {fileID: 2327475467788772441, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2562115389857424821, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}

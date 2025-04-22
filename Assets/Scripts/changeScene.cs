@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class changeScene : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class changeScene : MonoBehaviour
     public Animator extraAnimation;
     public float transitionTime = 1f;
     public GameObject[] uiImages;
-
+    
     // DEFINIR structure EN EL INSPECTOR
     // DEFAULT: 1
     // TOWN: 2
@@ -58,7 +59,6 @@ public class changeScene : MonoBehaviour
         
 
         yield return new WaitForSeconds(transitionTime);
-
         
         SceneManager.LoadScene(levelIndex);
 

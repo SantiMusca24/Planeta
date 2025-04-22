@@ -7,9 +7,9 @@ public class Rotatable : MonoBehaviour
     [SerializeField] private InputAction pressed, axis;
     [SerializeField] private float speed = 1;
     [SerializeField] private bool inverted;
-    public float inertiaDamping = 2f; // Fricción de la inercia
+    public float inertiaDamping = 2f; 
     private Vector2 rotation;
-    private Vector2 angularVelocity = Vector2.zero; // Velocidad angular (solo X e Y)
+    private Vector2 angularVelocity = Vector2.zero; 
     private bool rotateAllowed;
     private Transform cam;
     private int speedCounter = 0;
@@ -19,11 +19,33 @@ public class Rotatable : MonoBehaviour
         cam = Camera.main.transform;
         pressed.Enable();
         axis.Enable();
-        pressed.performed += _ => { StartCoroutine(Rotate()); };
+        pressed.performed += ctx =>
+        {
+            Vector2 screenPos = ctx.control.device is Pointer pointer
+                ? pointer.position.ReadValue()
+                : Vector2.zero;
+
+            if (WasPressedOnPlanet(screenPos))
+                StartCoroutine(Rotate());
+        };
         pressed.canceled += _ => { rotateAllowed = false; };
         axis.performed += context => { rotation = context.ReadValue<Vector2>(); };
     }
+    private bool WasPressedOnPlanet(Vector2 screenPos)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+        RaycastHit hit;
 
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform == transform)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     private IEnumerator Rotate()
     {
         rotateAllowed = true;
@@ -37,8 +59,8 @@ public class Rotatable : MonoBehaviour
             // Verificar si la velocidad supera 1 y sumar al contador
             if (Mathf.Abs(angularVelocity.x) > 40 || Mathf.Abs(angularVelocity.y) > 40)
             {
-                speedCounter++; // Aumenta el contador
-                Debug.Log("Speed counter: " + speedCounter); // Imprime el contador para ver los cambios
+                speedCounter++; 
+                Debug.Log("Speed counter: " + speedCounter); 
             }
 
             // Rotación del objeto
