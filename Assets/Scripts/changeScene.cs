@@ -28,10 +28,10 @@ public class changeScene : MonoBehaviour
         }
 
     }
-    void OnMouseDown()
-    {        
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + structure));
-    }
+    public void LoadLevelFromUI()
+{
+    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + structure));
+}
     public void ActivateUI()
     {
         foreach (GameObject img in uiImages)
