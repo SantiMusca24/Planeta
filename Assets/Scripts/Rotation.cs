@@ -40,6 +40,7 @@ public class Rotatable : MonoBehaviour
         {
             if (hit.transform == transform)
             {
+                PlanetRotation.touch = true;
                 return true;
             }
         }
