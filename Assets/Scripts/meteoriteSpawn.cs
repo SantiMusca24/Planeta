@@ -21,7 +21,7 @@ public class meteoriteSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(randomSpeed * Time.deltaTime, 0f, 0f, Space.Self);
+        // transform.Rotate(randomSpeed * Time.deltaTime, 0f, 0f, Space.Self);
         if (canSpawn)
         {
             canSpawn = false;

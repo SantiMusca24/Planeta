@@ -18,7 +18,7 @@ public class meteorMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "meteorKill") Destroy(gameObject);
+       if (other.name == "meteorKill") Destroy(gameObject);
     }
 
 }
