@@ -119,7 +119,23 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "62d9ca455901450f95e118c069aa0a71"
+        },
+        {
+            "m_Id": "beb2b2c1671c45d8b1f978e108222618"
+        },
+        {
+            "m_Id": "54a0036d9b1c4449b4b8457b036f98ac"
+        },
+        {
+            "m_Id": "4242720f0532452590ecdedf737f338b"
+        },
+        {
+            "m_Id": "987172f02ab542d485921cd732845b0e"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -1631,6 +1647,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "4242720f0532452590ecdedf737f338b",
+    "m_Title": "Multiply al Uv",
+    "m_Content": "En este caso se uso para deformar la textura original y conseguir una forma interesante, ya que sin esta no se ve muy diferente de un simple Fresnel. La seccion del vector 4 seleccionada (g) hace referencia al valor Vertical.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -426.0,
+        "y": 1117.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "427b7af3bd2a44dd9f5e7f1882bcdf67",
     "m_Id": 5,
@@ -1807,6 +1843,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "54a0036d9b1c4449b4b8457b036f98ac",
+    "m_Title": "Multiply al Uv",
+    "m_Content": "En este caso se uso para deformar la textura original y conseguir una forma interesante, ya que sin esta no se ve muy diferente de un simple Fresnel. La seccion del vector 4 seleccionada (r) hace referencia al valor Horizontal.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -652.0,
+        "y": 2586.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.NormalMaterialSlot",
     "m_ObjectId": "55722c944afb4451b07bac0965511a6d",
     "m_Id": 0,
@@ -1937,8 +1993,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 418.0,
-            "y": 640.0000610351563,
+            "x": 423.0,
+            "y": 623.0,
             "width": 140.0,
             "height": 34.0
         }
@@ -2118,6 +2174,26 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "62d9ca455901450f95e118c069aa0a71",
+    "m_Title": "Smooth step",
+    "m_Content": "Reduce los valores intermedios en la particula para que se genere un estilo toon. En el caso de aumentarlo a 1 la explosion se hace realista",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 613.0,
+        "y": 387.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
 }
 
 {
@@ -2771,10 +2847,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -551.9473876953125,
-            "y": 1019.7133178710938,
+            "x": -571.0,
+            "y": 996.9999389648438,
             "width": 120.0,
-            "height": 149.0
+            "height": 149.00006103515626
         }
     },
     "m_Slots": [
@@ -2846,6 +2922,26 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "987172f02ab542d485921cd732845b0e",
+    "m_Title": "Como funciona",
+    "m_Content": "Una vez generadas las particulas tienen un tamaño similar, asi que en el particle system se utiliza una curva que hace que se disuelvan lentamente. La idea es que la parte colorida se disuelva mas rapido teniendo un contorno negro a lo largo de todo su lifetime.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 1941.0,
+        "y": 720.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
@@ -3492,6 +3588,26 @@
         "e31": 0.0,
         "e32": 0.0,
         "e33": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "beb2b2c1671c45d8b1f978e108222618",
+    "m_Title": "Smooth step",
+    "m_Content": "Reduce los valores intermedios en la particula para que se genere un estilo toon. En el caso de aumentarlo a 1 la explosion se hace realista",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 605.0,
+        "y": 1859.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 

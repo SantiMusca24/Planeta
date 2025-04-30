@@ -137,7 +137,23 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "81cd4249ea72407eac90e4e5127cb9c6"
+        },
+        {
+            "m_Id": "b1fee9217e9448b79619e2e9cccf8497"
+        },
+        {
+            "m_Id": "e9b8eb8119774a05bedfb2f20b666af0"
+        },
+        {
+            "m_Id": "e703b5de58ce48ff930c044443cf97b1"
+        },
+        {
+            "m_Id": "4dd9f675585f4dda9cc904d2a38856be"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -860,10 +876,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 957.0,
-            "y": 295.0,
-            "width": 126.0,
-            "height": 118.0
+            "x": 962.0,
+            "y": 366.0000305175781,
+            "width": 126.0001220703125,
+            "height": 117.99996948242188
         }
     },
     "m_Slots": [
@@ -1164,9 +1180,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -347.9999694824219,
-            "y": 801.0,
-            "width": 120.0,
+            "x": -375.0,
+            "y": 618.0,
+            "width": 119.99998474121094,
             "height": 149.00006103515626
         }
     },
@@ -1410,10 +1426,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2545.0,
-            "y": -588.0000610351563,
+            "x": -2548.999755859375,
+            "y": -692.9999389648438,
             "width": 208.0,
-            "height": 302.0
+            "height": 301.99993896484377
         }
     },
     "m_Slots": [
@@ -1453,10 +1469,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2426.0,
-            "y": -1034.0,
+            "x": -2309.999755859375,
+            "y": -344.9999694824219,
             "width": 208.0,
-            "height": 312.99993896484377
+            "height": 313.00006103515627
         }
     },
     "m_Slots": [
@@ -1491,10 +1507,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 672.0,
-            "y": 250.00001525878907,
-            "width": 208.0,
-            "height": 302.0
+            "x": 665.0,
+            "y": 498.9999694824219,
+            "width": 208.00006103515626,
+            "height": 302.0000305175781
         }
     },
     "m_Slots": [
@@ -1622,10 +1638,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2197.0,
-            "y": -609.0,
-            "width": 128.0,
-            "height": 100.99996948242188
+            "x": -2201.0,
+            "y": -713.9999389648438,
+            "width": 128.000244140625,
+            "height": 101.0
         }
     },
     "m_Slots": [
@@ -1907,9 +1923,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -583.0,
-            "y": 135.00001525878907,
-            "width": 207.99996948242188,
+            "x": -634.0,
+            "y": 135.00003051757813,
+            "width": 208.00003051757813,
             "height": 302.0
         }
     },
@@ -1966,6 +1982,26 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "4dd9f675585f4dda9cc904d2a38856be",
+    "m_Title": "Scroll Speed",
+    "m_Content": "Regula la velocidad en la que las llamas se mueven.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -632.0,
+        "y": 20.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
 }
 
 {
@@ -2201,10 +2237,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -633.2177734375,
-            "y": 853.4674072265625,
-            "width": 0.0,
-            "height": 0.0
+            "x": -660.0,
+            "y": 670.0,
+            "width": 208.00003051757813,
+            "height": 313.0
         }
     },
     "m_Slots": [
@@ -2619,10 +2655,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1356.0,
-            "y": -275.0,
-            "width": 119.9998779296875,
-            "height": 148.99996948242188
+            "x": 1296.0,
+            "y": -123.9999771118164,
+            "width": 120.0001220703125,
+            "height": 149.0
         }
     },
     "m_Slots": [
@@ -2864,6 +2900,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "81cd4249ea72407eac90e4e5127cb9c6",
+    "m_Title": "Step",
+    "m_Content": "Su proposito es generar un efecto de disolverse a medida que pasa el tiempo",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 1150.0,
+        "y": 60.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TimeNode",
     "m_ObjectId": "81dfc3f8a2e6407f8130e2758cc42001",
     "m_Group": {
@@ -2934,10 +2990,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 111.9999771118164,
-            "y": 401.0,
-            "width": 112.0000228881836,
-            "height": 33.999969482421878
+            "x": 237.0,
+            "y": 767.0000610351563,
+            "width": 112.0,
+            "height": 33.99993896484375
         }
     },
     "m_Slots": [
@@ -2970,9 +3026,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2807.000244140625,
-            "y": -588.0000610351563,
-            "width": 124.000244140625,
+            "x": -2810.999755859375,
+            "y": -692.9999389648438,
+            "width": 124.0,
             "height": 173.0
         }
     },
@@ -3069,10 +3125,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 111.99998474121094,
-            "y": -42.00000762939453,
-            "width": 208.0000457763672,
-            "height": 349.9999694824219
+            "x": 133.00001525878907,
+            "y": -42.000003814697269,
+            "width": 208.00001525878907,
+            "height": 350.0000305175781
         }
     },
     "m_Slots": [
@@ -3139,8 +3195,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2786.0,
-            "y": -375.0000305175781,
+            "x": -2810.999755859375,
+            "y": -480.9999084472656,
             "width": 139.0,
             "height": 33.999969482421878
         }
@@ -3343,8 +3399,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 981.0,
-            "y": -275.0,
+            "x": 1541.0,
+            "y": -123.99999237060547,
             "width": 208.0,
             "height": 278.0
         }
@@ -3572,6 +3628,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "b1fee9217e9448b79619e2e9cccf8497",
+    "m_Title": "Twirl",
+    "m_Content": "Afecta la textura de modo que se genera una especie de espiral simulando llamas en movimiento.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 220.0,
+        "y": -200.0,
+        "width": 200.0,
+        "height": 146.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "b4954e01726243d9b176f4a0b5c20aaa",
     "m_Id": 2,
@@ -3736,10 +3812,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2129.0,
-            "y": -1027.0,
-            "width": 119.9998779296875,
-            "height": 148.99993896484376
+            "x": -2012.9998779296875,
+            "y": -337.9999694824219,
+            "width": 120.0,
+            "height": 149.00001525878907
         }
     },
     "m_Slots": [
@@ -3798,10 +3874,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 290.0,
-            "y": 381.0000305175781,
-            "width": 208.00003051757813,
-            "height": 434.9999694824219
+            "x": 374.0,
+            "y": 641.0000610351563,
+            "width": 208.00006103515626,
+            "height": 434.99993896484377
         }
     },
     "m_Slots": [
@@ -3997,10 +4073,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -267.0,
-            "y": 69.00000762939453,
-            "width": 145.0,
-            "height": 34.0
+            "x": -59.0,
+            "y": 70.99999237060547,
+            "width": 141.00001525878907,
+            "height": 34.00005340576172
         }
     },
     "m_Slots": [
@@ -4393,6 +4469,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "e703b5de58ce48ff930c044443cf97b1",
+    "m_Title": "Scroll Speed",
+    "m_Content": "Regula la velocidad en la que las llamas se mueven.",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -2549.0,
+        "y": -810.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "e8cbe3a2a54f4a3ba4a1789f7db8a831",
     "m_Id": 0,
@@ -4488,6 +4584,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "e9b8eb8119774a05bedfb2f20b666af0",
+    "m_Title": "Distorsion ",
+    "m_Content": "Toda esta seccion superior busca generar un poco mas de aleatoriedad a la llama. ",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1046.0,
+        "y": -805.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2Node",
     "m_ObjectId": "f0a716ff3f184ecda513eaa0c75fcf9c",
     "m_Group": {
@@ -4498,10 +4614,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -291.99993896484377,
-            "y": 135.0,
-            "width": 127.99996948242188,
-            "height": 101.00001525878906
+            "x": -318.9999694824219,
+            "y": 135.00003051757813,
+            "width": 128.00001525878907,
+            "height": 100.99996948242188
         }
     },
     "m_Slots": [
