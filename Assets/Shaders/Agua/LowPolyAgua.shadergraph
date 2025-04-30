@@ -189,7 +189,17 @@
             "m_Id": "c299a50924004a4195b585d0b8646eb5"
         }
     ],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "21541ae3d1c74f028b23834b6f4f71b4"
+        },
+        {
+            "m_Id": "2d8f7ae1f05f40b0aa943c2af0ad68bc"
+        },
+        {
+            "m_Id": "04b9b22ea3474b0283ac55663cf1e931"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -775,6 +785,26 @@
     "m_Value": 1.0,
     "m_DefaultValue": 1.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "04b9b22ea3474b0283ac55663cf1e931",
+    "m_Title": "DDY y DDX",
+    "m_Content": "Usamos DDY Y DDX para medir  cuánto cambia un valor de un píxel al siguiente en cada dirección",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1062.0,
+        "y": 1432.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": "c299a50924004a4195b585d0b8646eb5"
+    }
 }
 
 {
@@ -1375,6 +1405,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "21541ae3d1c74f028b23834b6f4f71b4",
+    "m_Title": "",
+    "m_Content": "En el Vertex Displacement generamos la forma que va a tneer la ola junto a su tamaño, velocidad,etc",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1450.0,
+        "y": -29.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PositionMaterialSlot",
     "m_ObjectId": "23337bd1a15e4075a458c4946d76b71a",
     "m_Id": 0,
@@ -1487,6 +1537,26 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "2d8f7ae1f05f40b0aa943c2af0ad68bc",
+    "m_Title": "Lerp",
+    "m_Content": "Usamos el lerp para mezclar los 2 colores que son el de las zonas no tan profunda y el color del agua en general",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1.0,
+        "y": 807.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": "347c3569b3e1488480fbd672d15025eb"
     }
 }
 
