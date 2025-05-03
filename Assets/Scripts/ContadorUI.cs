@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -8,11 +8,16 @@ public class ContadorUI : MonoBehaviour
 {
     [SerializeField] TMP_Text countText;
     [SerializeField] TMP_Text incomePerSecondText;
+    [SerializeField] TMP_Text GoalText;
+    [SerializeField] private int goalPoints = 1000;
     [Header("Floating Text")]
     [SerializeField] Transform floatingTextContainer;
     [SerializeField] TMP_Text floatingTextPrefab;
 
     [SerializeField] ScrollRect scrollRectToReset;
+    [SerializeField] private string upgradeNameToTrack = "Upgrade_1";
+    [SerializeField] private int goalLevel = 10;
+    [SerializeField] private TMP_Text upgradeGoalText;
 
     void Start()
     {
@@ -28,13 +33,44 @@ public class ContadorUI : MonoBehaviour
     {
         if (countText != null)
         {
-            countText.text = Mathf.RoundToInt(GameManager.Instance.count).ToString();
+            int currentPoints = Mathf.RoundToInt(GameManager.Instance.count);
+            countText.text = currentPoints.ToString();
+
+            if (GoalText != null)
+            {
+                GoalText.text = "Puntos: " + currentPoints + " / " + goalPoints;
+
+                if (currentPoints >= goalPoints)
+                {
+                    GoalText.color = Color.green;
+                }
+                else
+                {
+                    GoalText.color = Color.white;
+                }
+            }
         }
 
         if (incomePerSecondText != null)
         {
             float incomePerSecond = GameManager.Instance.GetIncomePerSecond();
             incomePerSecondText.text = Mathf.Round(incomePerSecond).ToString() + " /s";
+        }
+
+        
+        if (!string.IsNullOrEmpty(upgradeNameToTrack) && upgradeGoalText != null)
+        {
+            int currentLevel = PlayerPrefs.GetInt(upgradeNameToTrack + "_Level", 0);
+            upgradeGoalText.text = "Mejora Arboles: " + upgradeNameToTrack + " nivel " + currentLevel + " / " + goalLevel;
+
+            if (currentLevel >= goalLevel)
+            {
+                upgradeGoalText.color = Color.green;
+            }
+            else
+            {
+                upgradeGoalText.color = Color.white;
+            }
         }
     }
     public void SpawnFloatingText(int amount)

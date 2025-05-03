@@ -9,6 +9,7 @@ public class UpgradeManager : MonoBehaviour
     [Header("Comoponents")]
     public TMP_Text priceText;
     public TMP_Text incomeInfoText;
+    public TMP_Text levelText;
     public Button button;
     [Header("Managers")]
     public GameManager gameManager;
@@ -20,16 +21,31 @@ public class UpgradeManager : MonoBehaviour
     [Header("Settings")]
     public string upgradeName;
 
-
+    [Header("Level Unlocks")]
+    public List<LevelUnlockObject> unlocks = new List<LevelUnlockObject>();
 
     int level = 0;
 
-
+    [System.Serializable]
+    public class LevelUnlockObject
+    {
+        public int requiredLevel;
+        public GameObject objectToActivate;
+    }
     private void Start()
     {
         if (!string.IsNullOrEmpty(upgradeName))
         {
             level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
+        }
+
+        
+        foreach (var unlock in unlocks)
+        {
+            if (unlock.objectToActivate != null)
+            {
+                unlock.objectToActivate.SetActive(level >= unlock.requiredLevel);
+            }
         }
 
         UpdateUI();
@@ -42,6 +58,7 @@ public class UpgradeManager : MonoBehaviour
         if (purchaseSuccess) 
         {
             level++;
+            CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {
                 PlayerPrefs.SetInt(upgradeName + "_Level", level);
@@ -58,6 +75,8 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpdateUI()
     {
+        if (levelText != null)
+            levelText.text = "Level: " + level;
         priceText.text = CalculatePrice().ToString();
         incomeInfoText.text = level.ToString() + "x" + cookiesPerUpgrade + "/s";
 
@@ -79,5 +98,14 @@ public class UpgradeManager : MonoBehaviour
         gameManager = gm;
         UpdateUI();
     }
-
+    void CheckLevelUnlocks()
+    {
+        foreach (var unlock in unlocks)
+        {
+            if (level >= unlock.requiredLevel && unlock.objectToActivate != null && !unlock.objectToActivate.activeSelf)
+            {
+                unlock.objectToActivate.SetActive(true);
+            }
+        }
+    }
 }

@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -490,6 +495,140 @@ Transform:
   - {fileID: 3613463311986417421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &109610693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109610694}
+  - component: {fileID: 109610696}
+  - component: {fileID: 109610695}
+  m_Layer: 5
+  m_Name: Text (TMP) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &109610694
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109610693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 966269132}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 138.9, y: 0.10000038}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &109610695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109610693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &109610696
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109610693}
+  m_CullTransparentMesh: 1
 --- !u!1 &124864425
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +985,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -964,6 +1108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1054,12 +1203,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 821050344}
   incomeInfoText: {fileID: 1583796501}
+  levelText: {fileID: 0}
   button: {fileID: 299033116}
   gameManager: {fileID: 1067373840}
   startPrice: 20
   upgradePriceMultiplier: 1.25
   cookiesPerUpgrade: 5
   upgradeName: Click2
+  unlocks: []
 --- !u!114 &299033116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,12 +1731,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 2123952882}
   incomeInfoText: {fileID: 1116373076}
+  levelText: {fileID: 0}
   button: {fileID: 357781015}
   gameManager: {fileID: 1067373840}
   startPrice: 20
   upgradePriceMultiplier: 1.25
   cookiesPerUpgrade: 5
   upgradeName: Click2
+  unlocks: []
 --- !u!114 &357781015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,12 +2159,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 962025361}
   incomeInfoText: {fileID: 1836900145}
+  levelText: {fileID: 0}
   button: {fileID: 436874487}
   gameManager: {fileID: 1067373840}
   startPrice: 20
   upgradePriceMultiplier: 1.25
   cookiesPerUpgrade: 5
   upgradeName: Click2
+  unlocks: []
 --- !u!114 &436874487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2352,6 +2507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -2845,6 +3005,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3114,6 +3279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -3619,6 +3789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4051,6 +4226,7 @@ RectTransform:
   m_Children:
   - {fileID: 1171807739}
   - {fileID: 432950376}
+  - {fileID: 109610694}
   m_Father: {fileID: 818915483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4166,12 +4342,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 1171807740}
   incomeInfoText: {fileID: 432950377}
+  levelText: {fileID: 109610695}
   button: {fileID: 966269133}
   gameManager: {fileID: 1067373840}
   startPrice: 3
   upgradePriceMultiplier: 1.15
   cookiesPerUpgrade: 1
-  upgradeName: Click
+  upgradeName: Arboles
+  unlocks:
+  - requiredLevel: 3
+    objectToActivate: {fileID: 239616205}
+  - requiredLevel: 5
+    objectToActivate: {fileID: 960886696}
 --- !u!1001 &987261570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4254,6 +4436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -4415,12 +4602,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 74868013}
   incomeInfoText: {fileID: 308870950}
+  levelText: {fileID: 0}
   button: {fileID: 1027606570}
   gameManager: {fileID: 1067373840}
   startPrice: 20
   upgradePriceMultiplier: 1.25
   cookiesPerUpgrade: 5
   upgradeName: Click2
+  unlocks: []
 --- !u!114 &1027606570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4636,6 +4825,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -4910,6 +5104,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5027,6 +5226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -5422,6 +5626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5606,6 +5815,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5717,12 +5931,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 1739098821}
   incomeInfoText: {fileID: 845992567}
+  levelText: {fileID: 0}
   button: {fileID: 1354822691}
   gameManager: {fileID: 1067373840}
   startPrice: 20
   upgradePriceMultiplier: 1.25
   cookiesPerUpgrade: 5
   upgradeName: Click2
+  unlocks: []
 --- !u!114 &1354822691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5899,6 +6115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lowpoly tree (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
@@ -7359,6 +7580,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly tree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 1b066a6461d02174bb72bdb0228ac0e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7776,7 +8002,7 @@ PrefabInstance:
     - target: {fileID: 2327475467788772441, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3032791287196709191, guid: bfed94928c9d2334ca03c3aea3c70d90,
         type: 3}
@@ -8207,7 +8433,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712458881}
   m_HandleRect: {fileID: 1712458880}
   m_Direction: 2
-  m_Value: 0.5
+  m_Value: 0.4999999
   m_Size: 0.41456312
   m_NumberOfSteps: 0
   m_OnValueChanged:
