@@ -529,7 +529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 138.9, y: 0.10000038}
+  m_AnchoredPosition: {x: 138.9, y: 0.100097656}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109610695
@@ -1468,7 +1468,7 @@ RectTransform:
   m_GameObject: {fileID: 324535559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8030999, y: 2.8030999, z: 2.8030999}
+  m_LocalScale: {x: 0.94106096, y: 7.0123534, z: 3.764569}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1742323493}
@@ -1476,7 +1476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -18.500793, y: 999}
+  m_AnchoredPosition: {x: -3, y: 973}
   m_SizeDelta: {x: -1760, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324535561
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1555,8 +1555,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 796616480, guid: 271982d9b9dc0044cb51f1df119fb1dc, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1591,7 +1591,10 @@ MonoBehaviour:
   slideSpeed: 3000
   extraUIElement: {fileID: 324535560}
   extraOnScreenPosition: {x: 0, y: 1000}
-  extraOffScreenPosition: {x: 0, y: 112}
+  extraOffScreenPosition: {x: 0, y: 150}
+  extraImage: {fileID: 324535562}
+  onScreenSprite: {fileID: -412017333, guid: 42fd516d3c43c4b42919353a464527bb, type: 3}
+  offScreenSprite: {fileID: 796616480, guid: 271982d9b9dc0044cb51f1df119fb1dc, type: 3}
 --- !u!1 &353610007
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,8 +3397,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 500
-    m_Bottom: 500
+    m_Top: 1000
+    m_Bottom: 1000
   m_ChildAlignment: 1
   m_Spacing: 1000
   m_ChildForceExpandWidth: 1
@@ -4350,10 +4353,38 @@ MonoBehaviour:
   cookiesPerUpgrade: 1
   upgradeName: Arboles
   unlocks:
-  - requiredLevel: 3
+  - requiredLevel: 1
     objectToActivate: {fileID: 239616205}
-  - requiredLevel: 5
+  - requiredLevel: 3
     objectToActivate: {fileID: 960886696}
+  - requiredLevel: 5
+    objectToActivate: {fileID: 1713107797}
+  - requiredLevel: 7
+    objectToActivate: {fileID: 441787438}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 441787438}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1514878237}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1573012154}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 235237025}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1214360769}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 747339531}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1663594041}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 852897561}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1190318638}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 868823263}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 611164406}
+  - requiredLevel: 9
+    objectToActivate: {fileID: 1079436081}
 --- !u!1001 &987261570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6444,7 +6475,7 @@ RectTransform:
   m_GameObject: {fileID: 1487308312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8031, y: 2.8031, z: 2.8031}
+  m_LocalScale: {x: 1.8867533, y: 8.786066, z: 5.8605027}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1842484411}
@@ -6452,7 +6483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 638.83, y: 714.43945}
+  m_AnchoredPosition: {x: 677, y: 805}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487308314
@@ -6524,15 +6555,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 562106701, guid: 3b3b007abc4068245a0ea606012cfe1f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7334,7 +7365,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Panel
+  m_text: '
+
 
 '
   m_isRightToLeft: 0
@@ -7832,9 +7864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Return
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8433,8 +8463,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712458881}
   m_HandleRect: {fileID: 1712458880}
   m_Direction: 2
-  m_Value: 0.4999999
-  m_Size: 0.41456312
+  m_Value: 0.49999982
+  m_Size: 0.36969697
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -18,6 +18,9 @@ public class PanelUI : MonoBehaviour
     private bool isVisible = false;
     private Coroutine panelCoroutine;
     private Coroutine extraCoroutine;
+    public UnityEngine.UI.Image extraImage;
+    public Sprite onScreenSprite;
+    public Sprite offScreenSprite;
 
     private void Start()
     {
@@ -37,6 +40,12 @@ public class PanelUI : MonoBehaviour
 
         panelCoroutine = StartCoroutine(Slide(panel, isVisible ? onScreenPosition : offScreenPosition));
         extraCoroutine = StartCoroutine(Slide(extraUIElement, isVisible ? extraOnScreenPosition : extraOffScreenPosition));
+
+        
+        if (extraImage != null)
+        {
+            extraImage.sprite = isVisible ? onScreenSprite : offScreenSprite;
+        }
     }
 
     private System.Collections.IEnumerator Slide(RectTransform target, Vector2 targetPosition)
