@@ -20,7 +20,7 @@ public class UpgradeManager : MonoBehaviour
     public float cookiesPerUpgrade = 0.1f;
     [Header("Settings")]
     public string upgradeName;
-
+    [SerializeField] int levelToChange;
     [Header("Level Unlocks")]
     public List<LevelUnlockObject> unlocks = new List<LevelUnlockObject>();
 
@@ -32,8 +32,45 @@ public class UpgradeManager : MonoBehaviour
         public int requiredLevel;
         public GameObject objectToActivate;
     }
-    private void Start()
+    private void Update()
     {
+        switch (levelToChange)
+        {
+            case 1:
+                Debug.Log("UPGRADE MANAGER LEVEL " + level);
+                //Debug.Log("FIX LEVEL A " + UpgradeManager2.level1);
+                UpgradeManager2.level1 = level;
+                //Debug.Log("FIX LEVEL B " + UpgradeManager2.level1);
+                break;
+            case 2:
+                Debug.Log("UPGRADE MANAGER LEVEL b " + level);
+                //Debug.Log("FIX LEVEL Ab " + UpgradeManager2.level2);
+                UpgradeManager2.level2 = level;
+                //Debug.Log("FIX LEVEL Bb " + UpgradeManager2.level2);
+                break;
+            case 3:
+                UpgradeManager2.level3 = level;
+                break;
+            case 4:
+                UpgradeManager2.level4 = level;
+                break;
+            case 5:
+                UpgradeManager2.level5 = level;
+                break;
+            case 6:
+                UpgradeManager2.level6 = level;
+                break;
+
+        }
+
+    }
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+    private void Start()
+    {       
+        sceneLoad.planetScene = false;
         if (!string.IsNullOrEmpty(upgradeName))
         {
             level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);

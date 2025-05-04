@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,6 +13,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] private ContadorUI uiManager;
     [SerializeField] UpgradeManager[] upgradeManagers;
+    [SerializeField] UpgradeManager2[] upgradeManagers2;
+    //public GameObject sas;
+
     [SerializeField] int updatesPerSecond = 10;
    
     private void Awake()
@@ -30,10 +34,34 @@ public class GameManager : MonoBehaviour
     {
         if (nextTimeCheck< Time.timeSinceLevelLoad)
         {
-            IdleCalculate();
+
+            if (!sceneLoad.planetScene)
+            {
+                Debug.Log("BOSQUE PUNTOS");
+                IdleCalculate();
+            }
+            else 
+            {
+                Debug.Log("TIERRA PUNTOS");
+                IdleCalculate2(); 
+            }
             nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
              
         }
+    }
+    void IdleCalculate2()
+    {        
+        float sum = 0;
+        //Debug.Log("STEP 1 SUM " +sum);
+        foreach (var upgradeManager in upgradeManagers2)
+        {
+            //Debug.Log("STEP 2");
+            sum += upgradeManager.CalculateIncomePerSecond();
+        }
+        Debug.Log("SUMA 1 PLANETA " + sum);
+        count += sum / updatesPerSecond;
+        Debug.Log("SUMA 2 PLANETA " + sum);
+        uiManager.UpdateUI();
     }
     void IdleCalculate()
     {
@@ -43,7 +71,9 @@ public class GameManager : MonoBehaviour
             sum += upgradeManager.CalculateIncomePerSecond();
             upgradeManager.UpdateUI();
         }
+        Debug.Log("SUMA 1 BOSQUE " + sum);
         count += sum /updatesPerSecond;
+        Debug.Log("SUMA 2 BOSQUE " + sum);
         uiManager.UpdateUI();
     }
     public float GetIncomePerSecond()
@@ -112,12 +142,26 @@ public class GameManager : MonoBehaviour
     }
     public void ForceIncomeUpdate()
     {
-        IdleCalculate();
+        if (!sceneLoad.planetScene)
+        {
+            Debug.Log("BOSQUE PUNTOS B");
+            IdleCalculate();
+        }
+        else
+        {
+            Debug.Log("TIERRA PUNTOS B");
+            IdleCalculate2();
+        }
         nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
     }
     public void RefreshUpgradeManagers()
     {
         upgradeManagers = FindObjectsOfType<UpgradeManager>();
+        ForceIncomeUpdate();
+    }
+    public void RefreshUpgradeManagers2()
+    {
+        upgradeManagers2 = FindObjectsOfType<UpgradeManager2>();
         ForceIncomeUpdate();
     }
 
