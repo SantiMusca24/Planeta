@@ -69,7 +69,7 @@ public class UpgradeManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
     private void Start()
-    {       
+    {        
         sceneLoad.planetScene = false;
         if (!string.IsNullOrEmpty(upgradeName))
         {
@@ -95,6 +95,7 @@ public class UpgradeManager : MonoBehaviour
         if (purchaseSuccess) 
         {
             level++;
+            GameManager.rotatePoints += level * 10 + 1;
             CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {

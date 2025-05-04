@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] UpgradeManager2[] upgradeManagers2;
     //public GameObject sas;
 
+    static public int rotatePoints = 1; 
+
     [SerializeField] int updatesPerSecond = 10;
    
     private void Awake()
@@ -99,10 +101,10 @@ public class GameManager : MonoBehaviour
 
     public void RotateAction()
     {
-        count++;
+        count += rotatePoints;
         uiManager.UpdateUI();
         
-        uiManager.SpawnFloatingText(1);
+        uiManager.SpawnFloatingText(rotatePoints);
 
     }
 

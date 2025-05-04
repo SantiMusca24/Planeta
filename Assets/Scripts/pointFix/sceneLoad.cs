@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class sceneLoad : MonoBehaviour
 {
     static public bool planetScene;
+    //static public bool started = false;
     [SerializeField] private UpgradeManager2[] upgradeManagers2;
     [SerializeField] private GameManager gameManager;
     //public Skibidi1 
@@ -22,6 +23,12 @@ public class sceneLoad : MonoBehaviour
         {
             upgradeManager2.AssignGameManager(GameManager.Instance);
         }*/
+        /*if (!started)
+        {
+            GameManager.rotatePoints += 1;
+            started = true;
+        }*/
+
         planetScene = true;
         Debug.Log("planetScene true");
     }
