@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    static public bool tapped = false;
     public float count = 0;
     float nextTimeCheck = 1;
 
@@ -34,6 +34,13 @@ public class GameManager : MonoBehaviour
     }
      void Update()
     {
+
+        if (tapped)
+        {
+            tapped = false;
+            count += (1 + UpgradeManager2.level1) * 999;
+        }
+
         if (nextTimeCheck< Time.timeSinceLevelLoad)
         {
 
@@ -51,6 +58,10 @@ public class GameManager : MonoBehaviour
              
         }
     }
+    /*static public void tapped()
+    {
+        GameManager.Instance.count += UpgradeManager2.level1 * 999;
+    }*/
     void IdleCalculate2()
     {        
         float sum = 0;
