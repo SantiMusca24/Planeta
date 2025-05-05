@@ -95,7 +95,7 @@ public class UpgradeManager : MonoBehaviour
         if (purchaseSuccess) 
         {
             level++;
-            GameManager.rotatePoints += level * 10 + 1;
+            GameManager.rotatePoints += level + 1;
             CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {

@@ -1178,26 +1178,26 @@ MonoBehaviour:
   button: {fileID: 176567176}
   gameManager: {fileID: 1067373840}
   startPrice: 20
-  upgradePriceMultiplier: 1.25
+  upgradePriceMultiplier: 2
   cookiesPerUpgrade: 5
   upgradeName: Carpinteria
   levelToChange: 2
   unlocks:
   - requiredLevel: 1
     objectToActivate: {fileID: 353610007}
-  - requiredLevel: 2
-    objectToActivate: {fileID: 195497245610789594}
-  - requiredLevel: 3
-    objectToActivate: {fileID: 3776275480617104650}
-  - requiredLevel: 4
-    objectToActivate: {fileID: 1799657021492839182}
   - requiredLevel: 5
+    objectToActivate: {fileID: 195497245610789594}
+  - requiredLevel: 10
+    objectToActivate: {fileID: 3776275480617104650}
+  - requiredLevel: 15
+    objectToActivate: {fileID: 1799657021492839182}
+  - requiredLevel: 20
     objectToActivate: {fileID: 1053441725}
-  - requiredLevel: 6
+  - requiredLevel: 25
     objectToActivate: {fileID: 6490391177164486771}
-  - requiredLevel: 7
+  - requiredLevel: 30
     objectToActivate: {fileID: 1298846368}
-  - requiredLevel: 8
+  - requiredLevel: 35
     objectToActivate: {fileID: 1107699702}
 --- !u!114 &176567176
 MonoBehaviour:
@@ -4680,25 +4680,25 @@ MonoBehaviour:
   levelText: {fileID: 388666649}
   button: {fileID: 745509152}
   gameManager: {fileID: 1067373840}
-  startPrice: 20
-  upgradePriceMultiplier: 1.25
-  cookiesPerUpgrade: 5
+  startPrice: 100
+  upgradePriceMultiplier: 3
+  cookiesPerUpgrade: 10
   upgradeName: Almacen
   levelToChange: 0
   unlocks:
   - requiredLevel: 1
     objectToActivate: {fileID: 1318962968356284389}
-  - requiredLevel: 2
+  - requiredLevel: 8
     objectToActivate: {fileID: 1979743761}
-  - requiredLevel: 3
+  - requiredLevel: 16
     objectToActivate: {fileID: 725560025}
-  - requiredLevel: 4
+  - requiredLevel: 24
     objectToActivate: {fileID: 1473852225}
-  - requiredLevel: 5
+  - requiredLevel: 32
     objectToActivate: {fileID: 288504636}
-  - requiredLevel: 6
+  - requiredLevel: 40
     objectToActivate: {fileID: 944316202}
-  - requiredLevel: 7
+  - requiredLevel: 48
     objectToActivate: {fileID: 9094007004786994265}
 --- !u!114 &745509152
 MonoBehaviour:
@@ -5521,35 +5521,35 @@ MonoBehaviour:
     objectToActivate: {fileID: 441787438}
   - requiredLevel: 9
     objectToActivate: {fileID: 441787438}
-  - requiredLevel: 9
+  - requiredLevel: 11
     objectToActivate: {fileID: 1514878237}
-  - requiredLevel: 9
+  - requiredLevel: 13
     objectToActivate: {fileID: 561248726965913991}
-  - requiredLevel: 9
+  - requiredLevel: 15
     objectToActivate: {fileID: 1573012154}
-  - requiredLevel: 9
+  - requiredLevel: 17
     objectToActivate: {fileID: 235237025}
-  - requiredLevel: 9
+  - requiredLevel: 19
     objectToActivate: {fileID: 1214360769}
-  - requiredLevel: 9
+  - requiredLevel: 21
     objectToActivate: {fileID: 747339531}
-  - requiredLevel: 9
+  - requiredLevel: 23
     objectToActivate: {fileID: 5062507895889347691}
-  - requiredLevel: 9
+  - requiredLevel: 25
     objectToActivate: {fileID: 1663594041}
-  - requiredLevel: 9
+  - requiredLevel: 27
     objectToActivate: {fileID: 852897561}
-  - requiredLevel: 9
+  - requiredLevel: 29
     objectToActivate: {fileID: 698783922}
-  - requiredLevel: 9
+  - requiredLevel: 31
     objectToActivate: {fileID: 1190318638}
-  - requiredLevel: 9
+  - requiredLevel: 33
     objectToActivate: {fileID: 868823263}
-  - requiredLevel: 9
+  - requiredLevel: 35
     objectToActivate: {fileID: 611164406}
-  - requiredLevel: 9
+  - requiredLevel: 37
     objectToActivate: {fileID: 1079436081}
-  - requiredLevel: 9
+  - requiredLevel: 39
     objectToActivate: {fileID: 1143229860}
 --- !u!1 &852897561 stripped
 GameObject:
