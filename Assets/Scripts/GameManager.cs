@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        count = PlayerPrefs.GetFloat("Count", 0f);
     }
      void Update()
     {
@@ -150,8 +151,11 @@ public class GameManager : MonoBehaviour
     
     public void ResetPlayerPrefs()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll(); 
         PlayerPrefs.Save();
+
+        count = 0; 
+        uiManager.UpdateUI(); 
     }
     public void ForceIncomeUpdate()
     {
@@ -177,5 +181,13 @@ public class GameManager : MonoBehaviour
         upgradeManagers2 = FindObjectsOfType<UpgradeManager2>();
         ForceIncomeUpdate();
     }
-
+    public void SaveProgress()
+    {
+        PlayerPrefs.SetFloat("Count", count);
+        PlayerPrefs.Save();
+    }
+    private void OnApplicationQuit()
+    {
+        SaveProgress();
+    }
 }

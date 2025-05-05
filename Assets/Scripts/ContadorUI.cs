@@ -100,7 +100,7 @@ public class ContadorUI : MonoBehaviour
             {
                 GoalText2.gameObject.SetActive(true);
                 int currentPoints = Mathf.RoundToInt(GameManager.Instance.count);
-                GoalText2.text = "Puntos: " + currentPoints + " / " + goalPoints2;
+                GoalText2.text =  currentPoints + " / " + goalPoints2;
                 GoalText2.color = (currentPoints >= goalPoints2) ? Color.green : Color.white;
             }
 
