@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         if (tapped)
         {
             tapped = false;
-            count += (1 + UpgradeManager2.level1) * 999;
+            count += (1 + UpgradeManager2.level1) * cloud1.meteorReward;
         }
 
         if (nextTimeCheck< Time.timeSinceLevelLoad)

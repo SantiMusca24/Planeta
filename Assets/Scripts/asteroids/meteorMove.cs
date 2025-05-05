@@ -13,7 +13,7 @@ public class meteorMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, -4 * Time.deltaTime, 0);
+        transform.Translate(0, cloud1.meteorSpd * Time.deltaTime, 0);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class meteoriteSpawn : MonoBehaviour
 {
-
+    
     [SerializeField] GameObject meteor;
     [SerializeField] Transform metSpawner;
     [SerializeField] bool canSpawn = true;
     [SerializeField] float randomSeconds;
-    [SerializeField] float maxSeconds = 10;
+    //[SerializeField] float minSeconds = 3, maxSeconds = 10;
 
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class meteoriteSpawn : MonoBehaviour
     void Update()
     {
         // transform.Rotate(randomSpeed * Time.deltaTime, 0f, 0f, Space.Self);
-        if (canSpawn)
+        if (canSpawn && cloud1.meteorsEnable)
         {
             canSpawn = false;
             StartCoroutine(Spawn());
@@ -32,8 +32,8 @@ public class meteoriteSpawn : MonoBehaviour
 
     public IEnumerator Spawn()
     {
-        randomSeconds = Random.Range(3,maxSeconds);
-        transform.position = new Vector3(3, Random.Range(-2f, 7f), -3);
+        randomSeconds = Random.Range(cloud1.minMeteorWait,cloud1.maxMeteorWait);
+        transform.position = new Vector3(3, Random.Range(cloud1.minAsteroidHeight, cloud1.maxAsteroidHeight), -3);
         yield return new WaitForSeconds(randomSeconds);
         Instantiate(meteor, metSpawner.transform.position, metSpawner.transform.rotation, metSpawner.transform);
         canSpawn = true;
