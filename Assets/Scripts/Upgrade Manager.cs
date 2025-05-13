@@ -34,34 +34,66 @@ public class UpgradeManager : MonoBehaviour
     }
     private void Update()
     {
-        switch (levelToChange)
+        if (levelToChange == 1)
         {
-            case 1:
-                Debug.Log("UPGRADE MANAGER LEVEL " + level);
-                //Debug.Log("FIX LEVEL A " + UpgradeManager2.level1);
-                UpgradeManager2.level1 = level;
-                //Debug.Log("FIX LEVEL B " + UpgradeManager2.level1);
-                break;
-            case 2:
-                Debug.Log("UPGRADE MANAGER LEVEL b " + level);
-                //Debug.Log("FIX LEVEL Ab " + UpgradeManager2.level2);
-                UpgradeManager2.level2 = level;
-                //Debug.Log("FIX LEVEL Bb " + UpgradeManager2.level2);
-                break;
-            case 3:
-                UpgradeManager2.level3 = level;
-                break;
-            case 4:
-                UpgradeManager2.level4 = level;
-                break;
-            case 5:
-                UpgradeManager2.level5 = level;
-                break;
-            case 6:
-                UpgradeManager2.level6 = level;
-                break;
-
+            Debug.Log("UPGRADE MANAGER LEVEL " + level);
+            //Debug.Log("FIX LEVEL A " + UpgradeManager2.level1);
+            UpgradeManager2.level1 = level;
+            //Debug.Log("FIX LEVEL B " + UpgradeManager2.level1);
         }
+        else if (levelToChange == 2)
+        {
+            Debug.Log("UPGRADE MANAGER LEVEL b " + level);
+            //Debug.Log("FIX LEVEL Ab " + UpgradeManager2.level2);
+            UpgradeManager2.level2 = level;
+            //Debug.Log("FIX LEVEL Bb " + UpgradeManager2.level2);
+        }
+        else if (levelToChange == 3)
+        {
+            UpgradeManager2.level3 = level;
+        }
+        else if (levelToChange == 4)
+        {
+            UpgradeManager2.level4 = level;
+        }
+        else if (levelToChange == 5)
+        {
+            UpgradeManager2.level5 = level;
+        }
+        else if (levelToChange == 6)
+        {
+            UpgradeManager2.level6 = level;
+        }
+
+
+            /*switch (levelToChange)
+            {
+                case 1:
+                    Debug.Log("UPGRADE MANAGER LEVEL " + level);
+                    //Debug.Log("FIX LEVEL A " + UpgradeManager2.level1);
+                    UpgradeManager2.level1 = level;
+                    //Debug.Log("FIX LEVEL B " + UpgradeManager2.level1);
+                    break;
+                case 2:
+                    Debug.Log("UPGRADE MANAGER LEVEL b " + level);
+                    //Debug.Log("FIX LEVEL Ab " + UpgradeManager2.level2);
+                    UpgradeManager2.level2 = level;
+                    //Debug.Log("FIX LEVEL Bb " + UpgradeManager2.level2);
+                    break;
+                case 3:
+                    UpgradeManager2.level3 = level;
+                    break;
+                case 4:
+                    UpgradeManager2.level4 = level;
+                    break;
+                case 5:
+                    UpgradeManager2.level5 = level;
+                    break;
+                case 6:
+                    UpgradeManager2.level6 = level;
+                    break;
+
+            }*/
 
     }
     private void Awake()
