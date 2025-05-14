@@ -108,14 +108,11 @@ public class UpgradeManager : MonoBehaviour
             level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
         }
 
-        
-        foreach (var unlock in unlocks)
-        {
-            if (unlock.objectToActivate != null)
-            {
-                unlock.objectToActivate.SetActive(level >= unlock.requiredLevel);
-            }
-        }
+
+        new UpgradeBuilder()
+        .WithUnlocks(unlocks)
+        .AtLevel(level)
+        .Build();
 
         UpdateUI();
     }
@@ -137,6 +134,7 @@ public class UpgradeManager : MonoBehaviour
             UpdateUI();
             gameManager.RefreshUI();
             
+
         }
 
     }
@@ -170,12 +168,10 @@ public class UpgradeManager : MonoBehaviour
     }
     void CheckLevelUnlocks()
     {
-        foreach (var unlock in unlocks)
-        {
-            if (level >= unlock.requiredLevel && unlock.objectToActivate != null && !unlock.objectToActivate.activeSelf)
-            {
-                unlock.objectToActivate.SetActive(true);
-            }
-        }
+        Debug.Log("BOCA");
+        new UpgradeBuilder()
+     .WithUnlocks(unlocks)
+     .AtLevel(level)
+     .Build();
     }
 }
