@@ -59,10 +59,14 @@ public class changeScene : MonoBehaviour
         
 
         yield return new WaitForSeconds(transitionTime);
-        
-        SceneManager.LoadScene(levelIndex);
 
+        //SceneManager.LoadScene(levelIndex);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
 
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
 
     }
 }

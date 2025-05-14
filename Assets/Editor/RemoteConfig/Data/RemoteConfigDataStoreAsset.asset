@@ -12,45 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c2ebf4a0-bf01-4b8a-8fd3-db45cfe11419\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MaxAsteroidWait\",\r\n      \"type\":
-    \"float\",\r\n      \"value\": 10.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"f363d675-fcce-4c4e-bb8b-0136b4d1ac38\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"MinAsteroidWait\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 3.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"7a23ba79-4728-42fa-9323-a029c94f3e22\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"MeteorsEnabled\",\r\n      \"type\": \"bool\",\r\n      \"value\":
-    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2f9e0d98-44ac-4516-b50c-3bb23dd84801\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MeteorSpeed\",\r\n      \"type\": \"int\",\r\n     
-    \"value\": -2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b26c07ef-e50a-48a8-beff-f9c8798c3f68\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"MeteorPoints\",\r\n      \"type\": \"int\",\r\n      \"value\": 999\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a4d90479-2dcf-400c-8365-c70ad379fc36\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MaxMeteorHeight\",\r\n      \"type\":
-    \"float\",\r\n      \"value\": 7.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"425337d4-4336-4eb2-afc8-4ed04dbd46ae\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"MinMeteorHeight\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": -2.0\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c2ebf4a0-bf01-4b8a-8fd3-db45cfe11419\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MaxAsteroidWait\",\r\n      \"type\":
-    \"float\",\r\n      \"value\": 10.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"f363d675-fcce-4c4e-bb8b-0136b4d1ac38\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"MinAsteroidWait\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 3.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"7a23ba79-4728-42fa-9323-a029c94f3e22\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"MeteorsEnabled\",\r\n      \"type\": \"bool\",\r\n      \"value\":
-    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2f9e0d98-44ac-4516-b50c-3bb23dd84801\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MeteorSpeed\",\r\n      \"type\": \"int\",\r\n     
-    \"value\": -2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"b26c07ef-e50a-48a8-beff-f9c8798c3f68\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"MeteorPoints\",\r\n      \"type\": \"int\",\r\n      \"value\": 999\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a4d90479-2dcf-400c-8365-c70ad379fc36\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"MaxMeteorHeight\",\r\n      \"type\":
-    \"float\",\r\n      \"value\": 7.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"425337d4-4336-4eb2-afc8-4ed04dbd46ae\"\r\n    },\r\n   
-    \"rs\": {\r\n      \"key\": \"MinMeteorHeight\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": -2.0\r\n    }\r\n  }\r\n]"
-  _environments: "[\r\n  {\r\n    \"projectId\": \"efb0a925-3fbd-4097-8206-ccfb809caa75\",\r\n   
-    \"name\": \"production\",\r\n    \"id\": \"5dfcedde-a94b-4ffa-8c23-6206998d2dc9\",\r\n   
-    \"isDefault\": true,\r\n    \"createdAt\": \"2025-05-05T03:33:21Z\",\r\n    \"updatedAt\":
-    \"2025-05-05T03:33:21Z\"\r\n  }\r\n]"
+  _rsKeyList: '[]'
+  _rsLastCachedKeyList: '[]'
+  _environments: '[]'
