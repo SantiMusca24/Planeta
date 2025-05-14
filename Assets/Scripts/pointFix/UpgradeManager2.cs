@@ -79,44 +79,46 @@ public class UpgradeManager2 : MonoBehaviour
 
     public float CalculateIncomePerSecond()
     {
-
+        float total = 0;
         if (thisLevel == 1)
         {
-            //total = cookiesPerUpgrade * level1;
+            total = cookiesPerUpgrade * level1;
             //Debug.Log("STEP 3 LEVEL " + level1 + " TOTAL: " + total);
-            return cookiesPerUpgrade * level1;
+            //return cookiesPerUpgrade * level1;
         }
         else if (thisLevel == 2)
         {
-            //total = cookiesPerUpgrade * level2;
+            total = cookiesPerUpgrade * level2;
             //Debug.Log("STEP 3a LEVEL " + level2 + " TOTAL: " + total);
-            return cookiesPerUpgrade * level2;
+            //return cookiesPerUpgrade * level2;
         }
         else if (thisLevel == 3)
         {
-            //total = cookiesPerUpgrade * level3;
-            return cookiesPerUpgrade * level3;
+            total = cookiesPerUpgrade * level3;
+            //return cookiesPerUpgrade * level3;
         }
         else if (thisLevel == 4)
         {
-            //total = cookiesPerUpgrade * level4;
-            return cookiesPerUpgrade * level4;
+            total = cookiesPerUpgrade * level4;
+            //return cookiesPerUpgrade * level4;
         }
         else if (thisLevel == 5)
         {
-            //total = cookiesPerUpgrade * level5;
-            return cookiesPerUpgrade * level5;
+            total = cookiesPerUpgrade * level5;
+            //return cookiesPerUpgrade * level5;
         }
         else if (thisLevel == 6)
         {
-            //total = cookiesPerUpgrade * level6;
-            return cookiesPerUpgrade * level6;
+            total = cookiesPerUpgrade * level6;
+            //return cookiesPerUpgrade * level6;
         }
         else
         {
-            return cookiesPerUpgrade * 0;
+            total = 0;
+            //return cookiesPerUpgrade * 0;
         }
 
+        return total;
         /*
             //float total = 0;
             switch (thisLevel)
