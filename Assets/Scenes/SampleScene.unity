@@ -547,8 +547,8 @@ MonoBehaviour:
   upgradeManagers: []
   gameManager: {fileID: 224241179}
   upgradeManagers2:
-  - {fileID: 1826920826}
-  - {fileID: 1472730861}
+  - {fileID: 1826920828}
+  - {fileID: 1472730863}
 --- !u!4 &90488136
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 244690481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 224241179}
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 697521606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 224241179}
@@ -7718,8 +7718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeManagers2:
-  - {fileID: 1826920826}
-  - {fileID: 1472730861}
+  - {fileID: 0}
+  - {fileID: 0}
   gameManager: {fileID: 0}
 --- !u!4 &1160180155
 Transform:
@@ -7804,7 +7804,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1204609709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 224241179}
@@ -8167,7 +8167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310742579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 224241179}
@@ -8384,12 +8384,12 @@ PrefabInstance:
         type: 3}
       propertyPath: upgradeManagers2.Array.data[0]
       value: 
-      objectReference: {fileID: 1826920826}
+      objectReference: {fileID: 1826920828}
     - target: {fileID: 7917948423067998934, guid: e2c81d9d248aeb443b7296240f0fe5a1,
         type: 3}
       propertyPath: upgradeManagers2.Array.data[1]
       value: 
-      objectReference: {fileID: 1472730861}
+      objectReference: {fileID: 1472730863}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8763,7 +8763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472730862}
-  - component: {fileID: 1472730861}
+  - component: {fileID: 1472730863}
   m_Layer: 0
   m_Name: Fix (1)
   m_TagString: Untagged
@@ -8771,24 +8771,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1472730861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472730860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 224241179}
-  startPrice: 20
-  upgradePriceMultiplier: 1.25
-  cookiesPerUpgrade: 5
-  upgradeName: 
-  thisLevel: 2
 --- !u!4 &1472730862
 Transform:
   m_ObjectHideFlags: 0
@@ -8804,6 +8786,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 186658100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472730863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472730860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 224241179}
+  startPrice: 20
+  upgradePriceMultiplier: 1.25
+  cookiesPerUpgrade: 5
+  upgradeName: 
+  thisLevel: 2
 --- !u!224 &1482275588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7211755870128984968, guid: 844b2e969641b294b803b54c6bc9a630,
@@ -10429,7 +10429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826920827}
-  - component: {fileID: 1826920826}
+  - component: {fileID: 1826920828}
   m_Layer: 0
   m_Name: Fix
   m_TagString: Untagged
@@ -10437,24 +10437,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1826920826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826920825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739a4a379a1f27c428f5b954668c22ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 224241179}
-  startPrice: 3
-  upgradePriceMultiplier: 1.15
-  cookiesPerUpgrade: 1
-  upgradeName: 
-  thisLevel: 1
 --- !u!4 &1826920827
 Transform:
   m_ObjectHideFlags: 0
@@ -10470,6 +10452,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 186658100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826920828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826920825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57e2c53f6dab0544a0936f6ae69ae2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 224241179}
+  startPrice: 3
+  upgradePriceMultiplier: 1.15
+  cookiesPerUpgrade: 1
+  upgradeName: 
+  thisLevel: 1
 --- !u!1 &1832347067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2898615062195524589, guid: dcf633d1049084e4e957d91b93341633,
