@@ -4,21 +4,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class GameManager : MonoBehaviour
+public abstract class GameManager : MonoBehaviour
 {
     static public bool tapped = false;
     public float count = 0;
-    float nextTimeCheck = 1;
+    protected float nextTimeCheck = 1;
 
     public static GameManager Instance;
-    [SerializeField] private ContadorUI uiManager;
-    [SerializeField] UpgradeManager[] upgradeManagers;
-    [SerializeField] UpgradeManager2[] upgradeManagers2;
+    [SerializeField] protected ContadorUI uiManager;
+    [SerializeField] protected UpgradeManager[] upgradeManagers;
+    [SerializeField] protected UpgradeManager2[] upgradeManagers2;
     //public GameObject sas;
 
     static public int rotatePoints = 1; 
 
-    [SerializeField] int updatesPerSecond = 10;
+    [SerializeField] protected int updatesPerSecond = 10;
    
     private void Awake()
     {
@@ -63,131 +63,21 @@ public class GameManager : MonoBehaviour
     {
         GameManager.Instance.count += UpgradeManager2.level1 * 999;
     }*/
-    void IdleCalculate2()
-    {        
-        float sum = 0;
-        //Debug.Log("STEP 1 SUM " +sum);
-        foreach (var upgradeManager in upgradeManagers2)
-        {
-            //Debug.Log("STEP 2");
-            sum += upgradeManager.CalculateIncomePerSecond();
-        }
-        Debug.Log("SUMA 1 PLANETA " + sum);
-        count += sum / updatesPerSecond;
-        Debug.Log("SUMA 2 PLANETA " + sum);
-        uiManager.UpdateUI();
-    }
-    void IdleCalculate()
-    {
-        float sum = 0;
-        foreach (var upgradeManager in upgradeManagers)
-        {
-            sum += upgradeManager.CalculateIncomePerSecond();
-            upgradeManager.UpdateUI();
-        }
-        Debug.Log("SUMA 1 BOSQUE " + sum);
-        count += sum /updatesPerSecond;
-        Debug.Log("SUMA 2 BOSQUE " + sum);
-        uiManager.UpdateUI();
-    }
-    public float GetIncomePerSecond()
-    {
-        float sum = 0;
-        foreach (var upgradeManager in upgradeManagers)
-        {
-            sum += upgradeManager.CalculateIncomePerSecond();
-        }
-        return sum;
-    }
-    public void OnEnable()
-    {
-       spinDetect.OnPlanetRotated += RotateAction;
-        StartCoroutine(AutoIncrementCoroutine());
-        
-    }
-
-    void OnDisable()
-    {
-        spinDetect.OnPlanetRotated -= RotateAction;
-    }
-
-    public void RotateAction()
-    {
-        count += rotatePoints;
-        uiManager.UpdateUI();
-        
-        uiManager.SpawnFloatingText(rotatePoints);
-
-    }
-
+    protected abstract void IdleCalculate2();
+    protected abstract void IdleCalculate();
+    public abstract float GetIncomePerSecond();
+    public abstract void OnEnable();
+    protected abstract void OnDisable();
+    public abstract void RotateAction();
+    protected abstract IEnumerator AutoIncrementCoroutine();
+    public abstract bool PurchaseAction(int cost);
+    public abstract void RefreshUI();
+    public abstract void SetUIManager(ContadorUI newUIManager);
+    public abstract void ResetPlayerPrefs();
+    public abstract void ForceIncomeUpdate();
+    public abstract void RefreshUpgradeManagers();
+    public abstract void RefreshUpgradeManagers2();
+    public abstract void SaveProgress();
+    protected abstract void OnApplicationQuit();
     
-    IEnumerator AutoIncrementCoroutine()
-    {
-        while (true) 
-        {
-            yield return new WaitForSeconds(1f); 
-            RotateAction(); 
-        }
-    }
-    public bool PurchaseAction(int cost)
-    {
-        if(count >= cost)
-        {
-            count -= cost;
-            uiManager.UpdateUI();
-            return true;
-        }
-        return false;
-    }
-    public void RefreshUI()
-    {
-        uiManager.UpdateUI();
-    }
-    public void SetUIManager(ContadorUI newUIManager)
-    {
-        uiManager = newUIManager;
-    }
-   
-    
-    public void ResetPlayerPrefs()
-    {
-        PlayerPrefs.DeleteAll(); 
-        PlayerPrefs.Save();
-
-        count = 0; 
-        uiManager.UpdateUI(); 
-    }
-    public void ForceIncomeUpdate()
-    {
-        if (!sceneLoad.planetScene)
-        {
-            Debug.Log("BOSQUE PUNTOS B");
-            IdleCalculate();
-        }
-        else
-        {
-            Debug.Log("TIERRA PUNTOS B");
-            IdleCalculate2();
-        }
-        nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
-    }
-    public void RefreshUpgradeManagers()
-    {
-        upgradeManagers = FindObjectsOfType<UpgradeManager>();
-        ForceIncomeUpdate();
-    }
-    public void RefreshUpgradeManagers2()
-    {
-        upgradeManagers2 = FindObjectsOfType<UpgradeManager2>();
-        ForceIncomeUpdate();
-    }
-    public void SaveProgress()
-    {
-        PlayerPrefs.SetFloat("Count", count);
-        PlayerPrefs.Save();
-    }
-    private void OnApplicationQuit()
-    {
-        SaveProgress();
-    }
 }
