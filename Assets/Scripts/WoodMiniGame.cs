@@ -17,15 +17,15 @@ public class WoodMiniGame : MonoBehaviour
     private float gameTimer = 20f;
     private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
-    public TMP_Text cutsText;
-    public TMP_Text logsText;
-    public TMP_Text timerText;
+    
     public GameObject summaryPanel;
-    public TMP_Text summaryText;
+    
     public ContadorUI uiManager;
+    
     private void Start()
     {
        minigamePanel.SetActive(false);
+
     }
     void Update()
     {
@@ -33,9 +33,11 @@ public class WoodMiniGame : MonoBehaviour
         {
             UpdateSlider();
             timer -= Time.deltaTime;
-            timerText.text = $"Tiempo: {timer:F1}s"; 
+            uiManager?.UpdateTimerText(timer);
+
             if (timer <= 0)
                 EndMinigame();
+
             if (Input.GetKeyDown(KeyCode.W))
                 AttemptCut();
         }
@@ -43,13 +45,16 @@ public class WoodMiniGame : MonoBehaviour
 
     public void StartMinigame()
     {
-        cutsText.text = $"Cortes: 0/{cutsNeededPerLog}";
-        logsText.text = $"Troncos: 0";
-        phase = WoodcutPhase.Cutting;
-        minigamePanel.SetActive(true);
-        timer = gameTimer;
-        logsCut = 0;
         currentCuts = 0;
+        logsCut = 0;
+        timer = gameTimer;
+        sliderSpeed = 2f;
+        phase = WoodcutPhase.Cutting;
+
+        uiManager?.ShowMinigamePanel();
+        uiManager?.UpdateCutsText(currentCuts, cutsNeededPerLog);
+        uiManager?.UpdateLogsText(logsCut);
+        uiManager?.UpdateTimerText(timer);
     }
 
     void UpdateSlider()
@@ -71,52 +76,45 @@ public class WoodMiniGame : MonoBehaviour
 
         if (Mathf.Abs(val - 0.55f) < 0.15f)
         {
-            Debug.Log("¡Perfecto!");
             currentCuts += 2;
+            uiManager?.ShowPerfectCutFeedback();
         }
         else if (Mathf.Abs(val - 0.55f) < 0.30f)
         {
-            Debug.Log("Regular");
             currentCuts += 1;
+            uiManager?.ShowRegularCutFeedback();
         }
         else
         {
-            Debug.Log("Fallaste");
-
+            uiManager?.ShowFailCutFeedback();
         }
-
-        Debug.Log($"Cortes actuales: {currentCuts}/{cutsNeededPerLog} - Troncos completos: {logsCut}");
 
         if (currentCuts >= cutsNeededPerLog)
         {
             logsCut++;
-            Debug.Log("arbol cortado");
-            sliderSpeed *= 1.25f;
             currentCuts = 0;
+            sliderSpeed *= 1.25f;
         }
 
-        
-        cutsText.text = $"Cortes: {currentCuts}/{cutsNeededPerLog}";
-        logsText.text = $"Troncos: {logsCut}";
+        uiManager?.UpdateCutsText(currentCuts, cutsNeededPerLog);
+        uiManager?.UpdateLogsText(logsCut);
 
     }
 
     void EndMinigame()
     {
         phase = WoodcutPhase.Summary;
-        minigamePanel.SetActive(false);
-        summaryPanel.SetActive(true);
 
-        
         float incomePerSecond = GameManager.Instance.GetIncomePerSecond();
         int maderaGanada = Mathf.RoundToInt(logsCut * 100 * incomePerSecond);
 
-        
         GameManager.Instance.count += maderaGanada;
-        summaryText.text = $"¡Minijuego terminado!\n" +
-                           $"Troncos cortados: {logsCut}\n" +
-                           $"Madera obtenida: {maderaGanada}";
-        sliderSpeed = 2f;
+
+        string resumen = $"¡Minijuego terminado!\n" +
+                         $"Troncos cortados: {logsCut}\n" +
+                         $"Madera obtenida: {maderaGanada}";
+
+        uiManager?.ShowSummaryPanel(resumen);
     }
     public enum WoodcutPhase
     {

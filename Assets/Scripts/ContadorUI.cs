@@ -23,6 +23,18 @@ public class ContadorUI : MonoBehaviour
     [SerializeField] private int goalPoints2 = 5000;
     [SerializeField] private string upgradeNameToTrack2 = "Upgrade_2";
     [SerializeField] private int goalLevel2 = 20;
+    [Header("Feedback Cortes")]
+    [SerializeField] private TMP_Text perfectoText;
+    [SerializeField] private TMP_Text regularText;
+    [SerializeField] private TMP_Text falloText;
+    [SerializeField] private float feedbackDuration = 0.7f;
+    [Header("Minijuego de madera")]
+    [SerializeField] private TMP_Text cortesText;
+    [SerializeField] private TMP_Text troncosText;
+    [SerializeField] private TMP_Text tiempoText;
+    [SerializeField] private TMP_Text resumenText;
+    [SerializeField] private GameObject minigamePanel;
+    [SerializeField] private GameObject resumenPanel;
 
     void Start()
     {
@@ -35,6 +47,9 @@ public class ContadorUI : MonoBehaviour
 
         if (GoalText2 != null) GoalText2.gameObject.SetActive(false);
         if (upgradeGoalText2 != null) upgradeGoalText2.gameObject.SetActive(false);
+        if (perfectoText != null) perfectoText.gameObject.SetActive(false);
+        if (regularText != null) regularText.gameObject.SetActive(false);
+        if (falloText != null) falloText.gameObject.SetActive(false);
     }
 
     public void UpdateUI()
@@ -134,5 +149,56 @@ public class ContadorUI : MonoBehaviour
         }
 
         Destroy(floatingText.gameObject, 1f);
+    }
+    public void ShowPerfectCutFeedback()
+    {
+        if (perfectoText != null)
+            StartCoroutine(ShowTemporaryText(perfectoText));
+    }
+
+    public void ShowRegularCutFeedback()
+    {
+        if (regularText != null)
+            StartCoroutine(ShowTemporaryText(regularText));
+    }
+
+    public void ShowFailCutFeedback()
+    {
+        if (falloText != null)
+            StartCoroutine(ShowTemporaryText(falloText));
+    }
+
+    private IEnumerator ShowTemporaryText(TMP_Text text)
+    {
+        text.gameObject.SetActive(true);
+        yield return new WaitForSeconds(feedbackDuration);
+        text.gameObject.SetActive(false);
+    }
+    public void ShowMinigamePanel()
+    {
+        if (minigamePanel != null) minigamePanel.SetActive(true);
+        if (resumenPanel != null) resumenPanel.SetActive(false);
+    }
+
+    public void ShowSummaryPanel(string resumen)
+    {
+        if (minigamePanel != null) minigamePanel.SetActive(false);
+        if (resumenPanel != null) resumenPanel.SetActive(true);
+        if (resumenText != null) resumenText.text = resumen;
+    }
+
+    public void UpdateCutsText(int current, int needed)
+    {
+        if (cortesText != null) cortesText.text = $"Cortes: {current}/{needed}";
+    }
+
+    public void UpdateLogsText(int logs)
+    {
+        if (troncosText != null) troncosText.text = $"Troncos: {logs}";
+    }
+
+    public void UpdateTimerText(float time)
+    {
+        if (tiempoText != null) tiempoText.text = $"Tiempo: {time:F1}s";
     }
 }
