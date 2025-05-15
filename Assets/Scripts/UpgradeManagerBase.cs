@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class UpgradeManager : MonoBehaviour
+public abstract class UpgradeManagerBase : MonoBehaviour
 {
     [Header("Comoponents")]
     public TMP_Text priceText;
@@ -36,10 +36,12 @@ public abstract class UpgradeManager : MonoBehaviour
     {
         if (levelToChange == 1)
         {
+            Debug.Log("UPGRADE MANAGER LEVEL " + level);
             UpgradeManager2.level1 = level;
         }
         else if (levelToChange == 2)
         {
+            Debug.Log("UPGRADE MANAGER LEVEL b " + level);
             UpgradeManager2.level2 = level;
         }
         else if (levelToChange == 3)
@@ -58,31 +60,89 @@ public abstract class UpgradeManager : MonoBehaviour
         {
             UpgradeManager2.level6 = level;
         }
+
+
+            /*switch (levelToChange)
+            {
+                case 1:
+                    Debug.Log("UPGRADE MANAGER LEVEL " + level);
+                    //Debug.Log("FIX LEVEL A " + UpgradeManager2.level1);
+                    UpgradeManager2.level1 = level;
+                    //Debug.Log("FIX LEVEL B " + UpgradeManager2.level1);
+                    break;
+                case 2:
+                    Debug.Log("UPGRADE MANAGER LEVEL b " + level);
+                    //Debug.Log("FIX LEVEL Ab " + UpgradeManager2.level2);
+                    UpgradeManager2.level2 = level;
+                    //Debug.Log("FIX LEVEL Bb " + UpgradeManager2.level2);
+                    break;
+                case 3:
+                    UpgradeManager2.level3 = level;
+                    break;
+                case 4:
+                    UpgradeManager2.level4 = level;
+                    break;
+                case 5:
+                    UpgradeManager2.level5 = level;
+                    break;
+                case 6:
+                    UpgradeManager2.level6 = level;
+                    break;
+
+            }*/
+
     }
     protected virtual void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }
     protected virtual void Start()
-    {
+    {        
         sceneLoad.planetScene = false;
         if (!string.IsNullOrEmpty(upgradeName))
         {
             level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
         }
 
+
         new UpgradeBuilder()
-        .WithUnlocks(unlocks)
+        //.WithUnlocks(unlocks)
         .AtLevel(level)
         .Build();
 
         UpdateUI();
     }
 
-    public abstract void ClickAction();
+    public void ClickAction() 
+    {
+        int price = CalculatePrice();
+        bool purchaseSuccess = gameManager.PurchaseAction(price);
+        if (purchaseSuccess) 
+        {
+            level++;
+            GameManager.rotatePoints += level + 1;
+            CheckLevelUnlocks();
+            if (!string.IsNullOrEmpty(upgradeName))
+            {
+                PlayerPrefs.SetInt(upgradeName + "_Level", level);
+                PlayerPrefs.Save();
+            }
+            UpdateUI();
+            gameManager.RefreshUI();
+            
+
+        }
+
+    }
+
+
+
     public abstract void UpdateUI();
+
     protected abstract int CalculatePrice();
+
     public abstract float CalculateIncomePerSecond();
+
     public abstract void AssignGameManager(GameManager gm);
     public abstract void CheckLevelUnlocks();
 }

@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 176567178}
   - component: {fileID: 176567177}
   - component: {fileID: 176567176}
-  - component: {fileID: 176567175}
+  - component: {fileID: 176567180}
   - component: {fileID: 176567179}
   m_Layer: 5
   m_Name: Button (3)
@@ -1161,45 +1161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 277, y: 29}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &176567175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176567173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4629e9805e4689c4eb49f0e5bd3296fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priceText: {fileID: 1778560978}
-  incomeInfoText: {fileID: 1353447331}
-  levelText: {fileID: 1804266320}
-  button: {fileID: 176567176}
-  gameManager: {fileID: 1067373840}
-  startPrice: 20
-  upgradePriceMultiplier: 2
-  cookiesPerUpgrade: 5
-  upgradeName: Carpinteria
-  levelToChange: 2
-  unlocks:
-  - requiredLevel: 1
-    objectToActivate: {fileID: 353610007}
-  - requiredLevel: 5
-    objectToActivate: {fileID: 195497245610789594}
-  - requiredLevel: 10
-    objectToActivate: {fileID: 3776275480617104650}
-  - requiredLevel: 15
-    objectToActivate: {fileID: 1799657021492839182}
-  - requiredLevel: 20
-    objectToActivate: {fileID: 1053441725}
-  - requiredLevel: 25
-    objectToActivate: {fileID: 6490391177164486771}
-  - requiredLevel: 30
-    objectToActivate: {fileID: 1298846368}
-  - requiredLevel: 35
-    objectToActivate: {fileID: 1107699702}
 --- !u!114 &176567176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,7 +1205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 176567175}
+      - m_Target: {fileID: 176567180}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: ClickAction
         m_Mode: 1
@@ -1310,8 +1271,8 @@ MonoBehaviour:
   onHoldAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 176567175}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+      - m_Target: {fileID: 176567180}
+        m_TargetAssemblyTypeName: BasicUpgradeManager, Assembly-CSharp
         m_MethodName: ClickAction
         m_Mode: 1
         m_Arguments:
@@ -1322,6 +1283,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &176567180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176567173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efafb040c5f58074ab40461f311f63f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceText: {fileID: 1778560978}
+  incomeInfoText: {fileID: 1353447331}
+  levelText: {fileID: 1804266320}
+  button: {fileID: 176567176}
+  gameManager: {fileID: 1067373840}
+  startPrice: 20
+  upgradePriceMultiplier: 2
+  cookiesPerUpgrade: 5
+  upgradeName: Carpinteria
+  levelToChange: 2
+  unlocks:
+  - requiredLevel: 1
+    objectToActivate: {fileID: 353610007}
+  - requiredLevel: 5
+    objectToActivate: {fileID: 195497245610789594}
+  - requiredLevel: 10
+    objectToActivate: {fileID: 3776275480617104650}
+  - requiredLevel: 15
+    objectToActivate: {fileID: 1799657021492839182}
+  - requiredLevel: 20
+    objectToActivate: {fileID: 1053441725}
+  - requiredLevel: 25
+    objectToActivate: {fileID: 6490391177164486771}
+  - requiredLevel: 30
+    objectToActivate: {fileID: 1298846368}
+  - requiredLevel: 35
+    objectToActivate: {fileID: 1107699702}
 --- !u!1 &206741143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,7 +4664,7 @@ GameObject:
   - component: {fileID: 745509154}
   - component: {fileID: 745509153}
   - component: {fileID: 745509152}
-  - component: {fileID: 745509151}
+  - component: {fileID: 745509156}
   - component: {fileID: 745509155}
   m_Layer: 5
   m_Name: Button (4)
@@ -4693,43 +4693,6 @@ RectTransform:
   m_AnchoredPosition: {x: 277, y: 29}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &745509151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745509149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4629e9805e4689c4eb49f0e5bd3296fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priceText: {fileID: 94760716}
-  incomeInfoText: {fileID: 1924533468}
-  levelText: {fileID: 388666649}
-  button: {fileID: 745509152}
-  gameManager: {fileID: 1067373840}
-  startPrice: 100
-  upgradePriceMultiplier: 3
-  cookiesPerUpgrade: 10
-  upgradeName: Almacen
-  levelToChange: 0
-  unlocks:
-  - requiredLevel: 1
-    objectToActivate: {fileID: 1318962968356284389}
-  - requiredLevel: 8
-    objectToActivate: {fileID: 1979743761}
-  - requiredLevel: 16
-    objectToActivate: {fileID: 725560025}
-  - requiredLevel: 24
-    objectToActivate: {fileID: 1473852225}
-  - requiredLevel: 32
-    objectToActivate: {fileID: 288504636}
-  - requiredLevel: 40
-    objectToActivate: {fileID: 944316202}
-  - requiredLevel: 48
-    objectToActivate: {fileID: 9094007004786994265}
 --- !u!114 &745509152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4774,7 +4737,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745509151}
+      - m_Target: {fileID: 745509156}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: ClickAction
         m_Mode: 1
@@ -4840,8 +4803,8 @@ MonoBehaviour:
   onHoldAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745509151}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
+      - m_Target: {fileID: 745509156}
+        m_TargetAssemblyTypeName: BasicUpgradeManager, Assembly-CSharp
         m_MethodName: ClickAction
         m_Mode: 1
         m_Arguments:
@@ -4852,6 +4815,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &745509156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745509149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efafb040c5f58074ab40461f311f63f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceText: {fileID: 94760716}
+  incomeInfoText: {fileID: 1924533468}
+  levelText: {fileID: 388666649}
+  button: {fileID: 745509152}
+  gameManager: {fileID: 1067373840}
+  startPrice: 100
+  upgradePriceMultiplier: 3
+  cookiesPerUpgrade: 10
+  upgradeName: Almacen
+  levelToChange: 0
+  unlocks:
+  - requiredLevel: 1
+    objectToActivate: {fileID: 1318962968356284389}
+  - requiredLevel: 8
+    objectToActivate: {fileID: 1979743761}
+  - requiredLevel: 16
+    objectToActivate: {fileID: 725560025}
+  - requiredLevel: 24
+    objectToActivate: {fileID: 1473852225}
+  - requiredLevel: 32
+    objectToActivate: {fileID: 288504636}
+  - requiredLevel: 40
+    objectToActivate: {fileID: 944316202}
+  - requiredLevel: 48
+    objectToActivate: {fileID: 9094007004786994265}
 --- !u!1 &747339531 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
@@ -5424,7 +5424,7 @@ GameObject:
   - component: {fileID: 846632301}
   - component: {fileID: 846632300}
   - component: {fileID: 846632299}
-  - component: {fileID: 846632302}
+  - component: {fileID: 846632304}
   - component: {fileID: 846632303}
   m_Layer: 5
   m_Name: Button (2)
@@ -5497,7 +5497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 846632302}
+      - m_Target: {fileID: 846632304}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: ClickAction
         m_Mode: 1
@@ -5547,7 +5547,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846632297}
   m_CullTransparentMesh: 1
---- !u!114 &846632302
+--- !u!114 &846632303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5556,7 +5556,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 846632297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4629e9805e4689c4eb49f0e5bd3296fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 590f657679e4c5d43b968bd194e38bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdInterval: 0.2
+  onHoldAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 846632304}
+        m_TargetAssemblyTypeName: BasicUpgradeManager, Assembly-CSharp
+        m_MethodName: ClickAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &846632304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846632297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efafb040c5f58074ab40461f311f63f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   priceText: {fileID: 718697720}
@@ -5610,34 +5638,6 @@ MonoBehaviour:
     objectToActivate: {fileID: 1079436081}
   - requiredLevel: 39
     objectToActivate: {fileID: 1143229860}
---- !u!114 &846632303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846632297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590f657679e4c5d43b968bd194e38bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdInterval: 0.2
-  onHoldAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 846632302}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: ClickAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &852897561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
@@ -6601,10 +6601,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorUI: {fileID: 1326109478}
   upgradeManagers:
-  - {fileID: 846632302}
-  - {fileID: 176567175}
-  - {fileID: 745509151}
-  gameManager: {fileID: 0}
+  - {fileID: 846632304}
+  - {fileID: 176567180}
+  - {fileID: 745509156}
+  gameManager: {fileID: 1067373840}
   upgradeManagers2: []
 --- !u!4 &1000001131
 Transform:
@@ -12408,7 +12408,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712458881}
   m_HandleRect: {fileID: 1712458880}
   m_Direction: 2
-  m_Value: 0.4999999
+  m_Value: 0.5
   m_Size: 0.37579757
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15134,17 +15134,17 @@ PrefabInstance:
         type: 3}
       propertyPath: upgradeManagers.Array.data[0]
       value: 
-      objectReference: {fileID: 846632302}
+      objectReference: {fileID: 846632304}
     - target: {fileID: 7917948423067998934, guid: e2c81d9d248aeb443b7296240f0fe5a1,
         type: 3}
       propertyPath: upgradeManagers.Array.data[1]
       value: 
-      objectReference: {fileID: 176567175}
+      objectReference: {fileID: 176567180}
     - target: {fileID: 7917948423067998934, guid: e2c81d9d248aeb443b7296240f0fe5a1,
         type: 3}
       propertyPath: upgradeManagers.Array.data[2]
       value: 
-      objectReference: {fileID: 745509151}
+      objectReference: {fileID: 745509156}
     - target: {fileID: 7917948423067998934, guid: e2c81d9d248aeb443b7296240f0fe5a1,
         type: 3}
       propertyPath: upgrades.Array.data[0].cookiesPerUpgrade
