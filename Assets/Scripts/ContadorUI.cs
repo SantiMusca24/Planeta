@@ -29,12 +29,13 @@ public class ContadorUI : MonoBehaviour
     [SerializeField] private TMP_Text falloText;
     [SerializeField] private float feedbackDuration = 0.7f;
     [Header("Minijuego de madera")]
-    [SerializeField] private TMP_Text cortesText;
-    [SerializeField] private TMP_Text troncosText;
-    [SerializeField] private TMP_Text tiempoText;
-    [SerializeField] private TMP_Text resumenText;
+    [SerializeField] public TMP_Text cortesText;
+    [SerializeField] public TMP_Text troncosText;
+    [SerializeField] public TMP_Text tiempoText;
+    [SerializeField] public TMP_Text resumenText;
     [SerializeField] private GameObject minigamePanel;
     [SerializeField] private GameObject resumenPanel;
+    [SerializeField] public TMP_Text cooldownTimerText;
 
     void Start()
     {
@@ -50,6 +51,8 @@ public class ContadorUI : MonoBehaviour
         if (perfectoText != null) perfectoText.gameObject.SetActive(false);
         if (regularText != null) regularText.gameObject.SetActive(false);
         if (falloText != null) falloText.gameObject.SetActive(false);
+        if (falloText != null) falloText.gameObject.SetActive(false);
+        if (tiempoText != null) tiempoText.gameObject.SetActive(false);
     }
 
     public void UpdateUI()
@@ -150,22 +153,32 @@ public class ContadorUI : MonoBehaviour
 
         Destroy(floatingText.gameObject, 1f);
     }
-    public void ShowPerfectCutFeedback()
+    public enum CutFeedbackType
     {
-        if (perfectoText != null)
-            StartCoroutine(ShowTemporaryText(perfectoText));
+        Perfect,
+        Regular,
+        Fail
     }
 
-    public void ShowRegularCutFeedback()
+    public void ShowCutFeedback(CutFeedbackType type)
     {
-        if (regularText != null)
-            StartCoroutine(ShowTemporaryText(regularText));
-    }
+        TMP_Text feedbackText = null;
 
-    public void ShowFailCutFeedback()
-    {
-        if (falloText != null)
-            StartCoroutine(ShowTemporaryText(falloText));
+        switch (type)
+        {
+            case CutFeedbackType.Perfect:
+                feedbackText = perfectoText;
+                break;
+            case CutFeedbackType.Regular:
+                feedbackText = regularText;
+                break;
+            case CutFeedbackType.Fail:
+                feedbackText = falloText;
+                break;
+        }
+
+        if (feedbackText != null)
+            StartCoroutine(ShowTemporaryText(feedbackText));
     }
 
     private IEnumerator ShowTemporaryText(TMP_Text text)
@@ -174,31 +187,40 @@ public class ContadorUI : MonoBehaviour
         yield return new WaitForSeconds(feedbackDuration);
         text.gameObject.SetActive(false);
     }
-    public void ShowMinigamePanel()
+    public enum MinigamePanelType
     {
-        if (minigamePanel != null) minigamePanel.SetActive(true);
-        if (resumenPanel != null) resumenPanel.SetActive(false);
+        Minigame,
+        Summary
     }
 
-    public void ShowSummaryPanel(string resumen)
+    public void ShowPanel(MinigamePanelType panelType, string resumen = "")
     {
-        if (minigamePanel != null) minigamePanel.SetActive(false);
-        if (resumenPanel != null) resumenPanel.SetActive(true);
-        if (resumenText != null) resumenText.text = resumen;
+        if (minigamePanel != null) minigamePanel.SetActive(panelType == MinigamePanelType.Minigame);
+        if (resumenPanel != null) resumenPanel.SetActive(panelType == MinigamePanelType.Summary);
+
+        if (panelType == MinigamePanelType.Summary && resumenText != null)
+        {
+            resumenText.text = resumen;
+        }
     }
 
-    public void UpdateCutsText(int current, int needed)
+    public void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
     {
-        if (cortesText != null) cortesText.text = $"Cortes: {current}/{needed}";
-    }
+        if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
+            cortesText.text = $"Cortes: {cortes}/{cortesNecesarios}";
 
-    public void UpdateLogsText(int logs)
-    {
-        if (troncosText != null) troncosText.text = $"Troncos: {logs}";
-    }
+        if (troncos.HasValue && troncosText != null)
+            troncosText.text = $"Troncos: {troncos}";
 
-    public void UpdateTimerText(float time)
+        if (tiempo.HasValue && tiempoText != null)
+            tiempoText.text = $"Tiempo: {tiempo.Value:F1}s";
+    }
+    public void OcultarMinigameTextos()
     {
-        if (tiempoText != null) tiempoText.text = $"Tiempo: {time:F1}s";
+        if (tiempoText != null) tiempoText.gameObject.SetActive(false);
+        if (cortesText != null) cortesText.gameObject.SetActive(false);
+        if (troncosText != null) troncosText.gameObject.SetActive(false);
+        if (resumenText!= null) resumenText.gameObject.SetActive(false);
+
     }
 }
