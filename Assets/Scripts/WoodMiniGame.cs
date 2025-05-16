@@ -149,13 +149,13 @@ public class WoodMiniGame : MonoBehaviour
 
         uiManager?.OcultarMinigameTextos2();
 
-        StartCoroutine(ReactivarBotonInicioDespuesDeCooldown(10f));
+        StartCoroutine(BottomCooldowm(10f));
         
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
         
         StartCoroutine(OcultarTextos());
     }
-    private IEnumerator ReactivarBotonInicioDespuesDeCooldown(float segundos)
+    private IEnumerator BottomCooldowm(float segundos)
     {
 
         float t = segundos;
