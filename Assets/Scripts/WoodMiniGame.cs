@@ -15,7 +15,7 @@ public class WoodMiniGame : MonoBehaviour
     private bool increasing = true;
     private int currentCuts = 0;
     private int logsCut = 0;
-    private float gameTimer = 5f;
+    private float gameTimer = 30f;
     private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
     
@@ -36,7 +36,7 @@ public class WoodMiniGame : MonoBehaviour
     {
         if (phase == WoodcutPhase.Cutting)
         {
-            UpdateSlider();
+           // UpdateSlider();
             timer -= Time.deltaTime;
             uiManager?.UpdateMinigameUI(tiempo: timer);
 
@@ -95,18 +95,19 @@ public class WoodMiniGame : MonoBehaviour
 
         float val = precisionSlider.value;
 
-        if (Mathf.Abs(val - 0.55f) < 0.15f)
+        if (Mathf.Abs(val - 0.55f) < 0.1f)
         {
             currentCuts += 2;
             uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
         }
-        else if (Mathf.Abs(val - 0.55f) < 0.30f)
+        else if (Mathf.Abs(val - 0.55f) < 0.25f)
         {
             currentCuts += 1;
             uiManager?.ShowCutFeedback(CutFeedbackType.Regular);
         }
         else
         {
+            currentCuts = Mathf.Max(0, currentCuts - 1);
             uiManager?.ShowCutFeedback(CutFeedbackType.Fail);
         }
 
@@ -136,9 +137,8 @@ public class WoodMiniGame : MonoBehaviour
 
         GameManager.Instance.count += maderaGanada;
 
-        string resumen = $"¡Minijuego terminado!\n" +
-                         $"Troncos cortados: {logsCut}\n" +
-                         $"Madera obtenida: {maderaGanada}";
+        string resumen = 
+                         $"Puntos Obtenidos: {maderaGanada}";
 
         if (uiManager?.resumenText != null)
             uiManager.resumenText.gameObject.SetActive(true);

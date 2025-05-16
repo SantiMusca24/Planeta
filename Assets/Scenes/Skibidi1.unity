@@ -3438,7 +3438,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.90190315
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7184,7 +7184,7 @@ MonoBehaviour:
   minigamePanel: {fileID: 248307746}
   precisionSlider: {fileID: 522251961}
   sliderSpeed: 9.536743
-  cutsNeededPerLog: 5
+  cutsNeededPerLog: 10
   summaryPanel: {fileID: 953018639}
   botton: {fileID: 164325252}
   bottonInicio: {fileID: 1360755611}
@@ -10425,7 +10425,7 @@ PrefabInstance:
     - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
         type: 3}
       propertyPath: feedbackDuration
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
         type: 3}
@@ -11485,7 +11485,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610971574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -13995,7 +13995,7 @@ RectTransform:
   m_GameObject: {fileID: 2038235150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.43111, y: 2.2369204, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 637064761}
@@ -14026,15 +14026,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -14559,7 +14559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089463303}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
