@@ -213,14 +213,21 @@ public class ContadorUI : MonoBehaviour
             troncosText.text = $"Troncos: {troncos}";
 
         if (tiempo.HasValue && tiempoText != null)
-            tiempoText.text = $"Tiempo: {tiempo.Value:F1}s";
+            tiempoText.text = $": {tiempo.Value:F1}s";
     }
     public void OcultarMinigameTextos()
     {
+       
+        if (resumenText!= null) resumenText.gameObject.SetActive(false);
+
+    }
+
+    public void OcultarMinigameTextos2()
+    {
+
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
         if (cortesText != null) cortesText.gameObject.SetActive(false);
         if (troncosText != null) troncosText.gameObject.SetActive(false);
-        if (resumenText!= null) resumenText.gameObject.SetActive(false);
 
     }
 }

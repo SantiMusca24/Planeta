@@ -36,7 +36,7 @@ public class WoodMiniGame : MonoBehaviour
     {
         if (phase == WoodcutPhase.Cutting)
         {
-           // UpdateSlider();
+           UpdateSlider();
             timer -= Time.deltaTime;
             uiManager?.UpdateMinigameUI(tiempo: timer);
 
@@ -56,7 +56,7 @@ public class WoodMiniGame : MonoBehaviour
         currentCuts = 0;
         logsCut = 0;
         timer = gameTimer;
-        sliderSpeed = 2f;
+        sliderSpeed = 1f;
         phase = WoodcutPhase.Cutting;
 
         uiManager?.ShowPanel(MinigamePanelType.Minigame);
@@ -147,7 +147,8 @@ public class WoodMiniGame : MonoBehaviour
         
         bottonInicio.GetComponent<Button>().interactable = false;
 
-        
+        uiManager?.OcultarMinigameTextos2();
+
         StartCoroutine(ReactivarBotonInicioDespuesDeCooldown(10f));
         
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
@@ -165,7 +166,7 @@ public class WoodMiniGame : MonoBehaviour
         while (t > 0)
         {
             if (uiManager != null && uiManager.cooldownTimerText != null)
-                uiManager.cooldownTimerText.text = "Espera: " + Mathf.CeilToInt(t).ToString() + "s";
+                uiManager.cooldownTimerText.text = "" + Mathf.CeilToInt(t).ToString() + "s";
 
             yield return new WaitForSeconds(1f);
             t -= 1f;
