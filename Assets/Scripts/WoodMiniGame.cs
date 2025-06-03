@@ -18,7 +18,8 @@ public class WoodMiniGame : MonoBehaviour
     private float gameTimer = 30f;
     private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
-    
+    private float sliderPauseTimer = 0f;
+
     public GameObject summaryPanel;
     public GameObject botton;
     public GameObject bottonInicio;
@@ -80,6 +81,12 @@ public class WoodMiniGame : MonoBehaviour
 
     void UpdateSlider()
     {
+        if (sliderPauseTimer > 0f)
+        {
+            sliderPauseTimer -= Time.deltaTime;
+            return;
+        }
+
         if (increasing)
             precisionSlider.value += Time.deltaTime * sliderSpeed;
         else
@@ -92,6 +99,9 @@ public class WoodMiniGame : MonoBehaviour
     public void AttemptCut()
     {
         if (phase != WoodcutPhase.Cutting) return;
+
+       
+        if (sliderPauseTimer > 0f) return;
 
         float val = precisionSlider.value;
 
@@ -111,13 +121,16 @@ public class WoodMiniGame : MonoBehaviour
             uiManager?.ShowCutFeedback(CutFeedbackType.Fail);
         }
 
+        
+        sliderPauseTimer = 0.3f;
+
         if (currentCuts >= cutsNeededPerLog)
         {
             logsCut++;
             currentCuts = 0;
             sliderSpeed *= 1.25f;
         }
-        
+
         uiManager?.UpdateMinigameUI(cortes: currentCuts, cortesNecesarios: cutsNeededPerLog);
         uiManager?.UpdateMinigameUI(troncos: logsCut);
 
