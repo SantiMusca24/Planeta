@@ -20,60 +20,61 @@ public class CollectingCoin : MonoBehaviour
     [SerializeField] private float maxX;
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
+
     List<GameObject> coins = new List<GameObject>();
     private Tween coinReactionTween;
-   
-    
-    public async void CollectCoin()
+
+    public void CollectCoin()
     {
         for (int i = 0; i < coins.Count; i++)
         {
             Destroy(coins[i]);
         }
         coins.Clear();
+        StartCoroutine(CollectCoinCoroutine());
+    }
+
+    private IEnumerator CollectCoinCoroutine()
+    {
         for (int i = 0; i < coinAmount; i++)
         {
             GameObject coinInstance = Instantiate(coinPrefab, coinParent);
-            float xPostion = spawnLocation.position.x + Random.Range(minX, maxX);
+            float xPosition = spawnLocation.position.x + Random.Range(minX, maxX);
             float yPosition = spawnLocation.position.y + Random.Range(minY, maxY);
 
-            coinInstance.transform.position = new Vector3(xPostion, yPosition);
-            coinInstance.transform.DOPunchPosition(new Vector3(0, 30, 0), Random.Range(0, 1f)).SetEase(Ease.InOutElastic).ToUniTask();
+            coinInstance.transform.position = new Vector3(xPosition, yPosition);
+            coinInstance.transform.DOPunchPosition(new Vector3(0, 30, 0), Random.Range(0, 1f)).SetEase(Ease.InOutElastic);
             coins.Add(coinInstance);
-            await UniTask.Delay(TimeSpan.FromSeconds(0.01f));
+            yield return new WaitForSeconds(0.01f);
         }
-        await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
-        await MoveCoins();
-       
+
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(MoveCoins());
     }
-    private async UniTask ReactToCollectionCoin()
+
+    private IEnumerator ReactToCollectionCoin()
     {
         if (coinReactionTween == null)
         {
-          coinReactionTween = endPosition.DOPunchScale(new Vector3(0.3f, 0.3f, 0.1f), 0.1f).SetEase(Ease.InOutElastic);
-          await coinReactionTween.ToUniTask();
-          coinReactionTween = null;
-            
+            coinReactionTween = endPosition.DOPunchScale(new Vector3(0.3f, 0.3f, 0.1f), 0.1f).SetEase(Ease.InOutElastic);
+            yield return coinReactionTween.WaitForCompletion();
+            coinReactionTween = null;
         }
-        
     }
-    
-    private async UniTask MoveCoins()
+
+    private IEnumerator MoveCoins()
     {
-        List<UniTask> moveCoinTask = new List<UniTask>();
         for (int i = coins.Count - 1; i >= 0; i--)
         {
-            moveCoinTask.Add(MoveCoinTask(coins[i]));
-            await UniTask.Delay(TimeSpan.FromSeconds(0.05f));
+            StartCoroutine(MoveCoinTask(coins[i]));
+            yield return new WaitForSeconds(0.05f);
         }
-       
     }
-    private async UniTask MoveCoinTask(GameObject coinInstance)
+
+    private IEnumerator MoveCoinTask(GameObject coinInstance)
     {
-        await coinInstance.transform.DOMove(endPosition.position, duration).SetEase(Ease.InBack).ToUniTask();
-        GameObject temp = coinInstance;
-        Destroy(temp);
-        ReactToCollectionCoin();
+        yield return coinInstance.transform.DOMove(endPosition.position, duration).SetEase(Ease.InBack).WaitForCompletion();
+        Destroy(coinInstance);
+        StartCoroutine(ReactToCollectionCoin());
     }
-   
 }
