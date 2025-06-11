@@ -15,7 +15,7 @@ public class WoodMiniGame : MonoBehaviour
     private bool increasing = true;
     private int currentCuts = 0;
     private int logsCut = 0;
-    private float gameTimer = 30f;
+    private float gameTimer = 10f;
     private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
     private float sliderPauseTimer = 0f;
@@ -25,7 +25,8 @@ public class WoodMiniGame : MonoBehaviour
     public GameObject bottonInicio;
 
     public ContadorUI uiManager;
-    
+    [SerializeField] private CollectingCoin coinCollector;
+
     private void Start()
     {
        minigamePanel.SetActive(false);
@@ -148,7 +149,7 @@ public class WoodMiniGame : MonoBehaviour
         
         int maderaGanada = Mathf.RoundToInt(logsCut * 100 * incomePerSecond);
 
-        GameManager.Instance.count += maderaGanada;
+        
 
         string resumen = 
                          $"Puntos Obtenidos: {maderaGanada}";
@@ -167,6 +168,11 @@ public class WoodMiniGame : MonoBehaviour
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
         
         StartCoroutine(OcultarTextos());
+        if (maderaGanada > 0)
+        {
+           coinCollector.CollectCoin();
+            StartCoroutine(SumarPuntosExponencialmente(maderaGanada));
+        }
     }
     private IEnumerator BottomCooldowm(float segundos)
     {
@@ -196,6 +202,29 @@ public class WoodMiniGame : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         uiManager?.OcultarMinigameTextos();
+    }
+    private IEnumerator SumarPuntosExponencialmente(int totalPuntos)
+    {
+        yield return new WaitForSeconds(2.5f); 
+
+    int puntosActuales = 0;
+    float delay = 0.05f;
+
+    float valorInicial = GameManager.Instance.count;
+
+    while (puntosActuales < totalPuntos)
+    {
+        
+        int incremento = Mathf.Max(1, Mathf.RoundToInt((totalPuntos - puntosActuales) * 0.15f));
+        puntosActuales += incremento;
+
+        if (puntosActuales > totalPuntos)
+            puntosActuales = totalPuntos;
+
+        GameManager.Instance.count = valorInicial + puntosActuales;
+
+        yield return new WaitForSeconds(delay);
+    }
     }
     public enum WoodcutPhase
     {
