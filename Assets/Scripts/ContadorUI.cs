@@ -59,12 +59,12 @@ public class ContadorUI : MonoBehaviour
     {
         if (countText != null)
         {
-            int currentPoints = Mathf.RoundToInt(GameManager.Instance.count);
-            countText.text = currentPoints.ToString();
+            double currentPoints = GameManager.Instance.count;
+            countText.text = AbreviateNumber.Format(currentPoints);
 
             if (GoalText != null)
             {
-                GoalText.text = "Puntos: " + currentPoints + " / " + goalPoints;
+                GoalText.text = "Puntos: " + AbreviateNumber.Format(currentPoints) + " / " + AbreviateNumber.Format(goalPoints);
 
                 if (currentPoints >= goalPoints)
                 {
@@ -80,7 +80,7 @@ public class ContadorUI : MonoBehaviour
         if (incomePerSecondText != null)
         {
             float incomePerSecond = GameManager.Instance.GetIncomePerSecond();
-            incomePerSecondText.text = Mathf.Round(incomePerSecond).ToString() + " /s";
+            incomePerSecondText.text = AbreviateNumber.Format(incomePerSecond) + " /s";
         }
 
         
@@ -118,7 +118,7 @@ public class ContadorUI : MonoBehaviour
             {
                 GoalText2.gameObject.SetActive(true);
                 int currentPoints = Mathf.RoundToInt(GameManager.Instance.count);
-                GoalText2.text =  currentPoints + " / " + goalPoints2;
+                GoalText2.text = AbreviateNumber.Format(currentPoints) + " / " + AbreviateNumber.Format(goalPoints2);
                 GoalText2.color = (currentPoints >= goalPoints2) ? Color.green : Color.white;
             }
 
@@ -131,7 +131,7 @@ public class ContadorUI : MonoBehaviour
             }
         }
     }
-    public void SpawnFloatingText(int amount)
+    public void SpawnFloatingText(double amount)
     {
         Vector3 randomOffset = new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
 
@@ -140,8 +140,8 @@ public class ContadorUI : MonoBehaviour
         
         floatingText.rectTransform.anchoredPosition = randomOffset;
 
-       
-        floatingText.text = "+" + amount.ToString();
+
+        floatingText.text = "+" + AbreviateNumber.Format(amount);
         floatingText.color = Color.green;
 
         
