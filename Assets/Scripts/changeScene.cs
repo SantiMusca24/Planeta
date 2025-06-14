@@ -53,9 +53,9 @@ public class changeScene : MonoBehaviour
         }
 
         
-        transition.SetTrigger("Start");
+        //transition.SetTrigger("Start");
         
-        extraAnimation.SetTrigger("Play");
+        //extraAnimation.SetTrigger("Play");
         
 
         yield return new WaitForSeconds(transitionTime);
