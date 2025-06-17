@@ -11,6 +11,10 @@ public class BasicUpgradeManager : UpgradeManager
         bool purchaseSuccess = gameManager.PurchaseAction(price);
         if (purchaseSuccess)
         {
+            if (audioManager != null)
+                audioManager.Play("Coin");
+            if (audioManager != null)
+                audioManager.Play("Music");
             level++;
             GameManager.rotatePoints += level + 1;
             CheckLevelUnlocks();

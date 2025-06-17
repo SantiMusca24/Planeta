@@ -13,6 +13,7 @@ public abstract class UpgradeManager : MonoBehaviour
     public Button button;
     [Header("Managers")]
     public GameManager gameManager;
+    public AudioManager audioManager;
 
     [Header("Values")]
     public int startPrice = 15;
@@ -70,6 +71,7 @@ public abstract class UpgradeManager : MonoBehaviour
         {
             level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
         }
+        audioManager = FindObjectOfType<AudioManager>();
 
         new UpgradeBuilder()
         .WithUnlocks(unlocks)

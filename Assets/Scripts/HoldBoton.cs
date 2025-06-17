@@ -7,14 +7,21 @@ using UnityEngine.EventSystems;
 public class HoldBoton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
 
-    [Tooltip("Tiempo entre acciones mientras el botón está presionado.")]
-    public float holdInterval = 0.2f;
+    [Tooltip("Tiempo base entre acciones mientras el botón está presionado.")]
+    public float initialHoldInterval = 0.3f;
+
+    [Tooltip("Mínimo intervalo que puede alcanzar la aceleración.")]
+    public float minHoldInterval = 0.05f;
+
+    [Tooltip("Cuánto disminuye el intervalo por segundo mientras se mantiene presionado.")]
+    public float accelerationRate = 0.05f;
 
     [Tooltip("Acción a ejecutar cada vez que se activa el intervalo.")]
     public UnityEvent onHoldAction;
 
     private bool isHeld = false;
     private float timer = 0f;
+    private float currentHoldInterval;
 
     private void Update()
     {
@@ -23,15 +30,19 @@ public class HoldBoton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            timer = holdInterval;
+            timer = currentHoldInterval;
             onHoldAction?.Invoke();
+
+            
+            currentHoldInterval = Mathf.Max(minHoldInterval, currentHoldInterval - accelerationRate * Time.deltaTime);
         }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         isHeld = true;
-        timer = 0f; 
+        currentHoldInterval = initialHoldInterval;
+        timer = 0.3f; 
     }
 
     public void OnPointerUp(PointerEventData eventData)
