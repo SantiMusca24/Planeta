@@ -8,6 +8,7 @@ public class ConfigManager : MonoBehaviour
     public Button musicButton;
     public Button sfxButton;
     private AudioManager audioManager;
+    public GameObject configCanvas;
 
     private void Start()
     {
@@ -65,5 +66,9 @@ public class ConfigManager : MonoBehaviour
             if (s.isSFX)
                 s.source.mute = mute;
         }
+    }
+    public void ToggleConfigCanvas()
+    {
+        configCanvas.SetActive(!configCanvas.activeSelf);
     }
 }
