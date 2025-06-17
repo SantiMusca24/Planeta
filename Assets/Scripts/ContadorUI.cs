@@ -204,6 +204,18 @@ public class ContadorUI : MonoBehaviour
         }
     }
 
+    public void FishMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
+    {
+        if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
+            cortesText.text = $"Peces: {cortes}/{cortesNecesarios}";
+
+        if (troncos.HasValue && troncosText != null)
+            troncosText.text = $"Barriles: {troncos}";
+
+        if (tiempo.HasValue && tiempoText != null)
+            tiempoText.text = $": {tiempo.Value:F1}s";
+    }
+
     public void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
     {
         if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
