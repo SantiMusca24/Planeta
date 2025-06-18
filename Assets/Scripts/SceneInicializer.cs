@@ -13,7 +13,7 @@ public class SceneInicializer : MonoBehaviour
 
     void Start()
     {
-        
+        Debug.Log("skibi");
         GameManager.Instance.SetUIManager(contadorUI); 
         GameManager.Instance.RefreshUI();
         GameManager.Instance.RefreshUpgradeManagers();

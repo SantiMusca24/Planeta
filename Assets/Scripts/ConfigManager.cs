@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ConfigManager : MonoBehaviour
@@ -9,7 +11,9 @@ public class ConfigManager : MonoBehaviour
     public Button sfxButton;
     private AudioManager audioManager;
     public GameObject configCanvas;
-
+    public GameObject cache;
+    [SerializeField] private Button yesButton;
+    [SerializeField] private Button noButton;
     private void Start()
     {
        
@@ -22,6 +26,7 @@ public class ConfigManager : MonoBehaviour
 
         musicButton.onClick.AddListener(ToggleMusic);
         sfxButton.onClick.AddListener(ToggleSFX);
+        cache.SetActive(false);
     }
     public void SetCalidadAlta() => SetQuality(2);
     public void SetCalidadMedia() => SetQuality(1);
@@ -69,6 +74,46 @@ public class ConfigManager : MonoBehaviour
     }
     public void ToggleConfigCanvas()
     {
+        if (cache.activeSelf)
+            cache.SetActive(false);
+
         configCanvas.SetActive(!configCanvas.activeSelf);
     }
+    public void ResetGameData()
+    {
+        PlayerPrefs.DeleteAll();
+
+        GameManager.Instance.count = 0;
+        PlayerPrefs.SetFloat("Count", 0f);
+        PlayerPrefs.SetInt("GraphicQuality", 1); 
+        PlayerPrefs.SetInt("MusicMuted", 0);
+        PlayerPrefs.SetInt("SFXMuted", 0);
+        PlayerPrefs.Save();
+
+
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void AskResetConfirmation()
+    {
+        configCanvas.SetActive(false);
+        cache.SetActive(true);
+
+        yesButton.onClick.RemoveAllListeners();
+        noButton.onClick.RemoveAllListeners();
+
+        yesButton.onClick.AddListener(() =>
+        {
+            cache.SetActive(false);
+            GameManager.Instance.ResetPlayerPrefs();
+            
+        });
+
+        noButton.onClick.AddListener(() =>
+        {
+            cache.SetActive(false);
+            configCanvas.SetActive(true); 
+        });
+    }
+
+   
 }

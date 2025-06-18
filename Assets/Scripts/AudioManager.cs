@@ -7,8 +7,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
-     void Awake()
+    [SerializeField] private AudioManager audioManager;
+    void Awake()
     {
         foreach (Sound s in sounds)
         {
@@ -29,7 +29,10 @@ public class AudioManager : MonoBehaviour
                 s.source.mute = sfxMuted;
         }
     }
-
+    private void Start()
+    {
+        audioManager.Play("Music");
+    }
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
