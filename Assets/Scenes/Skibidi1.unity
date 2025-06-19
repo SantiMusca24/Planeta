@@ -3503,7 +3503,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 193474891}
-  distance: 10
   xSpeed: 500
   ySpeed: 500
   yMinLimit: 20
@@ -3514,6 +3513,9 @@ MonoBehaviour:
   initialXAngle: 10
   initialYAngle: 20
   initialDistance: 10
+  useSmoothRotation: 1
+  positionSmoothTime: 0.15
+  rotationSmoothTime: 0.1
 --- !u!1 &388666648
 GameObject:
   m_ObjectHideFlags: 0
