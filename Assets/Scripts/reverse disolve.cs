@@ -10,9 +10,9 @@ public class reversedisolve : MonoBehaviour
     [SerializeField] private Vector3 minScale = new Vector3(0.5f, 0.5f, 0.5f);
     [SerializeField] private Vector3 maxScale = new Vector3(1f, 1f, 1f);
 
-    private void Start()
+    public void OnEnable()
     {
-        
+        Debug.Log("llamada");
         Vector3 startPos = transform.localPosition;
         startPos.y = minY;
         transform.localPosition = startPos;
