@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ContadorUI : MonoBehaviour
 {
     [SerializeField] TMP_Text countText;
+    [SerializeField] TMP_Text gemsText;
     [SerializeField] TMP_Text incomePerSecondText;
     [SerializeField] TMP_Text GoalText;
     [SerializeField] private int goalPoints = 1000;
@@ -76,7 +77,11 @@ public class ContadorUI : MonoBehaviour
                 }
             }
         }
-
+        if (gemsText != null)
+        {
+            double currentPoints = GameManager.Instance.gems;
+            gemsText.text = AbreviateNumber.Format(currentPoints);
+        }
         if (incomePerSecondText != null)
         {
             float incomePerSecond = GameManager.Instance.GetIncomePerSecond();

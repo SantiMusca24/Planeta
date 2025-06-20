@@ -8,6 +8,7 @@ public abstract class GameManager : MonoBehaviour
 {
     static public bool tapped = false;
     public float count = 0;
+    public float gems = 0;
     protected float nextTimeCheck = 1;
 
     public static GameManager Instance;
@@ -32,6 +33,7 @@ public abstract class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         count = PlayerPrefs.GetFloat("Count", 0f);
+        gems = PlayerPrefs.GetFloat("Gems", 0f);
     }
      void Update()
     {

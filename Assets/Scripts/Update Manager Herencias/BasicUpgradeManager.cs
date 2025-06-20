@@ -11,6 +11,7 @@ public class BasicUpgradeManager : UpgradeManager
         bool purchaseSuccess = gameManager.PurchaseAction(price);
         if (purchaseSuccess)
         {
+            levelPublic = level;
             if (audioManager != null)
                 audioManager.Play("Coin");
             level++;

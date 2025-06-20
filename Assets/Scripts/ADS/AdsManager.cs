@@ -10,8 +10,8 @@ public class AdsManager : MonoBehaviour
     public bool canUse;
     [SerializeField] RewardedAd _myRewardedAd;
     [SerializeField] InterstitialAd interstitialAd;
-    [SerializeField] BannerAd bannerAd;
-    
+    [SerializeField] public BannerAd bannerAd;
+    [SerializeField] public static bool adsAllowed = true;
 
 
     void Awake()
@@ -46,20 +46,23 @@ public class AdsManager : MonoBehaviour
     
     public void ShowInterstitialAd()
     {
-        interstitialAd.ShowInterstitialAd();
+        if (adsAllowed) interstitialAd.ShowInterstitialAd();
     }
 
     IEnumerator ShowBannerAd()
     {
-        while (true)
+        if (adsAllowed)
         {
-            bannerAd.LoadBannerAd();
-            yield return new WaitForSeconds(5);
-            bannerAd.ShowBannerAd();
-            yield return new WaitForSeconds(30);
-            bannerAd.HideBannerAd();
-            yield return new WaitForSeconds(30);
-
+            while (true)
+            {
+                bannerAd.LoadBannerAd();
+                yield return new WaitForSeconds(5);
+                bannerAd.ShowBannerAd();
+                yield return new WaitForSeconds(30);
+                bannerAd.HideBannerAd();
+                yield return new WaitForSeconds(30);
+            }
         }
+            
     }
 }

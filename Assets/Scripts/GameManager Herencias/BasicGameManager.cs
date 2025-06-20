@@ -69,6 +69,7 @@ public class BasicGameManager : GameManager
         PlayerPrefs.Save();
 
         count = 0;
+        gems = 0;
         uiManager.UpdateUI();
     }
 
@@ -83,6 +84,7 @@ public class BasicGameManager : GameManager
     public override void SaveProgress()
     {
         PlayerPrefs.SetFloat("Count", count);
+        PlayerPrefs.SetFloat("Gems", gems);
         PlayerPrefs.Save();
     }
 

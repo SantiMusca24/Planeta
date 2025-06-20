@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public abstract class UpgradeManager : MonoBehaviour
 {
+    //public static UpgradeManager Instance;
     [Header("Comoponents")]
     public TMP_Text priceText;
     public TMP_Text incomeInfoText;
@@ -26,6 +27,7 @@ public abstract class UpgradeManager : MonoBehaviour
     public List<LevelUnlockObject> unlocks = new List<LevelUnlockObject>();
 
     protected int level = 0;
+    public static int levelPublic;
 
     [System.Serializable]
     public class LevelUnlockObject
@@ -66,6 +68,7 @@ public abstract class UpgradeManager : MonoBehaviour
     }
     protected virtual void Start()
     {
+        levelPublic = level;
         sceneLoad.planetScene = false;
         if (!string.IsNullOrEmpty(upgradeName))
         {

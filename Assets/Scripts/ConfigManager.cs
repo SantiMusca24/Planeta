@@ -12,6 +12,7 @@ public class ConfigManager : MonoBehaviour
     private AudioManager audioManager;
     public GameObject configCanvas;
     public GameObject cache;
+    public GameObject storeMenu;
     [SerializeField] private Button yesButton;
     [SerializeField] private Button noButton;
     private void Start()
@@ -74,10 +75,16 @@ public class ConfigManager : MonoBehaviour
     }
     public void ToggleConfigCanvas()
     {
+        if (storeMenu.activeSelf) storeMenu.SetActive(false);
         if (cache.activeSelf)
             cache.SetActive(false);
 
         configCanvas.SetActive(!configCanvas.activeSelf);
+    }
+    public void OpenStore()
+    {
+        ToggleConfigCanvas();
+        storeMenu.SetActive(true);        
     }
     public void ResetGameData()
     {
