@@ -11,6 +11,8 @@ public class FishUpgradeManager : UpgradeManager
         bool purchaseSuccess = gameManager.PurchaseAction(price);
         if (purchaseSuccess)
         {
+            if (audioManager != null)
+                audioManager.Play("Coin");
             level++;
             GameManager.rotatePoints += level + 1;
             CheckLevelUnlocks();
