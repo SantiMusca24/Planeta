@@ -75,7 +75,7 @@ public class CamaraRotation : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(y, x, 0);
         Vector3 desiredPosition = targetRotation * new Vector3(0, 0, -distance) + target.position;
 
-        // Posición (siempre suavizada, a menos que sea instant)
+        
         if (instant)
         {
             transform.position = desiredPosition;
