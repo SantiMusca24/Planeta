@@ -36,6 +36,14 @@ public class CamaraRotation : MonoBehaviour
 
     private Vector3 currentVelocity;
     private Quaternion currentRotation;
+    [Header("UI Control")]
+    public GameObject[] blockingCanvases; 
+    public Canvas mainUI;
+
+    [Header("UI Panel que bloquea")]
+    public RectTransform blockingPanel;
+    public Vector2 panelOnScreenPosition;
+    public float panelThreshold = 5f;
 
     void Start()
     {
@@ -56,6 +64,8 @@ public class CamaraRotation : MonoBehaviour
     void LateUpdate()
     {
         if (target == null) return;
+
+        if (IsCameraBlockedByUI()) return; 
 
         if (Input.GetMouseButton(0))
         {
@@ -98,4 +108,24 @@ public class CamaraRotation : MonoBehaviour
             }
         }
     }
+    private bool IsCameraBlockedByUI()
+    {
+
+        foreach (GameObject canvas in blockingCanvases)
+        {
+            if (canvas != null && canvas.gameObject.activeInHierarchy)
+                return true;
+        }
+
+        
+        if (blockingPanel != null)
+        {
+            float distance = Vector2.Distance(blockingPanel.anchoredPosition, panelOnScreenPosition);
+            if (distance < panelThreshold)
+                return true;
+        }
+
+        return false;
+    }
+
 }
