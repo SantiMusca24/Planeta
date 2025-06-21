@@ -40,14 +40,20 @@ public abstract class UpgradeManager : MonoBehaviour
         if (levelToChange == 1)
         {
             UpgradeManager2.level1 = level;
+            PlayerPrefs.SetInt("A" + "_Level", UpgradeManager2.level1);
+            PlayerPrefs.Save();
         }
         else if (levelToChange == 2)
         {
             UpgradeManager2.level2 = level;
+            PlayerPrefs.SetInt("B" + "_Level", UpgradeManager2.level2);
+            PlayerPrefs.Save();
         }
         else if (levelToChange == 3)
         {
             UpgradeManager2.level3 = level;
+            PlayerPrefs.SetInt("C" + "_Level", UpgradeManager2.level3);
+            PlayerPrefs.Save();
         }
         else if (levelToChange == 4)
         {

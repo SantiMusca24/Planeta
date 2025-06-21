@@ -14,8 +14,22 @@ public class BasicUpgradeManager2 : UpgradeManager2
             CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {
-                PlayerPrefs.SetInt(upgradeName + "_Level", level1);
-                PlayerPrefs.Save();
+                if (thisLevel == 1)
+                {
+                    PlayerPrefs.SetInt(upgradeName + "_Level", level1);
+                    PlayerPrefs.Save();
+                }
+                else if (thisLevel == 2)
+                {
+                    PlayerPrefs.SetInt(upgradeName + "_Level", level2);
+                    PlayerPrefs.Save();
+                }
+                else if (thisLevel == 3)
+                {
+                    PlayerPrefs.SetInt(upgradeName + "_Level", level3);
+                    PlayerPrefs.Save();
+                }
+
             }
             gameManager.RefreshUI();
 

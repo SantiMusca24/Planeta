@@ -37,8 +37,8 @@ public abstract class GameManager : MonoBehaviour
     }
      void Update()
     {
-        if (BasicUpgradeManager.levelForest >= 1) rotatePoints = (UpgradeManager2.level1 + 1) * (UpgradeManager2.level2 + 1) * (UpgradeManager2.level3 + 1);
-        else rotatePoints = 1;
+        rotatePoints = (UpgradeManager2.level1 + 1) * (UpgradeManager2.level2 + 1) * (UpgradeManager2.level3 + 1);
+        
 
         if (tapped)
         {

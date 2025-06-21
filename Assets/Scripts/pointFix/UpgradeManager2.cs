@@ -34,7 +34,12 @@ public abstract class UpgradeManager2 : MonoBehaviour
         //DontDestroyOnLoad(this.gameObject);
         if (!string.IsNullOrEmpty(upgradeName))
         {
-            level1 = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
+            level1 = PlayerPrefs.GetInt("A" + "_Level", 0);
+            Debug.Log("level1: " + level1);
+            level2 = PlayerPrefs.GetInt("B" + "_Level", 0);
+            Debug.Log("level2: " + level2);
+            level3 = PlayerPrefs.GetInt("C" + "_Level", 0);
+            Debug.Log("level3: " + level3);
         }
 
         
