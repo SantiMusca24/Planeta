@@ -15,7 +15,7 @@ public class ConfigManager : MonoBehaviour
     public GameObject storeMenu;
     [SerializeField] private Button yesButton;
     [SerializeField] private Button noButton;
-    
+    public static bool canEqualize = true;
     private void Start()
     {
        
@@ -93,16 +93,22 @@ public class ConfigManager : MonoBehaviour
     }
     public void ResetGameData()
     {
+        canEqualize = false;
         PlayerPrefs.DeleteAll();
-
+        
         GameManager.Instance.count = 0;
         PlayerPrefs.SetFloat("Count", 0f);
         PlayerPrefs.SetInt("GraphicQuality", 1); 
         PlayerPrefs.SetInt("MusicMuted", 0);
         PlayerPrefs.SetInt("SFXMuted", 0);
+        PlayerPrefs.SetInt("A" + "_Level", 0);
+        PlayerPrefs.SetInt("B" + "_Level", 0);
+        PlayerPrefs.SetInt("C" + "_Level", 0);
         PlayerPrefs.Save();
 
-
+        UpgradeManager2.level1 = 0;
+        UpgradeManager2.level2 = 0;
+        UpgradeManager2.level3 = 0;
         SceneManager.LoadScene("SampleScene");
     }
     public void AskResetConfirmation()
@@ -116,6 +122,9 @@ public class ConfigManager : MonoBehaviour
         yesButton.onClick.AddListener(() =>
         {
             cache.SetActive(false);
+            UpgradeManager2.level1 = 0;
+            UpgradeManager2.level2 = 0;
+            UpgradeManager2.level3 = 0;
             GameManager.Instance.ResetPlayerPrefs();
             
         });

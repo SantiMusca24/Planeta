@@ -70,6 +70,12 @@ public class BasicGameManager : GameManager
 
         count = 0;
         gems = 0;
+        PlayerPrefs.SetInt("A" + "_Level", 0);
+        PlayerPrefs.SetInt("B" + "_Level", 0);
+        PlayerPrefs.SetInt("C" + "_Level", 0);
+        UpgradeManager2.level1 = 0;
+        UpgradeManager2.level2 = 0;
+        UpgradeManager2.level3 = 0;
         uiManager.UpdateUI();
     }
 

@@ -37,6 +37,63 @@ public abstract class UpgradeManager : MonoBehaviour
     }
     protected virtual void Update()
     {
+        if (ConfigManager.canEqualize)
+        {
+            if (levelToChange == 1)
+            {
+                UpgradeManager2.level1 = level;
+                PlayerPrefs.SetInt("A" + "_Level", UpgradeManager2.level1);
+                PlayerPrefs.Save();
+            }
+            else if (levelToChange == 2)
+            {
+                UpgradeManager2.level2 = level;
+                PlayerPrefs.SetInt("B" + "_Level", UpgradeManager2.level2);
+                PlayerPrefs.Save();
+            }
+            else if (levelToChange == 3)
+            {
+                UpgradeManager2.level3 = level;
+                PlayerPrefs.SetInt("C" + "_Level", UpgradeManager2.level3);
+                PlayerPrefs.Save();
+            }
+            else if (levelToChange == 4)
+            {
+                UpgradeManager2.level4 = level;
+            }
+            else if (levelToChange == 5)
+            {
+                UpgradeManager2.level5 = level;
+            }
+            else if (levelToChange == 6)
+            {
+                UpgradeManager2.level6 = level;
+            }
+        }        
+    }
+    protected virtual void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+    protected virtual void Start()
+    {
+        levelPublic = level;
+        sceneLoad.planetScene = false;
+        if (!string.IsNullOrEmpty(upgradeName))
+        {
+            level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
+        }
+        audioManager = FindObjectOfType<AudioManager>();
+
+        new UpgradeBuilder()
+        .WithUnlocks(unlocks)
+        .AtLevel(level)
+        .Build();
+
+        UpdateUI();
+    }
+    /*public void Equalize()
+    {
         if (levelToChange == 1)
         {
             UpgradeManager2.level1 = level;
@@ -67,29 +124,7 @@ public abstract class UpgradeManager : MonoBehaviour
         {
             UpgradeManager2.level6 = level;
         }
-    }
-    protected virtual void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-    protected virtual void Start()
-    {
-        levelPublic = level;
-        sceneLoad.planetScene = false;
-        if (!string.IsNullOrEmpty(upgradeName))
-        {
-            level = PlayerPrefs.GetInt(upgradeName + "_Level", 0);
-        }
-        audioManager = FindObjectOfType<AudioManager>();
-
-        new UpgradeBuilder()
-        .WithUnlocks(unlocks)
-        .AtLevel(level)
-        .Build();
-
-        UpdateUI();
-    }
-
+    }*/
     public abstract void ClickAction();
     public abstract void UpdateUI();
     protected abstract int CalculatePrice();

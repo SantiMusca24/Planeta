@@ -21,6 +21,8 @@ public abstract class UpgradeManager2 : MonoBehaviour
 
     [SerializeField] protected int thisLevel;
 
+    //public static bool reset = false;
+
     static public int level1 = 0, level2 = 0, level3 = 0, level4 = 0, level5 = 0, level6 = 0;
 
     [System.Serializable]
@@ -31,15 +33,17 @@ public abstract class UpgradeManager2 : MonoBehaviour
     }
     private void Start()
     {
+
+        //UpgradeManager.Instance.Equalize(
         //DontDestroyOnLoad(this.gameObject);
         if (!string.IsNullOrEmpty(upgradeName))
         {
             level1 = PlayerPrefs.GetInt("A" + "_Level", 0);
-            Debug.Log("level1: " + level1);
+            //Debug.Log("level1: " + level1);
             level2 = PlayerPrefs.GetInt("B" + "_Level", 0);
-            Debug.Log("level2: " + level2);
+            //Debug.Log("level2: " + level2);
             level3 = PlayerPrefs.GetInt("C" + "_Level", 0);
-            Debug.Log("level3: " + level3);
+            //Debug.Log("level3: " + level3);
         }
 
         
@@ -50,6 +54,10 @@ public abstract class UpgradeManager2 : MonoBehaviour
                 unlock.objectToActivate.SetActive(level1 >= unlock.requiredLevel);
             }
         }*/
+    }
+    private void Update()
+    {
+        ConfigManager.canEqualize = true;
     }
 
     private void Awake()
