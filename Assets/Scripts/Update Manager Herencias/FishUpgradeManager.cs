@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class FishUpgradeManager : UpgradeManager
 {
-
+    static public int levelFish;
+    new void Update()
+    {
+        base.Update();
+        levelFish = level;
+    }
     public override void ClickAction()
     {
         int price = CalculatePrice();
@@ -14,7 +19,7 @@ public class FishUpgradeManager : UpgradeManager
             if (audioManager != null)
                 audioManager.Play("Coin");
             level++;
-            GameManager.rotatePoints += level + 1;
+            //GameManager.rotatePoints += level + 1;
             CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {

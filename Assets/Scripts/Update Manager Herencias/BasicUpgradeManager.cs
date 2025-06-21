@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class BasicUpgradeManager : UpgradeManager
 {
-
+    static public int levelForest;
+    new void Update()
+    {
+        base.Update();
+        levelForest = level;
+        Debug.Log("level: " + level + ". rotatePoints: " + GameManager.rotatePoints);
+    }
     public override void ClickAction()
     {
         int price = CalculatePrice();
@@ -15,7 +21,6 @@ public class BasicUpgradeManager : UpgradeManager
             if (audioManager != null)
                 audioManager.Play("Coin");
             level++;
-            GameManager.rotatePoints += level + 1;
             CheckLevelUnlocks();
             if (!string.IsNullOrEmpty(upgradeName))
             {
