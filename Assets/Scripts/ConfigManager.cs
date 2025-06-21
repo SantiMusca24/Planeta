@@ -15,6 +15,7 @@ public class ConfigManager : MonoBehaviour
     public GameObject storeMenu;
     [SerializeField] private Button yesButton;
     [SerializeField] private Button noButton;
+    
     private void Start()
     {
        
@@ -24,6 +25,10 @@ public class ConfigManager : MonoBehaviour
 
         UpdateMusicMute(PlayerPrefs.GetInt("MusicMuted", 0) == 1);
         UpdateSFXMute(PlayerPrefs.GetInt("SFXMuted", 0) == 1);
+        foreach (Button btn in GetComponentsInChildren<Button>(true))
+        {
+            btn.onClick.AddListener(() => audioManager.Play("ButtonClick"));
+        }
 
         musicButton.onClick.AddListener(ToggleMusic);
         sfxButton.onClick.AddListener(ToggleSFX);
