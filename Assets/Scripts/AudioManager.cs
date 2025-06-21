@@ -31,7 +31,12 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        audioManager.Play("Music");
+        Sound music = Array.Find(sounds, s => s.name == "Music");
+        if (music != null)
+        {
+            music.source.Play();
+            music.source.mute = PlayerPrefs.GetInt("MusicMuted", 0) == 1;
+        }
     }
     public void Play (string name)
     {
@@ -42,7 +47,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if (!s.source.mute)
-            s.source.Play();
+       
+        s.source.Play();
     }
 }
