@@ -1334,12 +1334,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 164325252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f49e0353c636914985bedaba33fc2b0, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a686745cfb01748bf5f02547f3ba4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  animateOnEnable: 1
+  animateOnClick: 0
+  appearDuration: 0.5
   startScale: {x: 0.5, y: 0.5, z: 0.5}
-  easeType: 27
+  appearEase: 27
+  pressedScale: 1.1
+  clickDuration: 0.1
+  clickEase: 6
 --- !u!1 &168503164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,12 +4510,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 522251960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f49e0353c636914985bedaba33fc2b0, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a686745cfb01748bf5f02547f3ba4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  animateOnEnable: 1
+  animateOnClick: 0
+  appearDuration: 0.5
   startScale: {x: 0.5, y: 0.5, z: 0.5}
-  easeType: 27
+  appearEase: 27
+  pressedScale: 1.1
+  clickDuration: 0.1
+  clickEase: 6
 --- !u!1 &529645510
 GameObject:
   m_ObjectHideFlags: 0
@@ -24267,12 +24277,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3020150672826524290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f49e0353c636914985bedaba33fc2b0, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a686745cfb01748bf5f02547f3ba4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  animateOnEnable: 1
+  animateOnClick: 0
+  appearDuration: 0.5
   startScale: {x: 0.5, y: 0.5, z: 0.5}
-  easeType: 27
+  appearEase: 27
+  pressedScale: 1.1
+  clickDuration: 0.1
+  clickEase: 6
 --- !u!23 &4586305894274384381
 MeshRenderer:
   m_ObjectHideFlags: 0
