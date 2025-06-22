@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 
 public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
-{   
-
+{
+    [SerializeField] private GameObject imagen1;
+    [SerializeField] private GameObject imagen2;
+    [SerializeField] private float rewardAmount = 10000f;
     [SerializeField] string _androidRewarded = "Rewarded_Android";
     //[SerializeField] string _iOSId = "5876854";
     //string _actualGameIdInUse;
@@ -60,9 +62,15 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
             if (showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
             {
                 // PREFERIBLE HACER UN SINGLETON PARA LA RECOMPENSA
+                imagen1.SetActive(true);
+                
                 Debug.Log("RECOMPENSA FULL");
             }
             if (showCompletionState.Equals(UnityAdsCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
+            imagen2.SetActive(true);
+            GameManager.Instance.count += rewardAmount;
+            PlayerPrefs.SetFloat("Count", GameManager.Instance.count);
+            PlayerPrefs.Save();
             if (showCompletionState.Equals(UnityAdsCompletionState.UNKNOWN)) Debug.Log("ALGO SALIÓ MAL");
         }
     }
