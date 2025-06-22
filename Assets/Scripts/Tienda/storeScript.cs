@@ -17,20 +17,41 @@ public class storeScript : MonoBehaviour
     public void RemoveAds()
     {
         //menu de dinero real
-        AdsManager.adsAllowed = false;
-        AdsManager.Instance.bannerAd.HideBannerAd();
+        if (GameManager.Instance.gems >= 100 && AdsManager.adsAllowed)
+        {
+            GameManager.Instance.gems -= 100;
+            AdsManager.adsAllowed = false;
+            AdsManager.Instance.bannerAd.HideBannerAd();
+        }
+        else if (!AdsManager.adsAllowed)
+        {
+            GameManager.Instance.gems += 100;
+            AdsManager.adsAllowed = true;
+        }
     }
     public void BuyGold1()
     {
-        BuyGoldGen(1);
+        if (GameManager.Instance.gems >= 5)
+        {
+            GameManager.Instance.gems -= 5;            
+            BuyGoldGen(1);
+        }        
     }
     public void BuyGold5()
     {
-        BuyGoldGen(5);
+        if (GameManager.Instance.gems >= 7)
+        {
+            GameManager.Instance.gems -= 7;
+            BuyGoldGen(5);
+        }
     }
     public void BuyGold10()
     {
-        BuyGoldGen(10);
+        if (GameManager.Instance.gems >= 10)
+        {
+            GameManager.Instance.gems -= 10;
+            BuyGoldGen(10);
+        }
     }
     public void BuyGoldGen(float hoursMult)
     {
