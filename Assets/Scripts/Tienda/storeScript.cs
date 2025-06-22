@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class storeScript : MonoBehaviour
 {
+    
     void Start()
     {
         
@@ -19,11 +20,23 @@ public class storeScript : MonoBehaviour
         AdsManager.adsAllowed = false;
         AdsManager.Instance.bannerAd.HideBannerAd();
     }
-    public void BuyGold()
+    public void BuyGold1()
     {
-        //menu de dinero real
-        GameManager.Instance.count += UpgradeManager.levelPublic * 1000;
+        BuyGoldGen(1);
     }
+    public void BuyGold5()
+    {
+        BuyGoldGen(5);
+    }
+    public void BuyGold10()
+    {
+        BuyGoldGen(10);
+    }
+    public void BuyGoldGen(float hoursMult)
+    {
+        GameManager.Instance.count += GameManager.Instance.GetIncomePerSecond() * (3600 * hoursMult);
+    }
+
     public void BuyGems()
     {
         //menu de dinero real
