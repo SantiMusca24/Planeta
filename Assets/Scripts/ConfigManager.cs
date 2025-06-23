@@ -88,7 +88,7 @@ public class ConfigManager : MonoBehaviour
     }
     public void OpenStore()
     {
-        ToggleConfigCanvas();
+        //ToggleConfigCanvas();
         storeMenu.SetActive(true);        
     }
     public void ResetGameData()
