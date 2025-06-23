@@ -59,19 +59,19 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     {
         if (placementId == _androidRewarded )
         {
-            if (showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
+            if (showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
             {
                 // PREFERIBLE HACER UN SINGLETON PARA LA RECOMPENSA
                 imagen1.SetActive(true);
                 
                 Debug.Log("RECOMPENSA FULL");
             }
-            if (showCompletionState.Equals(UnityAdsCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
+            if (showCompletionState.Equals(UnityAdsShowCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
             imagen2.SetActive(true);
             GameManager.Instance.count += rewardAmount;
             PlayerPrefs.SetFloat("Count", GameManager.Instance.count);
             PlayerPrefs.Save();
-            if (showCompletionState.Equals(UnityAdsCompletionState.UNKNOWN)) Debug.Log("ALGO SALIÓ MAL");
+            if (showCompletionState.Equals(UnityAdsShowCompletionState.UNKNOWN)) Debug.Log("ALGO SALIÓ MAL");
         }
     }
 
