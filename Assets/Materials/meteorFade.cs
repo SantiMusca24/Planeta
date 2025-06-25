@@ -8,15 +8,20 @@ public class meteorFade : MonoBehaviour
     
     //private disolve = 1f;
     private float change = 0.1f;
-    public Material myMaterial;
-    public float someValue = 1;
-    /*
+    public Material disolve;
+    public float someValue = 0;
+    public GameObject stigma;
+    public bool begin = true;
+
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        myMaterial.SetFloat(“speed”, someValue);
+        begin = true;
+        someValue = 0;
     }
 
+    /*
     void Changeshader()
     {
         if (shaderValue <= 0f)
@@ -30,9 +35,17 @@ public class meteorFade : MonoBehaviour
             changeDisolve.SetFloat("Visibility", shaderValue);
         }
     }
-
+    */
     void Update()
     {
+
+        if (someValue >= 1)
+        {
+            someValue = 0;
+        }
+
+        stigma.GetComponent<Renderer>().material.SetFloat("_disolver", someValue);
+
         //coroutines aren't exclusive, so this makes sure it is only run one time
         if (begin == true)
         {
@@ -46,13 +59,13 @@ public class meteorFade : MonoBehaviour
     IEnumerator Decrease()
     {
 
-        while (myVariable > 0)
+        while (someValue < 1)
         {
-            myVariable -= 1;
-            yield return new WaitForSeconds(0.1f);
+            someValue += 00.05f;
+            yield return new WaitForSeconds(0.05f);
         }
     }
-    */
+    
 }
 
 

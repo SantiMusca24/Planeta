@@ -4905,6 +4905,7 @@ GameObject:
   - component: {fileID: 380363508}
   - component: {fileID: 380363509}
   - component: {fileID: 380363510}
+  - component: {fileID: 380363511}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5083,6 +5084,22 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &380363511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380363504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd052928c173b84fbd9011876efd4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disolve: {fileID: -876546973899608171, guid: 61666fa22ec8d244a8325ebecfeb341a, type: 3}
+  someValue: 1
+  stigma: {fileID: 762083933}
+  begin: 1
 --- !u!1 &388666648
 GameObject:
   m_ObjectHideFlags: 0
@@ -14123,6 +14140,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758809797}
   m_Mesh: {fileID: -2865104911859505335, guid: 825e7cb30edd65d4f8e18b10c0baef0e, type: 3}
+--- !u!1 &762083933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80df2cb823f52409516a9b1bb947bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1201385921}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &762083937
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762083933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.012
+  m_Center: {x: -0.0000017136335, y: 0.00015324818, z: -0.00007097981}
 --- !u!1 &764316852
 GameObject:
   m_ObjectHideFlags: 0
@@ -19326,12 +19370,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc80df2cb823f52409516a9b1bb947bf,
         type: 3}
       propertyPath: m_Name
-      value: meteorito_lowpoly (1)
+      value: meteorito_lowpoly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80df2cb823f52409516a9b1bb947bf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 762083937}
   m_SourcePrefab: {fileID: 100100000, guid: cc80df2cb823f52409516a9b1bb947bf, type: 3}
 --- !u!1 &1214360769 stripped
 GameObject:
