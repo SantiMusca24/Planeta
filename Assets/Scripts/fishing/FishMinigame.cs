@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using static ContadorUI;
 
@@ -24,6 +25,7 @@ public class FishMinigame : MonoBehaviour
     private float sliderPauseTimer = 0f;
     private float fishTimer;
     private bool fishReady;
+   
 
     public GameObject summaryPanel;
     public GameObject botton;
@@ -31,13 +33,15 @@ public class FishMinigame : MonoBehaviour
 
     public ContadorUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
-
+    public ScriptableRendererFeature waterFeature;
     private void Start()
     {
         minigamePanel.SetActive(false);
         fishBites.SetActive(false);
         botton.SetActive(false);
         isCounting = false;
+        if (waterFeature != null)
+            waterFeature.SetActive(false);
     }
     void Update()
     {
@@ -60,6 +64,7 @@ public class FishMinigame : MonoBehaviour
                 AttemptCut();
         }
     }
+    
 
     private IEnumerator FishSpawn()
     {
@@ -77,6 +82,8 @@ public class FishMinigame : MonoBehaviour
 
     public void StartMinigame()
     {
+        if (waterFeature != null)
+            waterFeature.SetActive(true);
         bottonInicio.SetActive(false);
         //precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
@@ -164,6 +171,8 @@ public class FishMinigame : MonoBehaviour
 
     void EndMinigame()
     {
+        if (waterFeature != null)
+            waterFeature.SetActive(false);
         phase = WoodcutPhase.Summary;
 
         //precisionSlider.gameObject.SetActive(false);
