@@ -41,7 +41,7 @@ public class meteorFade : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         //print("hello 1");
-        if (Physics.Raycast(ray, out hit) && Input.GetMouseButtonDown(1) && !begin)
+        if (Physics.Raycast(ray, out hit) && Input.GetMouseButtonDown(0) && !begin)
         {
 
             if (hit.transform.position == stigma.transform.position)
