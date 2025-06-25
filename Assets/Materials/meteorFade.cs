@@ -5,11 +5,12 @@ using UnityEngine.UIElements;
 
 public class meteorFade : MonoBehaviour
 {
+    
     //private disolve = 1f;
     private float change = 0.1f;
     public Material myMaterial;
     public float someValue = 1;
-
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,7 @@ public class meteorFade : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-
+    */
 }
 
 
