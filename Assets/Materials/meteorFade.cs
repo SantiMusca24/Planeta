@@ -11,13 +11,13 @@ public class meteorFade : MonoBehaviour
     public Material disolve;
     public float someValue = 0;
     public GameObject stigma;
-    public bool begin = true;
+    public bool begin = false;
 
     // Start is called before the first frame update
 
     private void Start()
     {
-        begin = true;
+        begin = false;
         someValue = 0;
     }
 
@@ -38,9 +38,20 @@ public class meteorFade : MonoBehaviour
     */
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        //print("hello 1");
+        if (Physics.Raycast(ray, out hit) && Input.GetMouseButtonDown(1) && !begin)
+        {
 
+            if (hit.transform.position == stigma.transform.position)
+            {
+                begin = true;
+            }
+        }
         if (someValue >= 1)
         {
+            StopCoroutine("Decrease");
             someValue = 0;
         }
 
