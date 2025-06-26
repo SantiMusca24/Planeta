@@ -90,9 +90,14 @@ MonoBehaviour:
   - {fileID: 1704689704169556591}
   - {fileID: -8127682462265179631}
   - {fileID: -8415387773608544625}
+<<<<<<< Updated upstream
   - {fileID: 6062409312741468321}
   - {fileID: 8271092432429273319}
   m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a817110283e5dcab348f8fb6e5126889368ba1a8f96026012254e7505ec3bed2c872
+=======
+  - {fileID: 4114780255465879474}
+  m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a817110283e5dcab348f8fb6e5126889368bb2b7d55fd7a21a39
+>>>>>>> Stashed changes
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -151,7 +156,11 @@ MonoBehaviour:
   settings:
     renderPassEvent: 550
     screenHeight: 240
+<<<<<<< Updated upstream
 --- !u!114 &6062409312741468321
+=======
+--- !u!114 &4114780255465879474
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +170,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+<<<<<<< Updated upstream
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: 
   m_Active: 0
@@ -182,6 +192,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 0
   passMaterial: {fileID: 2100000, guid: 286555afe8afedc49850af23adb0c48d, type: 2}
+=======
+  m_Name: buygreenflash
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: bafd9bea57aaabd4e9371230661617e6, type: 2}
+>>>>>>> Stashed changes
   injectionPoint: 600
   requirements: 4
   passIndex: 0
