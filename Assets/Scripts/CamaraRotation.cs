@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CamaraRotation : MonoBehaviour
 {
@@ -44,7 +45,10 @@ public class CamaraRotation : MonoBehaviour
     public RectTransform blockingPanel;
     public Vector2 panelOnScreenPosition;
     public float panelThreshold = 5f;
-
+    [Header("Efecto de Fuego")]
+    public Transform fireObject;
+    public float fireActivationDistance = 10f;
+    public ScriptableRendererFeature fireFeature;
     void Start()
     {
         if (target == null)
@@ -63,6 +67,12 @@ public class CamaraRotation : MonoBehaviour
 
     void LateUpdate()
     {
+        if (fireObject != null && fireFeature != null)
+        {
+            float distanceToFire = Vector3.Distance(transform.position, fireObject.position);
+            bool shouldEnable = distanceToFire <= fireActivationDistance;
+            fireFeature.SetActive(shouldEnable);
+        }
         if (target == null) return;
 
         if (IsCameraBlockedByUI()) return; 
