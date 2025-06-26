@@ -90,9 +90,9 @@ MonoBehaviour:
   - {fileID: 1704689704169556591}
   - {fileID: -8127682462265179631}
   - {fileID: -8415387773608544625}
-  - {fileID: 6062409312741468321}
-  - {fileID: 8271092432429273319}
-  m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a817110283e5dcab348f8fb6e5126889368ba1a8f96026012254e7505ec3bed2c872
+  - {fileID: 8312721914769359099}
+  - {fileID: 3058401439157065110}
+  m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a817110283e5dcab348f8fb6e5126889368bfbc06eee89b85c73961580a1e79f712a
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -151,6 +151,23 @@ MonoBehaviour:
   settings:
     renderPassEvent: 550
     screenHeight: 240
+--- !u!114 &3058401439157065110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: FullScreenPassRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 286555afe8afedc49850af23adb0c48d, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
 --- !u!114 &6062409312741468321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +199,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 0
   passMaterial: {fileID: 2100000, guid: 286555afe8afedc49850af23adb0c48d, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
+--- !u!114 &8312721914769359099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: FullScreenPassRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  passMaterial: {fileID: 2100000, guid: 87aac30e3e7a00e4c865a93927b388da, type: 2}
   injectionPoint: 600
   requirements: 4
   passIndex: 0
