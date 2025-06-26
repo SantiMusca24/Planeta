@@ -67,7 +67,7 @@ public class CamaraRotation : MonoBehaviour
 
         if (IsCameraBlockedByUI()) return; 
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             x += Input.GetAxis("Mouse X") * xSpeed * Time.deltaTime;
             y -= Input.GetAxis("Mouse Y") * ySpeed * Time.deltaTime;
