@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class storeScript : MonoBehaviour
 {
-    
+    [SerializeField] private ScriptableRendererFeature gemPurchaseFeature;
     void Start()
     {
         
@@ -61,6 +62,16 @@ public class storeScript : MonoBehaviour
     public void BuyGems()
     {
         //menu de dinero real
+        if (gemPurchaseFeature != null)
+        {
+            gemPurchaseFeature.SetActive(true);
+            StartCoroutine(DisableFeatureAfterDelay(gemPurchaseFeature, 0.5f));
+        }
         GameManager.Instance.gems += 5;
+    }
+    private IEnumerator DisableFeatureAfterDelay(ScriptableRendererFeature feature, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        feature.SetActive(false);
     }
 }

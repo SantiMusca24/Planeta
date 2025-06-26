@@ -26891,7 +26891,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114666562}
   m_HandleRect: {fileID: 114666561}
   m_Direction: 2
-  m_Value: 0.4999998
+  m_Value: 0.49999985
   m_Size: 0.42314973
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -33737,6 +33737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04faa993d66734f4e9aeb4de87c1f816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemPurchaseFeature: {fileID: -7344472536239571713, guid: c40be3174f62c4acf8c1216858c64956,
+    type: 2}
 --- !u!114 &1039780177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62254,6 +62256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04faa993d66734f4e9aeb4de87c1f816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemPurchaseFeature: {fileID: 0}
 --- !u!114 &1756422209
 MonoBehaviour:
   m_ObjectHideFlags: 0
