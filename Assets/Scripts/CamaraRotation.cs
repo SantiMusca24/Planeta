@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CamaraRotation : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class CamaraRotation : MonoBehaviour
     public RectTransform blockingPanel;
     public Vector2 panelOnScreenPosition;
     public float panelThreshold = 5f;
+    [Header("Efecto de Fuego")]
+    public Transform fireObject; // el objeto al que hay que acercarse
+    public float fireActivationDistance = 10f;
+    public ScriptableRendererFeature fireFeature;
 
     void Start()
     {
@@ -65,8 +70,13 @@ public class CamaraRotation : MonoBehaviour
     {
         if (target == null) return;
 
-        if (IsCameraBlockedByUI()) return; 
-
+        if (IsCameraBlockedByUI()) return;
+        if (fireObject != null && fireFeature != null)
+        {
+            float distanceToFire = Vector3.Distance(transform.position, fireObject.position);
+            bool shouldEnable = distanceToFire <= fireActivationDistance;
+            fireFeature.SetActive(shouldEnable);
+        }
         if (Input.GetMouseButton(0))
         {
             x += Input.GetAxis("Mouse X") * xSpeed * Time.deltaTime;
