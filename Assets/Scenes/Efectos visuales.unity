@@ -4962,6 +4962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6258204396453407548, guid: 1255b6438d0694747ac9a3eb503e9156,
         type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258204396453407548, guid: 1255b6438d0694747ac9a3eb503e9156,
+        type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 20000
       objectReference: {fileID: 0}
@@ -22469,8 +22474,8 @@ GameObject:
   - component: {fileID: 1447261501}
   - component: {fileID: 1447261500}
   - component: {fileID: 1447261499}
-  - component: {fileID: 1447261498}
   - component: {fileID: 1447261502}
+  - component: {fileID: 1447261503}
   m_Layer: 0
   m_Name: w
   m_TagString: Untagged
@@ -22478,27 +22483,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1447261498
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447261497}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.35
-  m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!23 &1447261499
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22578,6 +22562,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feature1: {fileID: 11400000, guid: c40be3174f62c4acf8c1216858c64956, type: 2}
+--- !u!65 &1447261503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447261497}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.81618625, y: 0.3058991, z: 0.78314483}
+  m_Center: {x: -0.024487969, y: -0.02251064, z: 0.023623437}
 --- !u!1001 &1451424509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31408,8 +31413,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712458881}
   m_HandleRect: {fileID: 1712458880}
   m_Direction: 2
-  m_Value: 0.4999998
-  m_Size: 0.42314973
+  m_Value: 0.49999985
+  m_Size: 0.42314968
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
