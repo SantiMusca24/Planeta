@@ -86,7 +86,23 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "b9b7d5546d4c4cfba627ef535f9e8a58"
+        },
+        {
+            "m_Id": "b6bf24203a024c198ec225d849359318"
+        },
+        {
+            "m_Id": "f65e4454738748a483f91211defbfb69"
+        },
+        {
+            "m_Id": "1b5da22a61ed48e48febb6a13fd139a5"
+        },
+        {
+            "m_Id": "0ee4f3839a6246f9944a72a377fa3632"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -394,10 +410,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -132.9999237060547,
-            "y": 624.0001220703125,
-            "width": 151.99993896484376,
-            "height": 33.99993896484375
+            "x": -59.00008773803711,
+            "y": 571.0,
+            "width": 152.0000762939453,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -487,6 +503,26 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "0ee4f3839a6246f9944a72a377fa3632",
+    "m_Title": "Cambio",
+    "m_Content": "encontre la imagen al revez de como la queria ",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 1034.0,
+        "y": 190.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
@@ -645,6 +681,26 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "1b5da22a61ed48e48febb6a13fd139a5",
+    "m_Title": "Union",
+    "m_Content": "Juntamos los dos efectos para generar uno solo",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 1378.0,
+        "y": -119.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
@@ -965,8 +1021,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 432.00006103515627,
-            "y": 719.0,
+            "x": 847.0,
+            "y": 685.0,
             "width": 208.0,
             "height": 277.99993896484377
         }
@@ -1061,10 +1117,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -295.9999694824219,
-            "y": 307.9999694824219,
-            "width": 127.99996948242188,
-            "height": 34.000030517578128
+            "x": -334.0000305175781,
+            "y": 283.0,
+            "width": 150.00003051757813,
+            "height": 34.00006103515625
         }
     },
     "m_Slots": [
@@ -1151,10 +1207,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 460.0,
-            "y": 322.9999694824219,
-            "width": 208.0,
-            "height": 302.0000305175781
+            "x": 733.9998779296875,
+            "y": 326.00006103515627,
+            "width": 208.0001220703125,
+            "height": 301.99993896484377
         }
     },
     "m_Slots": [
@@ -1329,9 +1385,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 725.0,
-            "y": 313.9999694824219,
-            "width": 208.0,
+            "x": 1034.0,
+            "y": 305.9999694824219,
+            "width": 207.9998779296875,
             "height": 278.0000305175781
         }
     },
@@ -1741,10 +1797,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1010.0,
-            "y": 17.0,
+            "x": 1385.0,
+            "y": 20.000001907348634,
             "width": 208.0,
-            "height": 302.0
+            "height": 302.0000305175781
         }
     },
     "m_Slots": [
@@ -2000,6 +2056,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "b6bf24203a024c198ec225d849359318",
+    "m_Title": "Sine mas time",
+    "m_Content": "Genera un efecto de respiracion del escudo, intercalando entre valores cada x segundos determinado por la \"frecuencia del escudo\"",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 934.0,
+        "y": 1025.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "b888f500d30f473fb86448d47b903dbc",
     "m_Id": 6,
@@ -2011,6 +2087,26 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "b9b7d5546d4c4cfba627ef535f9e8a58",
+    "m_Title": "lenght",
+    "m_Content": "Devuelve la magnitud de lo que esta conectado",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -449.0,
+        "y": -194.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
 }
 
 {
@@ -2601,10 +2697,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 595.0000610351563,
-            "y": 999.0000610351563,
-            "width": 208.00006103515626,
-            "height": 301.99993896484377
+            "x": 602.9999389648438,
+            "y": 978.0,
+            "width": 208.0001220703125,
+            "height": 302.0001220703125
         }
     },
     "m_Slots": [
@@ -2695,6 +2791,26 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "f65e4454738748a483f91211defbfb69",
+    "m_Title": "Marco",
+    "m_Content": "Hacemos que actue como un fresnel dejando libre de color y totalmente transparente el centro.\nconsiguiendo un fade hacia los costados",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 44.96500778198242,
+        "y": -267.14501953125,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 

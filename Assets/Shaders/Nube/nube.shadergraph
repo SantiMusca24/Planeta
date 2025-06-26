@@ -161,7 +161,26 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "7017fb80b9b1412d84154a463fe03cd3"
+        },
+        {
+            "m_Id": "c8f44fba843d4a6ba3eb21f8582bb7a5"
+        },
+        {
+            "m_Id": "2e5566b8620b437699a743c5e1782fa3"
+        },
+        {
+            "m_Id": "855c9737575349c49cb6f419ab30d718"
+        },
+        {
+            "m_Id": "bbff05b7829f4cdf979aed3c8425c991"
+        },
+        {
+            "m_Id": "a4c7aff8c99a4e6d83dd8add1f6256ee"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -1458,6 +1477,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "2e5566b8620b437699a743c5e1782fa3",
+    "m_Title": "Movimiento 1",
+    "m_Content": "Genera movimiento con tile and offset generando un efecto de dinamismo",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1102.0,
+        "y": -23.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "30b0599e2072420d88b763337d741268",
     "m_Id": 0,
@@ -2367,6 +2406,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "7017fb80b9b1412d84154a463fe03cd3",
+    "m_Title": "Fade",
+    "m_Content": "Con un fresnel busca generar transparencia en los laterales haciendo parecer que esta compuesto por una figura mas compleja",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -975.0,
+        "y": 991.0,
+        "width": 200.0,
+        "height": 160.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "7129da6b762146109975b4c95bdefc53",
     "m_Id": 1,
@@ -2660,6 +2719,26 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "855c9737575349c49cb6f419ab30d718",
+    "m_Title": "Movimiento 2",
+    "m_Content": "Genera movimiento con tile and offset generando un efecto de dinamismo",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1110.0,
+        "y": 468.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
@@ -3154,6 +3233,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "a4c7aff8c99a4e6d83dd8add1f6256ee",
+    "m_Title": "Se unen los Fades",
+    "m_Content": "",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 1060.0,
+        "y": 1129.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "a71ffd2e36604b14a0f7c10bb64c04c1",
     "m_Id": 1,
@@ -3634,6 +3733,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "bbff05b7829f4cdf979aed3c8425c991",
+    "m_Title": "Se mezclan los dos movimientos",
+    "m_Content": "",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 636.0,
+        "y": 537.0,
+        "width": 200.0,
+        "height": 100.0
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "bcf24a2b148e478c82d2446926840a64",
     "m_Group": {
@@ -3886,6 +4005,26 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "c8f44fba843d4a6ba3eb21f8582bb7a5",
+    "m_Title": "Fade",
+    "m_Content": "Con un fresnel busca generar transparencia en los laterales haciendo parecer que esta metido mas hacia adentro disimulando la figura redonda",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": 628.0,
+        "y": 1319.0,
+        "width": 200.0,
+        "height": 119.0
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
