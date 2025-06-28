@@ -7,8 +7,10 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
 {
     [SerializeField] private GameObject imagen1;
     [SerializeField] private GameObject imagen2;
+    [SerializeField] private GameObject imagen3;
     [SerializeField] private float rewardAmount = 10000f;
     [SerializeField] string _androidRewarded = "Rewarded_Android";
+    [SerializeField] private FishMinigame fishMinigame;
     //[SerializeField] string _iOSId = "5876854";
     //string _actualGameIdInUse;
     //[SerializeField] bool _isTestingMode;
@@ -61,10 +63,22 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
         {
             if (showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
             {
-                // PREFERIBLE HACER UN SINGLETON PARA LA RECOMPENSA
-                imagen1.SetActive(true);
-                
-                Debug.Log("RECOMPENSA FULL");
+                if(AdsManager.AdRecompensa == true)
+                {
+
+                    
+                    GameManager.Instance.count += rewardAmount;
+                    PlayerPrefs.SetFloat("Count", GameManager.Instance.count);
+                    PlayerPrefs.Save();
+                    Debug.Log("RECOMPENSA FULL");
+                }
+                else
+                {
+
+                    fishMinigame.CancelarCooldown();
+                    imagen2.SetActive(true);
+                }
+                   
             }
             if (showCompletionState.Equals(UnityAdsShowCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
             imagen2.SetActive(true);

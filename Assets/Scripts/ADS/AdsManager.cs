@@ -8,6 +8,7 @@ public class AdsManager : MonoBehaviour
 {
     public static AdsManager Instance { get; private set; }
     public bool canUse;
+    public static bool AdRecompensa;
     [SerializeField] RewardedAd _myRewardedAd;
     [SerializeField] InterstitialAd interstitialAd;
     [SerializeField] public BannerAd bannerAd;
