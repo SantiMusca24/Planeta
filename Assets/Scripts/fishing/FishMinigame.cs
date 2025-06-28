@@ -33,15 +33,14 @@ public class FishMinigame : MonoBehaviour
 
     public ContadorUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
-    public ScriptableRendererFeature waterFeature;
+    
     private void Start()
     {
         minigamePanel.SetActive(false);
         fishBites.SetActive(false);
         botton.SetActive(false);
         isCounting = false;
-        if (waterFeature != null)
-            waterFeature.SetActive(false);
+        
     }
     void Update()
     {
@@ -82,8 +81,7 @@ public class FishMinigame : MonoBehaviour
 
     public void StartMinigame()
     {
-        if (waterFeature != null)
-            waterFeature.SetActive(true);
+        
         bottonInicio.SetActive(false);
         //precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
@@ -171,8 +169,7 @@ public class FishMinigame : MonoBehaviour
 
     void EndMinigame()
     {
-        if (waterFeature != null)
-            waterFeature.SetActive(false);
+        
         phase = WoodcutPhase.Summary;
 
         //precisionSlider.gameObject.SetActive(false);
