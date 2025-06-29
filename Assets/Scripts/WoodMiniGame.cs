@@ -16,12 +16,15 @@ public class WoodMiniGame : MonoBehaviour
     private int currentCuts = 0;
     private int logsCut = 0;
     private float gameTimer = 10f;
-    private float timer;
+    [SerializeField] public static float cooldownDuracion = 10f;
+    [SerializeField] private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
     private float sliderPauseTimer = 0f;
+    private Coroutine cooldownRoutine;
 
     public GameObject summaryPanel;
     public GameObject botton;
+    public GameObject bottonAd;
     public GameObject bottonInicio;
 
     public ContadorUI uiManager;
@@ -32,6 +35,7 @@ public class WoodMiniGame : MonoBehaviour
        minigamePanel.SetActive(false);
        precisionSlider.gameObject.SetActive(false);
        botton.SetActive(false);
+        bottonAd.SetActive(false);
 
     }
     void Update()
@@ -53,6 +57,7 @@ public class WoodMiniGame : MonoBehaviour
     public void StartMinigame()
     {
         bottonInicio.SetActive(false);
+        bottonAd.SetActive(true);
         precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
         currentCuts = 0;
@@ -163,8 +168,8 @@ public class WoodMiniGame : MonoBehaviour
 
         uiManager?.OcultarMinigameTextos2();
 
-        StartCoroutine(BottomCooldowm(10f));
-        
+        cooldownRoutine = StartCoroutine(BottomCooldowm(cooldownDuracion));
+
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
         
         StartCoroutine(OcultarTextos());
@@ -225,6 +230,20 @@ public class WoodMiniGame : MonoBehaviour
 
         yield return new WaitForSeconds(delay);
     }
+    }
+    public void CancelarCooldown()
+    {
+        if (cooldownRoutine != null)
+        {
+            StopCoroutine(cooldownRoutine);
+            cooldownRoutine = null;
+        }
+
+        if (bottonInicio != null)
+            bottonInicio.GetComponent<Button>().interactable = true;
+
+        if (uiManager != null && uiManager.cooldownTimerText != null)
+            uiManager.cooldownTimerText.gameObject.SetActive(false);
     }
     public enum WoodcutPhase
     {

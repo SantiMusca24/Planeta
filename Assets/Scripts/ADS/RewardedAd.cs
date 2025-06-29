@@ -11,6 +11,8 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     [SerializeField] private float rewardAmount = 10000f;
     [SerializeField] string _androidRewarded = "Rewarded_Android";
     [SerializeField] private FishMinigame fishMinigame;
+    [SerializeField] private WoodMiniGame woodMinigame;
+    [SerializeField] private int sceneName = 1;
     //[SerializeField] string _iOSId = "5876854";
     //string _actualGameIdInUse;
     //[SerializeField] bool _isTestingMode;
@@ -72,10 +74,15 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
                     PlayerPrefs.Save();
                     Debug.Log("RECOMPENSA FULL");
                 }
-                else
+                else if (sceneName == 1) 
                 {
 
                     fishMinigame.CancelarCooldown();
+                    imagen2.SetActive(true);
+                }
+                else if (sceneName == 2)
+                {
+                    woodMinigame.CancelarCooldown();
                     imagen2.SetActive(true);
                 }
                    
