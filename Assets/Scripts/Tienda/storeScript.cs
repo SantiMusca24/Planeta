@@ -55,7 +55,7 @@ public class storeScript : MonoBehaviour
     }
     public void BuyGoldGen(float hoursMult)
     {
-        GameManager.Instance.count += GameManager.Instance.GetIncomePerSecond() * (3600 * hoursMult);
+        GameManager.Instance.count += GameManager.Instance.IPS * (3600 * hoursMult);
     }
 
     public void BuyGems()
