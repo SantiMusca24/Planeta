@@ -10,6 +10,9 @@ public class moneyOvertime : MonoBehaviour
     DateTime _lastStaminaTime;
     TimeSpan _differenceTime;
     int _hoursPassed;
+    public TMP_Text goldTxt;
+    public GameObject popUp;
+
 
     [SerializeField] int _maxStamina = 10;
     int _currentStamina = 10;
@@ -29,6 +32,12 @@ public class moneyOvertime : MonoBehaviour
         Debug.Log("" + _nowStaminaTime + " - " + _lastStaminaTime + " = " + _differenceTime);
         Debug.Log("ELAPSED TIME: " + _hoursPassed + " hours");
         if (_hoursPassed > 8) _hoursPassed = 8;
+        if (_hoursPassed < 0) _hoursPassed = 0;
+        if (_hoursPassed > 0)
+        {
+            popUp.SetActive(true);
+            goldTxt.text = "" + GameManager.Instance.IPS * (3600 * _hoursPassed);
+        }
         Debug.Log("" + GameManager.Instance.IPS);
         Debug.Log("" + GameManager.Instance.IPS * (3600 * _hoursPassed));
         GameManager.Instance.count += GameManager.Instance.IPS * (3600 * _hoursPassed);
@@ -44,6 +53,10 @@ public class moneyOvertime : MonoBehaviour
         SaveGame();
     }
 
+    public void OnClick()
+    {
+        popUp.SetActive(false);
+    }
     /*IEnumerator ChargingStamina()
     {
         //UpdateStamina();
