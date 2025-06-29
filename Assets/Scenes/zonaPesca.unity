@@ -11568,7 +11568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &165064523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13118,17 +13118,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3ad3d64d151574695aedb9808c6226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 3455798124115433619, guid: f1aebc63f826ac0439e189612543befd,
+  coinPrefab: {fileID: 6176805560589680337, guid: 18ef85489390c3a4d8747d3dcaacf809,
     type: 3}
   coinParent: {fileID: 111964711}
   spawnLocation: {fileID: 1995441402}
   endPosition: {fileID: 1079629435}
   duration: 2
   coinAmount: 10
-  minX: -400
-  maxX: 400
-  minY: -500
-  maxY: 500
+  minX: -100
+  maxX: 100
+  minY: -200
+  maxY: 200
 --- !u!4 &318143228
 Transform:
   m_ObjectHideFlags: 0
@@ -22945,7 +22945,6 @@ RectTransform:
   - {fileID: 1740541579}
   - {fileID: 666510331}
   - {fileID: 1964436177}
-  - {fileID: 2062814672}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -25056,8 +25055,10 @@ MonoBehaviour:
   precisionSlider: {fileID: 522251961}
   sliderSpeed: 1.5
   cutsNeededPerLog: 10
+  timer: 0
   summaryPanel: {fileID: 953018639}
   botton: {fileID: 164325252}
+  bottonAd: {fileID: 0}
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 1326109478}
   coinCollector: {fileID: 318143227}
@@ -32384,14 +32385,14 @@ RectTransform:
   m_GameObject: {fileID: 1079629434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5143723, y: 0.51437235, z: 0.5143723}
+  m_LocalScale: {x: 0.26737657, y: 0.3248842, z: 0.3248842}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960674263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121.167206, y: 415.36816}
+  m_AnchoredPosition: {x: 50.21031, y: 391.0912}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079629436
@@ -32414,7 +32415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 538592197, guid: d622850f61dc57a44a515f1f6a96af75, type: 3}
+  m_Sprite: {fileID: 739116222, guid: 4201d418538160143ba46b4899a1c68b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -53317,7 +53318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2062814672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53325,13 +53326,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062814671}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1960674263}
-  m_Father: {fileID: 764316853}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -54880,6 +54881,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 943676525}
+    - target: {fileID: 1847289879729557797, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -718
+      objectReference: {fileID: 0}
     - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: gameManager
@@ -54929,6 +54935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376684141140126869, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2458.499
       objectReference: {fileID: 0}
     - target: {fileID: 3664494675990345179, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -55186,7 +55197,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2510394899038634092, guid: a3f07e64b10286549ab1899a85fa23b6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f07e64b10286549ab1899a85fa23b6, type: 3}
@@ -55489,6 +55501,7 @@ SceneRoots:
   - {fileID: 3948232284973399881}
   - {fileID: 1031773767}
   - {fileID: 2021813190}
+  - {fileID: 2062814672}
   - {fileID: 764316853}
   - {fileID: 177830501}
   - {fileID: 1338054295}
