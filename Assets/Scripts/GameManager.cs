@@ -6,6 +6,7 @@ using UnityEngine;
 
 public abstract class GameManager : MonoBehaviour
 {
+    public bool gotMoney = false;
     public float IPS;
     static public bool tapped = false;
     public float count = 0;

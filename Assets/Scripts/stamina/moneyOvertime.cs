@@ -25,22 +25,28 @@ public class moneyOvertime : MonoBehaviour
     //int id;
     void Start()
     {
-        LoadGame();
-        _nowStaminaTime = DateTime.Now;        
-        _differenceTime = _nowStaminaTime - _lastStaminaTime;
-        _hoursPassed = _differenceTime.Hours + (_differenceTime.Days*24);
-        Debug.Log("" + _nowStaminaTime + " - " + _lastStaminaTime + " = " + _differenceTime);
-        Debug.Log("ELAPSED TIME: " + _hoursPassed + " hours");
-        if (_hoursPassed > 8) _hoursPassed = 8;
-        if (_hoursPassed < 0) _hoursPassed = 0;
-        if (_hoursPassed > 0)
+        if (!GameManager.Instance.gotMoney)
         {
-            popUp.SetActive(true);
-            goldTxt.text = "" + GameManager.Instance.IPS * (3600 * _hoursPassed);
+            LoadGame();
+            _nowStaminaTime = DateTime.Now;
+            _differenceTime = _nowStaminaTime - _lastStaminaTime;
+            _hoursPassed = _differenceTime.Hours + (_differenceTime.Days * 24);
+            Debug.Log("" + _nowStaminaTime + " - " + _lastStaminaTime + " = " + _differenceTime);
+            Debug.Log("ELAPSED TIME: " + _hoursPassed + " hours");
+            if (_hoursPassed > 8) _hoursPassed = 8;
+            if (_hoursPassed < 0) _hoursPassed = 0;
+            if (_hoursPassed > 0)
+            {
+                popUp.SetActive(true);
+                goldTxt.text = "" + GameManager.Instance.IPS * (3600 * _hoursPassed);
+            }
+            Debug.Log("" + GameManager.Instance.IPS);
+            Debug.Log("" + GameManager.Instance.IPS * (3600 * _hoursPassed));
+            GameManager.Instance.count += GameManager.Instance.IPS * (3600 * _hoursPassed);
+            GameManager.Instance.gotMoney = true;
         }
-        Debug.Log("" + GameManager.Instance.IPS);
-        Debug.Log("" + GameManager.Instance.IPS * (3600 * _hoursPassed));
-        GameManager.Instance.count += GameManager.Instance.IPS * (3600 * _hoursPassed);
+
+        
 
 
         //LoadGame();

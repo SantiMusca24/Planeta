@@ -139,6 +139,7 @@ public class BasicGameManager : GameManager
 
     protected override void OnApplicationQuit()
     {
+        gotMoney = false;   
         SaveProgress();
     }
 
