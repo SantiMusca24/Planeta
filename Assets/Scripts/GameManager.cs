@@ -6,10 +6,12 @@ using UnityEngine;
 
 public abstract class GameManager : MonoBehaviour
 {
+    public float IPS;
     static public bool tapped = false;
     public float count = 0;
     public float gems = 0;
     protected float nextTimeCheck = 1;
+
 
     public static GameManager Instance;
     [SerializeField] protected ContadorUI uiManager;
@@ -23,7 +25,7 @@ public abstract class GameManager : MonoBehaviour
    
     private void Awake()
     {
-        
+        IPS = PlayerPrefs.GetFloat("IPS", 0f);
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public abstract class UpgradeManager : MonoBehaviour
 {
+    
+
     //public static UpgradeManager Instance;
     [Header("Comoponents")]
     public TMP_Text priceText;
@@ -37,6 +39,9 @@ public abstract class UpgradeManager : MonoBehaviour
     }
     protected virtual void Update()
     {
+            
+        GameManager.Instance.IPS = GameManager.Instance.GetIncomePerSecond();
+        PlayerPrefs.SetFloat("IPS", GameManager.Instance.IPS);
         if (ConfigManager.canEqualize)
         {
             if (levelToChange == 1)
