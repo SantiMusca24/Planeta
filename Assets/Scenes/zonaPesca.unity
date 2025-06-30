@@ -54876,6 +54876,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 757323090102222205, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlockCost
+      value: 400000
+      objectReference: {fileID: 0}
+    - target: {fileID: 871965963395150631, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlockCost
+      value: 900000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287043159853080059, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlockCost
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 1435320966913145501, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -54888,9 +54903,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: startPrice
+      value: 90000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 6175393720614953707}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: cookiesPerUpgrade
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: upgradePriceMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[1].requiredLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[2].requiredLevel
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: unlocks.Array.data[0].objectToActivate
@@ -54953,9 +54993,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: startPrice
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 6175393720614953707}
+    - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: cookiesPerUpgrade
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: upgradePriceMultiplier
+      value: 2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: unlocks.Array.data[0].objectToActivate
@@ -55083,9 +55138,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: startPrice
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 6175393720614953707}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: cookiesPerUpgrade
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: upgradePriceMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[1].requiredLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[2].requiredLevel
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[3].requiredLevel
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: unlocks.Array.data[4].requiredLevel
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: unlocks.Array.data[0].objectToActivate
