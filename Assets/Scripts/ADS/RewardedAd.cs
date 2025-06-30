@@ -93,7 +93,16 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
                 }
 
             }
-            if (showCompletionState.Equals(UnityAdsShowCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
+            if (showCompletionState.Equals(UnityAdsShowCompletionState.SKIPPED))
+            {
+                if (AdsManager.AdRecompensa == true)
+                {
+                    GameManager.Instance.count += rewardAmount / 2;
+                    PlayerPrefs.SetFloat("Count", GameManager.Instance.count);
+                    PlayerPrefs.Save();
+                }
+                Debug.Log("RECOMPENSA MITAD");
+            }
             imagen2.SetActive(true);
             GameManager.Instance.count += rewardAmount;
             PlayerPrefs.SetFloat("Count", GameManager.Instance.count);
