@@ -89,7 +89,7 @@ public class BottonSelection : MonoBehaviour
     private void ActualizarColorAudio()
     {
         botonMusica.image.color = musicaActiva ? colorAudioOn : colorAudioOff;
-        botonSFX.image.color = sfxActivo ? colorAudioOff : colorAudioOn;
+        botonSFX.image.color = sfxActivo ? colorAudioOn : colorAudioOff;
     }
 
 
