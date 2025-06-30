@@ -35,7 +35,7 @@ public class BasicUpgradeManager : UpgradeManager
     public override void UpdateUI()
     {
         if (levelText != null)
-            levelText.text = "Level: " + level;
+            levelText.text = "" + level;
         priceText.text = CalculatePrice().ToString();
         incomeInfoText.text = level.ToString() + "x" + cookiesPerUpgrade + "/s";
 
