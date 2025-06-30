@@ -5248,8 +5248,8 @@ MonoBehaviour:
   botonSFX: {fileID: 348266801}
   colorSeleccionado: {r: 0.67893374, g: 0.6886792, b: 0.67893374, a: 1}
   colorNormal: {r: 1, g: 1, b: 1, a: 1}
-  colorAudioOn: {r: 0.6784314, g: 0.6901961, b: 0.6784314, a: 1}
-  colorAudioOff: {r: 1, g: 1, b: 1, a: 1}
+  colorAudioOn: {r: 1, g: 1, b: 1, a: 1}
+  colorAudioOff: {r: 0.6784314, g: 0.6901961, b: 0.6784314, a: 1}
 --- !u!114 &348266817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14294,6 +14294,9 @@ MonoBehaviour:
   rewardAmount: 10000
   _androidRewarded: Rewarded_Android
   fishMinigame: {fileID: 0}
+  woodMinigame: {fileID: 0}
+  farmMinigame: {fileID: 0}
+  sceneName: 1
 --- !u!114 &952718832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31108,8 +31111,10 @@ MonoBehaviour:
   precisionSlider: {fileID: 1088912913}
   sliderSpeed: 1.5
   cutsNeededPerLog: 10
+  timer: 0
   summaryPanel: {fileID: 1341295413}
   botton: {fileID: 494223538}
+  bottonAd: {fileID: 0}
   bottonInicio: {fileID: 1979507591}
   uiManager: {fileID: 1013334632}
   coinCollector: {fileID: 893410837}
@@ -36876,6 +36881,79 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2115791621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115791623}
+  - component: {fileID: 2115791622}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2115791622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115791621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420c0a98d6e260e46a4599da2965a9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Coin
+    clip: {fileID: 8300000, guid: feeb440462325df4998e2a3926803744, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 62c968b5e180004488672d4245e5a989, type: 3}
+    volume: 1
+    pitch: 1.163
+    loop: 0
+    isSFX: 0
+    isMusic: 1
+    mute: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: feeb440462325df4998e2a3926803744, type: 3}
+    volume: 0.525
+    pitch: 1.67
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  audioManager: {fileID: 2115791622}
+--- !u!4 &2115791623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115791621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119063537
 GameObject:
   m_ObjectHideFlags: 0
@@ -38359,3 +38437,4 @@ SceneRoots:
   - {fileID: 1578067363}
   - {fileID: 1745404603}
   - {fileID: 2135529415}
+  - {fileID: 2115791623}
