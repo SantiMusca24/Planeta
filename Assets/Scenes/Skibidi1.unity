@@ -6083,11 +6083,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 193474891}
-  xSpeed: 500
-  ySpeed: 500
+  xSpeed: 50
+  ySpeed: 50
   yMinLimit: 20
   yMaxLimit: 90
-  scrollSpeed: 10
+  scrollSpeed: 5
   minDistance: 5
   maxDistance: 20
   initialXAngle: 10
@@ -6097,11 +6097,10 @@ MonoBehaviour:
   positionSmoothTime: 0.15
   rotationSmoothTime: 0.1
   blockingCanvases:
-  - {fileID: 0}
   - {fileID: 248307746}
-  - {fileID: 2062814671}
-  - {fileID: 0}
+  - {fileID: 769528672}
   - {fileID: 132703319}
+  - {fileID: 1970558123}
   mainUI: {fileID: 764316856}
   blockingPanel: {fileID: 124864426}
   panelOnScreenPosition: {x: 0, y: 635}

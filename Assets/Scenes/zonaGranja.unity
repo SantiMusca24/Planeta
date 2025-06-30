@@ -453,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &40876020
 Transform:
   m_ObjectHideFlags: 0
@@ -5705,11 +5705,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1776427586}
-  xSpeed: 500
-  ySpeed: 500
+  xSpeed: 50
+  ySpeed: 50
   yMinLimit: 20
   yMaxLimit: 90
-  scrollSpeed: 10
+  scrollSpeed: 5
   minDistance: 5
   maxDistance: 20
   initialXAngle: 10
@@ -5719,10 +5719,10 @@ MonoBehaviour:
   positionSmoothTime: 0.15
   rotationSmoothTime: 0.1
   blockingCanvases:
-  - {fileID: 0}
   - {fileID: 496124729}
   - {fileID: 1700242363}
   - {fileID: 40876019}
+  - {fileID: 1278197246}
   mainUI: {fileID: 1815717260}
   blockingPanel: {fileID: 1815717259}
   panelOnScreenPosition: {x: 0, y: 635}

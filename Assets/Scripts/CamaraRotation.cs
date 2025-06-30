@@ -77,6 +77,23 @@ public class CamaraRotation : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         distance = Mathf.Clamp(distance - scroll * scrollSpeed, minDistance, maxDistance);
 
+#if UNITY_ANDROID || UNITY_IOS
+        if (Input.touchCount == 2)
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+            distance = Mathf.Clamp(distance + deltaMagnitudeDiff * 0.05f, minDistance, maxDistance);
+        }
+#endif
         UpdateCameraPosition(false);
     }
 
