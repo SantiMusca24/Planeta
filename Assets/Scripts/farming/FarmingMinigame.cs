@@ -278,13 +278,21 @@ public class FarmingMinigame : MonoBehaviour
         {
             StopCoroutine(cooldownRoutine);
             cooldownRoutine = null;
+            Debug.Log("AHGFJDSHKGJHS 1");
         }
 
         if (bottonInicio != null)
+        {
             bottonInicio.GetComponent<Button>().interactable = true;
+            Debug.Log("AHGFJDSHKGJHS 2");
+        }
+
 
         if (uiManager != null && uiManager.cooldownTimerText != null)
+        {
             uiManager.cooldownTimerText.gameObject.SetActive(false);
+            Debug.Log("AHGFJDSHKGJHS 3");
+        }
     }
     public enum WoodcutPhase
     {
