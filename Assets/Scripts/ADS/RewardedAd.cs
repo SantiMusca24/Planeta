@@ -12,6 +12,7 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     [SerializeField] string _androidRewarded = "Rewarded_Android";
     [SerializeField] private FishMinigame fishMinigame;
     [SerializeField] private WoodMiniGame woodMinigame;
+    [SerializeField] private WoodMiniGame farmMinigame;
     [SerializeField] private int sceneName = 1;
     //[SerializeField] string _iOSId = "5876854";
     //string _actualGameIdInUse;
@@ -85,7 +86,12 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
                     woodMinigame.CancelarCooldown();
                     imagen2.SetActive(true);
                 }
-                   
+                else if (sceneName == 3)
+                {
+                    farmMinigame.CancelarCooldown();
+                    //imagen2.SetActive(true);
+                }
+
             }
             if (showCompletionState.Equals(UnityAdsShowCompletionState.SKIPPED)) Debug.Log("RECOMPENSA MITAD");
             imagen2.SetActive(true);

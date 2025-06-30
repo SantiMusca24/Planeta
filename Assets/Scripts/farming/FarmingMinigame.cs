@@ -18,14 +18,17 @@ public class FarmingMinigame : MonoBehaviour
     private int currentCuts = 0;
     private int logsCut = 0;
     public float gameTimer = 20f;
-    private float timer;
+    [SerializeField] public static float cooldownDuracion = 10f;
+    [SerializeField] private float timer;
     private WoodcutPhase phase = WoodcutPhase.Inactive;
     //private float sliderPauseTimer = 0f;
     //private float fishTimer;
     //private bool fishReady;
+    private Coroutine cooldownRoutine;
 
     public GameObject summaryPanel;
     public GameObject botton;
+    public GameObject bottonAd;
     public GameObject bottonInicio;
 
     public ContadorUI uiManager;
@@ -62,6 +65,7 @@ public class FarmingMinigame : MonoBehaviour
         minigamePanel.SetActive(false);
         //fishBites.SetActive(false);
         botton.SetActive(false);
+        bottonAd.SetActive(false);
         //isCounting = false;
     }
     private void Update()
@@ -72,12 +76,15 @@ public class FarmingMinigame : MonoBehaviour
             timer -= Time.deltaTime;
             uiManager?.FarmMinigameUI(tiempo: timer);
 
+            Cow();
+            Catcher();
+            ProgressCheck();
+
             if (timer <= 0)
                 EndMinigame();
+
         }
-        Cow();
-        Catcher();
-        ProgressCheck();
+        
     }
     private void ProgressCheck()
     {
@@ -197,12 +204,12 @@ public class FarmingMinigame : MonoBehaviour
             uiManager.resumenText.gameObject.SetActive(true);
 
         bottonInicio.SetActive(true);
-
+        bottonAd.SetActive(true);
         bottonInicio.GetComponent<Button>().interactable = false;
 
         uiManager?.OcultarMinigameTextos2();
 
-        StartCoroutine(BottomCooldowm(10f));
+        cooldownRoutine = StartCoroutine(BottomCooldowm(cooldownDuracion));
 
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
 
@@ -264,6 +271,20 @@ public class FarmingMinigame : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
+    }
+    public void CancelarCooldown()
+    {
+        if (cooldownRoutine != null)
+        {
+            StopCoroutine(cooldownRoutine);
+            cooldownRoutine = null;
+        }
+
+        if (bottonInicio != null)
+            bottonInicio.GetComponent<Button>().interactable = true;
+
+        if (uiManager != null && uiManager.cooldownTimerText != null)
+            uiManager.cooldownTimerText.gameObject.SetActive(false);
     }
     public enum WoodcutPhase
     {
