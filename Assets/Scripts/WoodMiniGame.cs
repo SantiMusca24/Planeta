@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static ContadorUI;
 
-public class WoodMiniGame : MonoBehaviour
+public class WoodMiniGame : Rewind
 {
     public GameObject minigamePanel;
     public Slider precisionSlider;
@@ -32,7 +32,9 @@ public class WoodMiniGame : MonoBehaviour
 
     private void Start()
     {
-       minigamePanel.SetActive(false);
+        currentCuts = 0;
+        logsCut = 0;
+        minigamePanel.SetActive(false);
        precisionSlider.gameObject.SetActive(false);
        botton.SetActive(false);
         bottonAd.SetActive(false);
@@ -60,8 +62,8 @@ public class WoodMiniGame : MonoBehaviour
         bottonAd.SetActive(true);
         precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
-        currentCuts = 0;
-        logsCut = 0;
+        //currentCuts = 0;
+        //logsCut = 0;
         timer = gameTimer;
         sliderSpeed = 1f;
         phase = WoodcutPhase.Cutting;
@@ -144,6 +146,8 @@ public class WoodMiniGame : MonoBehaviour
 
     void EndMinigame()
     {
+        StartToRec();
+        
         phase = WoodcutPhase.Summary;
         
         precisionSlider.gameObject.SetActive(false);
@@ -178,6 +182,8 @@ public class WoodMiniGame : MonoBehaviour
            coinCollector.CollectCoin();
             StartCoroutine(SumarPuntosExponencialmente(maderaGanada));
         }
+        logsCut = 0;
+        currentCuts = 0;
     }
     private IEnumerator BottomCooldowm(float segundos)
     {
@@ -252,5 +258,24 @@ public class WoodMiniGame : MonoBehaviour
         Cutting,
         BetweenLogs,
         Summary
+    }
+
+    /*public override IEnumerator StartToRec()
+    {
+        while (true)
+        {
+            memento.Rec(new object[] { currentCuts, logsCut });
+            yield return new WaitForSeconds(0.1f);
+        }
+    }*/
+    public override void StartToRec()
+    {
+        memento.Rec(new object[] { currentCuts, logsCut });
+    }
+
+    protected override void BeRewind(ParamsMemento wrappers)
+    {
+        currentCuts = (int)wrappers.parameters[0];
+        logsCut = (int)wrappers.parameters[1];
     }
 }

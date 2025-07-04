@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeBuilder : MonoBehaviour
+public class UpgradeBuilder 
 {
 
     private List<UpgradeManager.LevelUnlockObject> unlocks;
