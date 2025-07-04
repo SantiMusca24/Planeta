@@ -41,12 +41,12 @@ public class TranslationManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
         SetLanguage(SystemLanguage.English);
-        Debug.Log("Idioma cambiado a Inglés (L)");
+    
         }  
     else if (Input.GetKeyDown(KeyCode.K))
         {
         SetLanguage(SystemLanguage.Slovenian);
-        Debug.Log("Idioma cambiado a Español (K)");
+       
         }
     }
 
