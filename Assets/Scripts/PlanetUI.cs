@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlanetUI : BaseContadorUI
 {
+    [Header("Floating Text")]
+    [SerializeField] protected Transform floatingTextContainer;
+    [SerializeField] protected TMP_Text floatingTextPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +40,21 @@ public class PlanetUI : BaseContadorUI
         }
 
         Destroy(floatingText.gameObject, 1f);
+    }
+    public override void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
+    {
+        throw new System.NotImplementedException();
+    }
+    public override void OcultarMinigameTextos()
+    {
+        throw new System.NotImplementedException();
+    }
+    public override void OcultarMinigameTextos2()
+    {
+        throw new System.NotImplementedException();
+    }
+    public override void ShowPanel(MinigamePanelType panelType, string resumen = "")
+    {
+        throw new System.NotImplementedException();
     }
 }

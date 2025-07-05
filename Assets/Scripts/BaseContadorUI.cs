@@ -11,9 +11,7 @@ public abstract class BaseContadorUI : MonoBehaviour
     [SerializeField] protected TMP_Text incomePerSecondText;
     [SerializeField] protected TMP_Text GoalText;
     [SerializeField] protected int goalPoints = 1000;
-    [Header("Floating Text")]
-    [SerializeField] protected Transform floatingTextContainer;
-    [SerializeField] protected TMP_Text floatingTextPrefab;
+    
 
     [SerializeField] protected ScrollRect scrollRectToReset;
     [SerializeField] protected string upgradeNameToTrack = "Upgrade_1";
@@ -177,64 +175,8 @@ public abstract class BaseContadorUI : MonoBehaviour
         Summary
     }
 
-    public void ShowPanel(MinigamePanelType panelType, string resumen = "")
-    {
-        if (minigamePanel != null) minigamePanel.SetActive(panelType == MinigamePanelType.Minigame);
-        if (resumenPanel != null) resumenPanel.SetActive(panelType == MinigamePanelType.Summary);
-
-        if (panelType == MinigamePanelType.Summary && resumenText != null)
-        {
-            resumenText.text = resumen;
-        }
-    }
-
-    public void FarmMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
-    {
-        if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
-            cortesText.text = $"Vacas: {cortes}/{cortesNecesarios}";
-
-        if (troncos.HasValue && troncosText != null)
-            troncosText.text = $"Establos: {troncos}";
-
-        if (tiempo.HasValue && tiempoText != null)
-            tiempoText.text = $": {tiempo.Value:F1}s";
-    }
-    public void FishMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
-    {
-        if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
-            cortesText.text = $"Peces: {cortes}/{cortesNecesarios}";
-
-        if (troncos.HasValue && troncosText != null)
-            troncosText.text = $"Barriles: {troncos}";
-
-        if (tiempo.HasValue && tiempoText != null)
-            tiempoText.text = $": {tiempo.Value:F1}s";
-    }
-
-    public void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
-    {
-        if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
-            cortesText.text = $"Cortes: {cortes}/{cortesNecesarios}";
-
-        if (troncos.HasValue && troncosText != null)
-            troncosText.text = $"Troncos: {troncos}";
-
-        if (tiempo.HasValue && tiempoText != null)
-            tiempoText.text = $": {tiempo.Value:F1}s";
-    }
-    public void OcultarMinigameTextos()
-    {
-
-        if (resumenText != null) resumenText.gameObject.SetActive(false);
-
-    }
-
-    public void OcultarMinigameTextos2()
-    {
-
-        if (tiempoText != null) tiempoText.gameObject.SetActive(false);
-        if (cortesText != null) cortesText.gameObject.SetActive(false);
-        if (troncosText != null) troncosText.gameObject.SetActive(false);
-
-    }
+    public abstract void ShowPanel(MinigamePanelType panelType, string resumen = "");
+    public abstract void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null);
+    public abstract void OcultarMinigameTextos();
+    public abstract void OcultarMinigameTextos2();
 }
