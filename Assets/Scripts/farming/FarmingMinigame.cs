@@ -198,7 +198,7 @@ public class FarmingMinigame : MonoBehaviour
 
 
         string resumen =
-                         $"Puntos Obtenidos: {maderaGanada}";
+                         $" {maderaGanada}";
 
         if (uiManager?.resumenText != null)
             uiManager.resumenText.gameObject.SetActive(true);
