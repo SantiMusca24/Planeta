@@ -187,7 +187,7 @@ public class FishMinigame : MonoBehaviour
 
 
         string resumen =
-                         $"Puntos Obtenidos: {maderaGanada}";
+                         $" {maderaGanada}";
 
         if (uiManager?.resumenText != null)
             uiManager.resumenText.gameObject.SetActive(true);
