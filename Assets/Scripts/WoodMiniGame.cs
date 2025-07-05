@@ -59,7 +59,7 @@ public class WoodMiniGame : Rewind
     public void StartMinigame()
     {
         bottonInicio.SetActive(false);
-        bottonAd.SetActive(true);
+        bottonAd.SetActive(false);
         precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
         //currentCuts = 0;
@@ -161,13 +161,13 @@ public class WoodMiniGame : Rewind
         
 
         string resumen = 
-                         $"Puntos Obtenidos: {maderaGanada}";
+                         $" {maderaGanada}";
 
         if (uiManager?.resumenText != null)
             uiManager.resumenText.gameObject.SetActive(true);
         
         bottonInicio.SetActive(true);
-        
+        bottonAd.SetActive(true);
         bottonInicio.GetComponent<Button>().interactable = false;
 
         uiManager?.OcultarMinigameTextos2();

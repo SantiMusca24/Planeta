@@ -15,7 +15,10 @@ public class BosqueUI : BaseContadorUI
     [SerializeField] public TMP_Text cortesText;
     [SerializeField] public TMP_Text troncosText;
     [SerializeField] public TMP_Text tiempoText;
+    [SerializeField] public TMP_Text cortesText2; 
+    [SerializeField] public TMP_Text troncosText2;
     [SerializeField] public TMP_Text resumenText;
+    [SerializeField] public TMP_Text resumenText2;
     [SerializeField] protected GameObject minigamePanel;
     [SerializeField] protected GameObject resumenPanel;
     [SerializeField] public TMP_Text cooldownTimerText;
@@ -27,11 +30,15 @@ public class BosqueUI : BaseContadorUI
         if (falloText != null) falloText.gameObject.SetActive(false);
         if (falloText != null) falloText.gameObject.SetActive(false);
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
+        if (cortesText2 != null) cortesText2.gameObject.SetActive(false);
+        if (troncosText2 != null) troncosText2.gameObject.SetActive(false);
+        if (resumenText != null) resumenText2.gameObject.SetActive(false);
     }
     
     public override void OcultarMinigameTextos()
     {
         if (resumenText != null) resumenText.gameObject.SetActive(false);
+        resumenText2.gameObject.SetActive(false);
     }
 
     public override void OcultarMinigameTextos2()
@@ -39,6 +46,7 @@ public class BosqueUI : BaseContadorUI
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
         if (cortesText != null) cortesText.gameObject.SetActive(false);
         if (troncosText != null) troncosText.gameObject.SetActive(false);
+        
     }
     public enum MinigamePanelType
     {
@@ -49,23 +57,30 @@ public class BosqueUI : BaseContadorUI
     {
         if (minigamePanel != null) minigamePanel.SetActive(panelType == MinigamePanelType.Minigame);
         if (resumenPanel != null) resumenPanel.SetActive(panelType == MinigamePanelType.Summary);
-
+        cortesText2.gameObject.SetActive(false);
+        troncosText2.gameObject.SetActive(false);
+        
         if (panelType == MinigamePanelType.Summary && resumenText != null)
         {
             resumenText.text = resumen;
+            resumenText2.gameObject.SetActive(true);
         }
     }
 
     public override void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
     {
         if (cortes.HasValue && cortesNecesarios.HasValue && cortesText != null)
-            cortesText.text = $"Cortes: {cortes}/{cortesNecesarios}";
+        {
+            cortesText.text = $" {cortes}/{cortesNecesarios}";
+            cortesText2.gameObject.SetActive(true);
+            troncosText2.gameObject.SetActive(true);
+        }
 
         if (troncos.HasValue && troncosText != null)
-            troncosText.text = $"Troncos: {troncos}";
+            troncosText.text = $" {troncos}";
 
         if (tiempo.HasValue && tiempoText != null)
-            tiempoText.text = $": {tiempo.Value:F1}s";
+            tiempoText.text = $" {tiempo.Value:F1}s";
     }
 
     public enum CutFeedbackType
@@ -97,6 +112,7 @@ public class BosqueUI : BaseContadorUI
 
     protected override IEnumerator ShowTemporaryText(TMP_Text text)
     {
+        
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(feedbackDuration);
         text.gameObject.SetActive(false);
