@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
-using static ContadorUI;
+using static PescaUI;
 
 public class FishMinigame : MonoBehaviour
 {
@@ -33,7 +33,7 @@ public class FishMinigame : MonoBehaviour
     public GameObject bottonAd;
     public GameObject bottonInicio;
 
-    public ContadorUI uiManager;
+    public PescaUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
     
     private void Start()
@@ -57,7 +57,7 @@ public class FishMinigame : MonoBehaviour
             }
             //UpdateSlider();
             timer -= Time.deltaTime;
-            uiManager?.FishMinigameUI(tiempo: timer);
+            uiManager?.UpdateMinigameUI(tiempo: timer);
 
             if (timer <= 0)
                 EndMinigame();
@@ -95,7 +95,7 @@ public class FishMinigame : MonoBehaviour
         phase = WoodcutPhase.Cutting;
 
         uiManager?.ShowPanel(MinigamePanelType.Minigame);
-        uiManager?.FishMinigameUI(
+        uiManager?.UpdateMinigameUI(
             cortes: currentCuts,
             cortesNecesarios: cutsNeededPerLog,
             troncos: logsCut,
@@ -165,8 +165,8 @@ public class FishMinigame : MonoBehaviour
                        
         }
 
-        uiManager?.FishMinigameUI(cortes: currentCuts, cortesNecesarios: cutsNeededPerLog);
-        uiManager?.FishMinigameUI(troncos: logsCut);
+        uiManager?.UpdateMinigameUI(cortes: currentCuts, cortesNecesarios: cutsNeededPerLog);
+        uiManager?.UpdateMinigameUI(troncos: logsCut);
 
     }
 

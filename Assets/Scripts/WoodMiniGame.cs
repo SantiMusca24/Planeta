@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static ContadorUI;
+using static BosqueUI;
 
 public class WoodMiniGame : Rewind
 {
@@ -27,7 +27,7 @@ public class WoodMiniGame : Rewind
     public GameObject bottonAd;
     public GameObject bottonInicio;
 
-    public ContadorUI uiManager;
+    public BosqueUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
 
     private void Start()

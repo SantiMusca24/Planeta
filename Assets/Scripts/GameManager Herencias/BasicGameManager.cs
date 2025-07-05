@@ -40,7 +40,18 @@ public class BasicGameManager : GameManager
         if (count >= cost)
         {
             count -= cost;
-            uiManager.UpdateUI();
+            if (uiBosque != null)
+            {
+                uiBosque.UpdateUI();
+            }
+            if (uiPesca != null)
+            {
+                uiPesca.UpdateUI();
+            }
+            if (uiGranja != null)
+            {
+                uiGranja.UpdateUI();
+            }
             return true;
         }
         return false;
@@ -48,7 +59,22 @@ public class BasicGameManager : GameManager
 
     public override void RefreshUI()
     {
-        uiManager.UpdateUI();
+        if (uiPlanet != null)
+        {
+            uiPlanet.UpdateUI();
+        }
+        if (uiBosque != null)
+        {
+            uiBosque.UpdateUI();
+        }
+        if (uiPesca != null)
+        {
+            uiPesca.UpdateUI();
+        }
+        if (uiGranja != null)
+        {
+            uiGranja.UpdateUI();
+        }
     }
 
     public override void RefreshUpgradeManagers()
@@ -76,15 +102,15 @@ public class BasicGameManager : GameManager
         UpgradeManager2.level1 = 0;
         UpgradeManager2.level2 = 0;
         UpgradeManager2.level3 = 0;
-        uiManager.UpdateUI();
+        RefreshUI();
     }
 
     public override void RotateAction()
     {
         count += rotatePoints;
-        uiManager.UpdateUI();
+        RefreshUI();
 
-        uiManager.SpawnFloatingText(rotatePoints);
+        if (uiPlanet != null) uiPlanet.SpawnFloatingText(rotatePoints);
     }
 
     public override void SaveProgress()
@@ -94,9 +120,25 @@ public class BasicGameManager : GameManager
         PlayerPrefs.Save();
     }
 
-    public override void SetUIManager(ContadorUI newUIManager)
+    /*public override void SetUIManager(ContadorUI newUIManager)
     {
         uiManager = newUIManager;
+    }*/
+    public override void SetUIPlanet(PlanetUI newUIManager)
+    {
+        uiPlanet = newUIManager;
+    }
+    public override void SetUIBosque(BosqueUI newUIManager)
+    {
+        uiBosque = newUIManager;
+    }
+    public override void SetUIPesca(PescaUI newUIManager)
+    {
+        uiPesca = newUIManager;
+    }
+    public override void SetUIGranja(GranjaUI newUIManager)
+    {
+        uiGranja = newUIManager;
     }
 
     protected override IEnumerator AutoIncrementCoroutine()
@@ -119,7 +161,7 @@ public class BasicGameManager : GameManager
         Debug.Log("SUMA 1 BOSQUE " + sum);
         count += sum / updatesPerSecond;
         Debug.Log("SUMA 2 BOSQUE " + sum);
-        uiManager.UpdateUI();
+        RefreshUI();
     }
 
     protected override void IdleCalculate2()
@@ -134,7 +176,7 @@ public class BasicGameManager : GameManager
         Debug.Log("SUMA 1 PLANETA " + sum);
         count += sum / updatesPerSecond;
         Debug.Log("SUMA 2 PLANETA " + sum);
-        uiManager.UpdateUI();
+        RefreshUI();
     }
 
     protected override void OnApplicationQuit()

@@ -4,7 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static ContadorUI;
+using static GranjaUI;
 
 public class FarmingMinigame : MonoBehaviour
 {
@@ -31,7 +31,7 @@ public class FarmingMinigame : MonoBehaviour
     public GameObject bottonAd;
     public GameObject bottonInicio;
 
-    public ContadorUI uiManager;
+    public GranjaUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
 
     // ################
@@ -74,7 +74,7 @@ public class FarmingMinigame : MonoBehaviour
         {
             //UpdateSlider();
             timer -= Time.deltaTime;
-            uiManager?.FarmMinigameUI(tiempo: timer);
+            uiManager?.UpdateMinigameUI(tiempo: timer);
 
             Cow();
             Catcher();
@@ -116,8 +116,8 @@ public class FarmingMinigame : MonoBehaviour
                 currentCuts = 0;
             }
 
-            uiManager?.FarmMinigameUI(cortes: currentCuts, cortesNecesarios: cutsNeededPerLog);
-            uiManager?.FarmMinigameUI(troncos: logsCut);
+            uiManager?.UpdateMinigameUI(cortes: currentCuts, cortesNecesarios: cutsNeededPerLog);
+            uiManager?.UpdateMinigameUI(troncos: logsCut);
         }
 
         catcherProgress = Mathf.Clamp(catcherProgress, 0f, 1f);
@@ -165,7 +165,7 @@ public class FarmingMinigame : MonoBehaviour
 
         minigamePanel.SetActive(true);
         //uiManager?.ShowPanel(MinigamePanelType.Minigame);
-        uiManager?.FarmMinigameUI(
+        uiManager?.UpdateMinigameUI(
             cortes: currentCuts,
             cortesNecesarios: cutsNeededPerLog,
             troncos: logsCut,

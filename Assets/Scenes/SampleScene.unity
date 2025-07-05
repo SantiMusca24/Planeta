@@ -1475,8 +1475,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contadorUI: {fileID: 1013334632}
+  uiPlanet: {fileID: 7818385375025404557}
+  uiBosque: {fileID: 0}
+  uiPesca: {fileID: 0}
+  uiGranja: {fileID: 0}
   upgradeManagers: []
   gameManager: {fileID: 1377431179}
+  sceneNum: 1
   upgradeManagers2:
   - {fileID: 1826920828}
   - {fileID: 1472730863}
@@ -16050,8 +16055,8 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7818385375025404555}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_GameObject: {fileID: 7818385375025404556}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3604fcdc0bb35042ac01915a7c0ca2d, type: 3}
   m_Name: 
@@ -25366,6 +25371,10 @@ MonoBehaviour:
   count: 0
   gems: 0
   uiManager: {fileID: 1013334632}
+  uiPlanet: {fileID: 7818385375025404557}
+  uiBosque: {fileID: 0}
+  uiPesca: {fileID: 0}
+  uiGranja: {fileID: 0}
   upgradeManagers: []
   upgradeManagers2:
   - {fileID: 1826920828}
@@ -32508,7 +32517,7 @@ MonoBehaviour:
   botton: {fileID: 494223538}
   bottonAd: {fileID: 0}
   bottonInicio: {fileID: 1979507591}
-  uiManager: {fileID: 1013334632}
+  uiManager: {fileID: 0}
   coinCollector: {fileID: 893410837}
 --- !u!1001 &1687700900
 PrefabInstance:
@@ -39508,6 +39517,11 @@ PrefabInstance:
       objectReference: {fileID: 1875197998}
     - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
+        type: 3}
       propertyPath: goalLevel2
       value: 10
       objectReference: {fileID: 0}
@@ -39624,8 +39638,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5817976759459765519, guid: 96046574d0e4f744baceb0f7872521de,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7818385375025404557}
   m_SourcePrefab: {fileID: 100100000, guid: 96046574d0e4f744baceb0f7872521de, type: 3}
+--- !u!1 &7818385375025404556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817976759459765519, guid: 96046574d0e4f744baceb0f7872521de,
+    type: 3}
+  m_PrefabInstance: {fileID: 7818385375025404555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7818385375025404557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818385375025404556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa845066c0a334b438ce385f89b2b1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 1875197998}
+  gemsText: {fileID: 1130873058}
+  scrollRectToReset: {fileID: 0}
+  GoalText: {fileID: 779803949}
+  goalPoints: 100
+  upgradeNameToTrack: Arboles
+  goalLevel: 10
+  upgradeGoalText: {fileID: 1671300781}
+  GoalText2: {fileID: 1482275590}
+  upgradeGoalText2: {fileID: 625286406}
+  goalPoints2: 5000
+  upgradeNameToTrack2: Carpinteria
+  goalLevel2: 10
+  floatingTextContainer: {fileID: 1625673929}
+  floatingTextPrefab: {fileID: 69915593405923128}
 --- !u!1001 &8132658851202092456
 PrefabInstance:
   m_ObjectHideFlags: 0

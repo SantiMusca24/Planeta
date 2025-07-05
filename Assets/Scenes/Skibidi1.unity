@@ -14005,7 +14005,7 @@ MonoBehaviour:
   botton: {fileID: 164325252}
   bottonAd: {fileID: 36418147}
   bottonInicio: {fileID: 1360755611}
-  uiManager: {fileID: 1326109478}
+  uiManager: {fileID: 1451424511}
   coinCollector: {fileID: 318143227}
 --- !u!1 &944316202 stripped
 GameObject:
@@ -15542,11 +15542,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contadorUI: {fileID: 1326109478}
+  uiPlanet: {fileID: 0}
+  uiBosque: {fileID: 1451424511}
+  uiPesca: {fileID: 0}
+  uiGranja: {fileID: 0}
   upgradeManagers:
   - {fileID: 846632304}
   - {fileID: 176567180}
   - {fileID: 745509156}
   gameManager: {fileID: 6175393720614953707}
+  sceneNum: 2
   upgradeManagers2: []
 --- !u!4 &1000001131
 Transform:
@@ -19139,8 +19144,8 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1451424509}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1451424510}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3604fcdc0bb35042ac01915a7c0ca2d, type: 3}
   m_Name: 
@@ -20913,6 +20918,11 @@ PrefabInstance:
       objectReference: {fileID: 1915613360}
     - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070764192844290937, guid: 96046574d0e4f744baceb0f7872521de,
+        type: 3}
       propertyPath: cortesText
       value: 
       objectReference: {fileID: 926961972}
@@ -21044,8 +21054,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5817976759459765519, guid: 96046574d0e4f744baceb0f7872521de,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1451424511}
   m_SourcePrefab: {fileID: 100100000, guid: 96046574d0e4f744baceb0f7872521de, type: 3}
+--- !u!1 &1451424510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817976759459765519, guid: 96046574d0e4f744baceb0f7872521de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451424509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451424511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451424510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6f5f47fa6e7f94ea1d37b1f0643825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 617997474}
+  gemsText: {fileID: 1796128108}
+  scrollRectToReset: {fileID: 124864430}
+  incomePerSecondText: {fileID: 666510332}
+  perfectoText: {fileID: 846854473}
+  regularText: {fileID: 720595084}
+  falloText: {fileID: 1915613360}
+  feedbackDuration: 0.1
+  cortesText: {fileID: 926961972}
+  troncosText: {fileID: 606769389}
+  tiempoText: {fileID: 998946820}
+  resumenText: {fileID: 529645512}
+  minigamePanel: {fileID: 248307746}
+  resumenPanel: {fileID: 953018639}
+  cooldownTimerText: {fileID: 1096533909}
 --- !u!1 &1458963944
 GameObject:
   m_ObjectHideFlags: 0
@@ -36523,6 +36570,10 @@ MonoBehaviour:
   count: 0
   gems: 0
   uiManager: {fileID: 1326109478}
+  uiPlanet: {fileID: 0}
+  uiBosque: {fileID: 1451424511}
+  uiPesca: {fileID: 0}
+  uiGranja: {fileID: 0}
   upgradeManagers:
   - {fileID: 846632304}
   - {fileID: 176567180}

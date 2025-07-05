@@ -16,6 +16,10 @@ public abstract class GameManager : MonoBehaviour
 
     public static GameManager Instance;
     [SerializeField] protected ContadorUI uiManager;
+    [SerializeField] protected PlanetUI uiPlanet;
+    [SerializeField] protected BosqueUI uiBosque;
+    [SerializeField] protected PescaUI uiPesca;
+    [SerializeField] protected GranjaUI uiGranja;
     [SerializeField] protected UpgradeManager[] upgradeManagers;
     [SerializeField] protected UpgradeManager2[] upgradeManagers2;
     //public GameObject sas;
@@ -79,7 +83,12 @@ public abstract class GameManager : MonoBehaviour
     protected abstract IEnumerator AutoIncrementCoroutine();
     public abstract bool PurchaseAction(int cost);
     public abstract void RefreshUI();
-    public abstract void SetUIManager(ContadorUI newUIManager);
+    //public abstract void SetUIManager(ContadorUI newUIManager);
+    public abstract void SetUIPlanet(PlanetUI newUIManager);
+    public abstract void SetUIBosque(BosqueUI newUIManager);
+    public abstract void SetUIPesca(PescaUI newUIManager);
+    public abstract void SetUIGranja(GranjaUI newUIManager);
+
     public abstract void ResetPlayerPrefs();
     public abstract void ForceIncomeUpdate();
     public abstract void RefreshUpgradeManagers();
