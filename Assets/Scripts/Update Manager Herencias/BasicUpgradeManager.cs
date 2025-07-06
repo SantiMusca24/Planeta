@@ -5,11 +5,26 @@ using UnityEngine;
 public class BasicUpgradeManager : UpgradeManager
 {
     static public int levelForest;
+    public int levelForestRedundant;
+    [SerializeField] forestUpgrade _forestUpgrade;
+
+    /*public BasicUpgradeManager(upgradeBase upgrd) : base(upgrd)
+    {
+    }*/
+    new void Start()
+    {
+        base.Start();
+        levelForest = level;
+        levelForestRedundant = level;
+        Debug.Log("FOREST LEVEL AAAAAA: " + levelForest);
+    }
     new void Update()
     {
         base.Update();
         levelForest = level;
+        levelForestRedundant = level;
         Debug.Log("level: " + level + ". rotatePoints: " + GameManager.rotatePoints);
+        Debug.Log("FOREST LEVEL AAAAAA: " + levelForest);
     }
     public override void ClickAction()
     {
@@ -29,6 +44,7 @@ public class BasicUpgradeManager : UpgradeManager
             }
             UpdateUI();
             gameManager.RefreshUI();
+            _forestUpgrade.CountStart();
         }
     }
 
@@ -45,7 +61,9 @@ public class BasicUpgradeManager : UpgradeManager
 
     public override float CalculateIncomePerSecond()
     {
-        return cookiesPerUpgrade * level;
+        if (levelToChange != 3) return cookiesPerUpgrade * level * _forestUpgrade.incTotal;
+        else return 0;
+
     }
 
     public override void CheckLevelUnlocks()
@@ -69,4 +87,9 @@ public class BasicUpgradeManager : UpgradeManager
         UpdateUI();
     }
 
+    /*public override float Inc()
+    {
+        Debug.Log("LEVEL FOREST: " + levelForest);
+        return _upgradeBase.Inc() + levelForest;
+    }*/
 }

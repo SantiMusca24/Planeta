@@ -5,6 +5,11 @@ using UnityEngine;
 public class FishUpgradeManager : UpgradeManager
 {
     static public int levelFish;
+
+    /*public FishUpgradeManager(upgradeDecorator upgrd) : base(upgrd)
+    {
+    }*/
+
     new void Update()
     {
         base.Update();
@@ -68,4 +73,8 @@ public class FishUpgradeManager : UpgradeManager
         UpdateUI();
     }
 
+    /*public override float Inc()
+    {
+        throw new System.NotImplementedException();
+    }*/
 }

@@ -24,12 +24,17 @@ public abstract class UpgradeManager : MonoBehaviour
     public float cookiesPerUpgrade = 0.1f;
     [Header("Settings")]
     public string upgradeName;
-    [SerializeField] int levelToChange;
+    [SerializeField] public int levelToChange;
+    [SerializeField] static public int levelToChangeStatic;
     [Header("Level Unlocks")]
     public List<LevelUnlockObject> unlocks = new List<LevelUnlockObject>();
 
     protected int level = 0;
     public static int levelPublic;
+
+    /*protected UpgradeManager(upgradeBase upgrd) : base(upgrd)
+    {
+    }*/
 
     [System.Serializable]
     public class LevelUnlockObject
@@ -82,6 +87,7 @@ public abstract class UpgradeManager : MonoBehaviour
     }
     protected virtual void Start()
     {
+        levelToChangeStatic = levelToChange;
         levelPublic = level;
         sceneLoad.planetScene = false;
         if (!string.IsNullOrEmpty(upgradeName))
