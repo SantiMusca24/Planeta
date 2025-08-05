@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class changeScene : MonoBehaviour
 {
-   
+    
+    float someValue;
+    
     public Animator transition;
+    public Material myMaterial;
     public Animator extraAnimation;
     public float transitionTime = 1f;
     public GameObject[] uiImages;
@@ -17,10 +20,13 @@ public class changeScene : MonoBehaviour
     // TOWN: 2
     [SerializeField] int structure = 1;
 
-
+    private void Update()
+    {
+        if (myMaterial != null) myMaterial.SetFloat("_fresnel_power", someValue);
+    }
     void Start()
     {
-        
+        someValue = 4.96f;
         foreach (GameObject img in uiImages)
         {
             if (img != null)
@@ -42,8 +48,8 @@ public class changeScene : MonoBehaviour
     }
     IEnumerator LoadLevel(int levelIndex)
     {
-
-        
+        someValue = 0.5f;
+        //if (myMaterial != null) Debug.LogError("AAAAAAAAAAAAAAAAA");
         yield return new WaitForSeconds(0.1f);
 
         foreach (GameObject img in uiImages)
