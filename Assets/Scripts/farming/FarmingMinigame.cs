@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using static GranjaUI;
 
@@ -33,7 +34,12 @@ public class FarmingMinigame : MonoBehaviour
 
     public GranjaUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
+    public ScriptableRendererFeature confettiFeature;
+    public ParticleSystem confeti;
 
+    public GameObject globo1;
+    public GameObject globo2;
+    public GameObject globo3;
     // ################
 
     [SerializeField] Transform topPivot, botPivot, cow;
@@ -61,6 +67,10 @@ public class FarmingMinigame : MonoBehaviour
 
     private void Start()
     {
+        confettiFeature.SetActive(false);
+        globo1.SetActive(false);
+        globo2.SetActive(false); 
+        globo3.SetActive(false);
         smoothMotion = 1;
         minigamePanel.SetActive(false);
         //fishBites.SetActive(false);
@@ -184,22 +194,19 @@ public class FarmingMinigame : MonoBehaviour
     }
     void EndMinigame()
     {
+        globo1.SetActive(true);
+        globo2.SetActive(true);
+        globo3.SetActive(true);
+        confettiFeature.SetActive(true);
+        confeti.Play(); 
         phase = WoodcutPhase.Summary;
         minigamePanel.SetActive(false);
-        //precisionSlider.gameObject.SetActive(false);
-        //fishBites.gameObject.SetActive(false);
-
         botton.SetActive(false);
 
         float incomePerSecond = GameManager.Instance.GetIncomePerSecond();
-
         int maderaGanada = Mathf.RoundToInt(logsCut * 1000 * incomePerSecond);
 
-
-
-        string resumen =
-                         $" {maderaGanada}";
-
+        string resumen = $" {maderaGanada}";
         if (uiManager?.resumenText != null)
             uiManager.resumenText.gameObject.SetActive(true);
 
@@ -208,9 +215,7 @@ public class FarmingMinigame : MonoBehaviour
         bottonInicio.GetComponent<Button>().interactable = false;
 
         uiManager?.OcultarMinigameTextos2();
-
         cooldownRoutine = StartCoroutine(BottomCooldowm(cooldownDuracion));
-
         uiManager?.ShowPanel(MinigamePanelType.Summary, resumen);
 
         StartCoroutine(OcultarTextos());
@@ -219,6 +224,15 @@ public class FarmingMinigame : MonoBehaviour
             coinCollector.CollectCoin();
             StartCoroutine(SumarPuntosExponencialmente(maderaGanada));
         }
+
+        // Apagar confeti después de 5 segundos
+        StartCoroutine(DesactivarConfetti());
+    }
+    private IEnumerator DesactivarConfetti()
+    {
+        yield return new WaitForSeconds(5f);
+        confettiFeature.SetActive(false);
+        confeti.Stop();
     }
     private IEnumerator BottomCooldowm(float segundos)
     {

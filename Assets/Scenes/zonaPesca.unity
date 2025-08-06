@@ -51431,6 +51431,7 @@ MonoBehaviour:
   gold1: {fileID: 0}
   gold5: {fileID: 0}
   gold10: {fileID: 0}
+  diamondShader: {fileID: 0}
 --- !u!114 &1756422209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55066,6 +55067,7 @@ MonoBehaviour:
   gold1: {fileID: 0}
   gold5: {fileID: 0}
   gold10: {fileID: 0}
+  diamondShader: {fileID: 0}
 --- !u!114 &1978513434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59493,12 +59495,17 @@ PrefabInstance:
     - target: {fileID: 3891709146979737334, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.083751
+      value: 0.043291844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891709146979737334, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.452653
       objectReference: {fileID: 0}
     - target: {fileID: 3891709146979737334, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.998413
+      value: -2.9985352
       objectReference: {fileID: 0}
     - target: {fileID: 3994236113564330464, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}

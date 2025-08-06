@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class storeScript : MonoBehaviour
 {
     public GameObject adInfo, goldInfo1, goldInfo2, goldInfo3, gemInfo;
     public TMP_Text gold1, gold5, gold10;
+    public ScriptableRendererFeature diamondShader;
     void Start()
     {
-        
+        diamondShader.SetActive(false);
     }
     public void CloseStore()
     {
@@ -61,8 +63,9 @@ public class storeScript : MonoBehaviour
 
     public void BuyGems()
     {
-        //menu de dinero real
         GameManager.Instance.gems += 5;
+        diamondShader.SetActive(true);
+        StartCoroutine(DisableDiamondShaderAfterDelay(0.5f)); // se apaga en 1 segundo
     }
     public void ClosePopup()
     {
@@ -94,5 +97,10 @@ public class storeScript : MonoBehaviour
     public void InfoGems()
     {
         gemInfo.SetActive(true);
+    }
+    private IEnumerator DisableDiamondShaderAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        diamondShader.SetActive(false);
     }
 }
