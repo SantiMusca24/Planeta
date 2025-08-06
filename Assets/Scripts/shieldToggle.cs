@@ -14,8 +14,9 @@ public class shieldToggle : MonoBehaviour
     void Start()
     {
         shieldOn = true;
-        feature1.rendererFeatures[4].SetActive(true);
-        feature1.rendererFeatures[5].SetActive(false);
+        feature1.rendererFeatures[2].SetActive(true);
+        feature1.rendererFeatures[3].SetActive(false);
+        feature1.rendererFeatures[4].SetActive(false);
         shieldObj.SetActive(true);
     }
 

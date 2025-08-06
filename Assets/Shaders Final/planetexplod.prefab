@@ -1,0 +1,481 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1317951444025802624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8024432503380940090}
+  - component: {fileID: -2672751213365953911}
+  m_Layer: 0
+  m_Name: planetexplod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8024432503380940090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317951444025802624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -92.89868, y: -99.034096, z: 163.14835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4282901011095528551}
+  - {fileID: 4878503598770799042}
+  - {fileID: 1129964889768395061}
+  - {fileID: 8482371183147085197}
+  - {fileID: 796453934694439914}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2672751213365953911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317951444025802624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55644a6735411f94f8a10e75ba1ad39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1372088771408698036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8024432503380940090}
+    m_Modifications:
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 98.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90304077
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.42955488
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -50.879
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087421641254143384, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion planeta particulas (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcaa5bbaf4dfa4646865a8ca384fe88f, type: 3}
+--- !u!4 &4878503598770799042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5816766547350051702, guid: fcaa5bbaf4dfa4646865a8ca384fe88f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1372088771408698036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1864666553898665145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8024432503380940090}
+    m_Modifications:
+    - target: {fileID: 147016695658217008, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion planeta particulas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93642676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1910936
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3312255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 98.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99307865
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.11745147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -13.49
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04b0a90d73010ce4898c8e5fe8138bd6, type: 3}
+--- !u!4 &4282901011095528551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1864666553898665145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2991191957172173620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8024432503380940090}
+    m_Modifications:
+    - target: {fileID: 147016695658217008, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion planeta particulas (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93642676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1910936
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3312255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 98.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.28019318
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.95994365
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 212.543
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04b0a90d73010ce4898c8e5fe8138bd6, type: 3}
+--- !u!4 &796453934694439914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2991191957172173620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3251944772337869291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8024432503380940090}
+    m_Modifications:
+    - target: {fileID: 147016695658217008, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion planeta particulas (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93642676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1910936
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3312255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 98.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9387167
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3446898
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 40.326
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04b0a90d73010ce4898c8e5fe8138bd6, type: 3}
+--- !u!4 &1129964889768395061 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3251944772337869291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6284813105739451731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8024432503380940090}
+    m_Modifications:
+    - target: {fileID: 147016695658217008, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion planeta particulas (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93642676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1910936
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3312255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 98.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.16033065
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.98706335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 161.548
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04b0a90d73010ce4898c8e5fe8138bd6, type: 3}
+--- !u!4 &8482371183147085197 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2490292264948736222, guid: 04b0a90d73010ce4898c8e5fe8138bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6284813105739451731}
+  m_PrefabAsset: {fileID: 0}

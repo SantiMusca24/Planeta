@@ -8,7 +8,11 @@ using static PescaUI;
 
 public class FishMinigame : MonoBehaviour
 {
-    
+    [SerializeField] UniversalRendererData feature1;
+    //public Camera _camData;
+    //public bool shieldOn = true;
+    //public GameObject shieldObj;
+
     public GameObject minigamePanel;
     public GameObject fishBites;
     public float sliderSpeed = 1f;
@@ -38,6 +42,12 @@ public class FishMinigame : MonoBehaviour
     
     private void Start()
     {
+        //shieldOn = true;
+        feature1.rendererFeatures[2].SetActive(true);
+        feature1.rendererFeatures[3].SetActive(false);
+        feature1.rendererFeatures[4].SetActive(false);
+        feature1.rendererFeatures[5].SetActive(false);
+        //shieldObj.SetActive(true);
         minigamePanel.SetActive(false);
         fishBites.SetActive(false);
         botton.SetActive(false);
@@ -84,7 +94,8 @@ public class FishMinigame : MonoBehaviour
 
     public void StartMinigame()
     {
-        
+        feature1.rendererFeatures[2].SetActive(false);
+        feature1.rendererFeatures[3].SetActive(true);
         bottonInicio.SetActive(false);
         //precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
@@ -172,7 +183,8 @@ public class FishMinigame : MonoBehaviour
 
     void EndMinigame()
     {
-        
+        feature1.rendererFeatures[2].SetActive(true);
+        feature1.rendererFeatures[3].SetActive(false);
         phase = WoodcutPhase.Summary;
 
         //precisionSlider.gameObject.SetActive(false);
