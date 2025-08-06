@@ -35,9 +35,10 @@ public class FishMinigame : MonoBehaviour
 
     public PescaUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
-    
+    public ScriptableRendererFeature waterFeature;
     private void Start()
     {
+        waterFeature.SetActive(false);
         minigamePanel.SetActive(false);
         fishBites.SetActive(false);
         botton.SetActive(false);
@@ -84,7 +85,8 @@ public class FishMinigame : MonoBehaviour
 
     public void StartMinigame()
     {
-        
+
+        waterFeature.SetActive(true);
         bottonInicio.SetActive(false);
         //precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
@@ -172,7 +174,8 @@ public class FishMinigame : MonoBehaviour
 
     void EndMinigame()
     {
-        
+
+        waterFeature.SetActive(false);
         phase = WoodcutPhase.Summary;
 
         //precisionSlider.gameObject.SetActive(false);
