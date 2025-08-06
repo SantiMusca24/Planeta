@@ -16,7 +16,7 @@ public class PlanetExplode : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        feature1.rendererFeatures[2].SetActive(true);
+        feature1.rendererFeatures[2].SetActive(false);
         feature1.rendererFeatures[3].SetActive(false);
         feature1.rendererFeatures[4].SetActive(false);
         feature1.rendererFeatures[5].SetActive(false);
