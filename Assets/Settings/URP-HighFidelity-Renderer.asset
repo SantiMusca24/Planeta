@@ -130,7 +130,8 @@ MonoBehaviour:
   - {fileID: 4412896635959871427}
   - {fileID: -5418931975993225384}
   - {fileID: -7280595349916138532}
-  m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a8177cda2deb42247cf0c117e8f9f9a226edc387e7201cc23d3d580feb1c1416ccb4dc43e37e1a21f69a
+  - {fileID: 1162591229340724813}
+  m_RendererFeatureMap: adc0de57c6d2eee56fca4a0d4146a8177cda2deb42247cf0c117e8f9f9a226edc387e7201cc23d3d580feb1c1416ccb4dc43e37e1a21f69a4daed63b905a2210
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -173,6 +174,24 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &1162591229340724813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: BACON
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  passMaterial: {fileID: -876546973899608171, guid: 9affd6e99623a8045bcbaa9a66e99b01,
+    type: 3}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
 --- !u!114 &1704689704169556591
 MonoBehaviour:
   m_ObjectHideFlags: 0
