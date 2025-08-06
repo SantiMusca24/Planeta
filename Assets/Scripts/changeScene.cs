@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class changeScene : MonoBehaviour
 {
     [SerializeField] UniversalRendererData feature1;
-    float someValue;
+    public float someValue;
     
     public Animator transition;
     public Material myMaterial;
@@ -31,7 +31,7 @@ public class changeScene : MonoBehaviour
         feature1.rendererFeatures[3].SetActive(false);
         feature1.rendererFeatures[4].SetActive(false);
         feature1.rendererFeatures[5].SetActive(false);
-        someValue = 4.96f;
+        //someValue = 4.96f;
         foreach (GameObject img in uiImages)
         {
             if (img != null)
