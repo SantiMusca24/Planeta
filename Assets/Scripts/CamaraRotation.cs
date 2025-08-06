@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CamaraRotation : MonoBehaviour
 {
@@ -37,14 +38,17 @@ public class CamaraRotation : MonoBehaviour
     private Vector3 currentVelocity;
     private Quaternion currentRotation;
     [Header("UI Control")]
-    public GameObject[] blockingCanvases; 
+    public GameObject[] blockingCanvases;
     public Canvas mainUI;
 
     [Header("UI Panel que bloquea")]
     public RectTransform blockingPanel;
     public Vector2 panelOnScreenPosition;
     public float panelThreshold = 5f;
-
+    [Header("Efecto de Fuego")]
+    public Transform fireObject;
+    public float fireActivationDistance = 10f;
+    public ScriptableRendererFeature fireFeature;
     void Start()
     {
         if (target == null)
@@ -63,9 +67,15 @@ public class CamaraRotation : MonoBehaviour
 
     void LateUpdate()
     {
+        if (fireObject != null && fireFeature != null)
+        {
+            float distanceToFire = Vector3.Distance(transform.position, fireObject.position);
+            bool shouldEnable = distanceToFire <= fireActivationDistance;
+            fireFeature.SetActive(shouldEnable);
+        }
         if (target == null) return;
 
-        if (IsCameraBlockedByUI()) return; 
+        if (IsCameraBlockedByUI()) return;
 
         if (Input.GetMouseButton(0))
         {
@@ -77,23 +87,6 @@ public class CamaraRotation : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         distance = Mathf.Clamp(distance - scroll * scrollSpeed, minDistance, maxDistance);
 
-#if UNITY_ANDROID || UNITY_IOS
-        if (Input.touchCount == 2)
-        {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
-
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
-
-            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-
-            distance = Mathf.Clamp(distance + deltaMagnitudeDiff * 0.05f, minDistance, maxDistance);
-        }
-#endif
         UpdateCameraPosition(false);
     }
 
@@ -102,7 +95,7 @@ public class CamaraRotation : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(y, x, 0);
         Vector3 desiredPosition = targetRotation * new Vector3(0, 0, -distance) + target.position;
 
-        
+
         if (instant)
         {
             transform.position = desiredPosition;
@@ -134,7 +127,7 @@ public class CamaraRotation : MonoBehaviour
                 return true;
         }
 
-        
+
         if (blockingPanel != null)
         {
             float distance = Vector2.Distance(blockingPanel.anchoredPosition, panelOnScreenPosition);
@@ -144,5 +137,6 @@ public class CamaraRotation : MonoBehaviour
 
         return false;
     }
+
 
 }
