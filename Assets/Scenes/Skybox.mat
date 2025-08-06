@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LowPolyWater
-  m_Shader: {fileID: -6465566751694194690, guid: 91a7fcf511a6f784f87276b601341ef8,
+  m_Name: Skybox
+  m_Shader: {fileID: -6465566751694194690, guid: e24bde7bd144e9a419bc982dd661d354,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -84,6 +84,10 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _AurorBlend: 4.78
+    - _AuroraPower: 7.4
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -91,20 +95,23 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Depth: 0.8
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DistortionSpeed: 1.28
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GradientOffSet: -0.22
+    - _HorizondBlend: 30
+    - _Intesity: 5.6
     - _Metallic: 0
+    - _NadierBlend: 1
+    - _NoiseScale: 530.2
     - _OcclusionStrength: 1
-    - _Oclussion: 0.5
     - _Parallax: 0.005
-    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -112,23 +119,27 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StarPower: 39.2
+    - _StartHeight: 200
     - _Surface: 0
-    - _Transparency: 0.44
-    - _WaveHeight: 1
-    - _WaveSpeed: 0.05
-    - _Wave_Strenght: 2
+    - _TwirlStrenght: 0.84
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _ZenithBlend: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepColor: {r: 0.13163047, g: 0.37194112, b: 0.5471698, a: 0}
+    - _DistorsionMinMax: {r: 10, g: 12, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShallowColor: {r: 0.06674973, g: 0.5660378, b: 0.56082684, a: 0}
+    - _GroundColor: {r: 0.13207549, g: 0.12148453, b: 0.12148453, a: 0}
+    - _HorizonColor: {r: 0.09433961, g: 0.088554636, b: 0.088554636, a: 0}
+    - _ScrollSpeed: {r: 0, g: 0.06, b: 0, a: 0}
+    - _SkyColor: {r: 0.028835887, g: 0.06892441, b: 0.2264151, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveDirection: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 2.96, b: 0, a: 0}
+    - _TwirlOffSet: {r: 0, g: 0.46, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &2502149851488348901
+--- !u!114 &3983868940413990184
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,3 +152,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
+--- !u!114 &8255547334304214064
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
