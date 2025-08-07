@@ -8,13 +8,16 @@ using static PescaUI;
 
 public class MiningMinigame : MonoBehaviour
 {
-    
+    [SerializeField] float leftMost = -700, rightMost = 701;
+    [SerializeField] float rockXPos;
+    [SerializeField] int bombRoll = 1;
+    [SerializeField] bool isBomb = false;
     public GameObject minigamePanel;
     public GameObject rockHits;
     public GameObject bombHits; // this randomly replaces the rock
     public float sliderSpeed = 1f;
     public int cutsNeededPerLog = 1;
-    public float secondsMax = 3, secondsMin = 1;
+    public float secondsMax = 2, secondsMin = 0.5f;
 
     private bool isCounting = false;
     private bool increasing = true;
@@ -39,6 +42,8 @@ public class MiningMinigame : MonoBehaviour
     
     private void Start()
     {
+        bombRoll = 1;
+        isBomb = false;
         minigamePanel.SetActive(false);
         rockHits.SetActive(false);
         botton.SetActive(false);
@@ -53,7 +58,19 @@ public class MiningMinigame : MonoBehaviour
             if (!isCounting)
             {
                 isCounting = true;
+                rockXPos = Random.Range(leftMost, rightMost);
                 rocksTimer = Random.Range(secondsMin, secondsMax);
+                bombRoll = Random.Range(1, 4);
+                if (bombRoll == 1)
+                {
+                    isBomb = true;
+                    bombHits.transform.position = new Vector3(rockXPos, 700, rockHits.transform.position.z);
+                }
+                else
+                {
+                    isBomb = false;
+                    rockHits.transform.position = new Vector3(rockXPos, 700, rockHits.transform.position.z);
+                }
                 //StartCoroutine(FishSpawn());
             }
             //UpdateSlider();

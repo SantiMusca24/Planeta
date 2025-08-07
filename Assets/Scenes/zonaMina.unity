@@ -11950,7 +11950,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164325252}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -24982,7 +24982,7 @@ GameObject:
   - component: {fileID: 845429820}
   - component: {fileID: 845429822}
   m_Layer: 5
-  m_Name: Barriles
+  m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24995,16 +24995,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845429818}
-  m_LocalRotation: {x: -0, y: -0, z: -0.34173003, w: 0.9397982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.574419, y: 2.574419, z: 2.574419}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 695684923}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.965}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 613, y: 607}
+  m_AnchoredPosition: {x: -50, y: 621}
   m_SizeDelta: {x: 60, y: -70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845429820
@@ -25027,7 +25027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BARREL
+  m_text: ROCKS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcac776fa108d2e438640914976f1187, type: 2}
   m_sharedMaterial: {fileID: -213249111827129024, guid: bcac776fa108d2e438640914976f1187,
@@ -26422,6 +26422,7 @@ GameObject:
   - component: {fileID: 943676523}
   - component: {fileID: 943676524}
   - component: {fileID: 943676525}
+  - component: {fileID: 943676526}
   m_Layer: 5
   m_Name: WoodMiniGame
   m_TagString: Untagged
@@ -26490,7 +26491,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943676522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7302512694f9bc144b2467ba52010e02, type: 3}
   m_Name: 
@@ -26502,6 +26503,38 @@ MonoBehaviour:
   secondsMax: 4
   secondsMin: 1
   gameTimer: 20
+  timer: 0
+  summaryPanel: {fileID: 953018639}
+  botton: {fileID: 164325252}
+  bottonAd: {fileID: 1037485693}
+  bottonInicio: {fileID: 1360755611}
+  uiManager: {fileID: 1451424511}
+  coinCollector: {fileID: 318143227}
+--- !u!114 &943676526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943676522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115c37ccc4049d24787efe005b7fc6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftMost: -700
+  rightMost: 701
+  rockXPos: 0
+  bombRoll: 1
+  isBomb: 0
+  minigamePanel: {fileID: 248307746}
+  rockHits: {fileID: 1929932035}
+  bombHits: {fileID: 1159710}
+  sliderSpeed: 1
+  cutsNeededPerLog: 1
+  secondsMax: 2
+  secondsMin: 0.5
+  gameTimer: 15
   timer: 0
   summaryPanel: {fileID: 953018639}
   botton: {fileID: 164325252}
@@ -41650,7 +41683,7 @@ GameObject:
   - component: {fileID: 1357296625}
   - component: {fileID: 1357296627}
   m_Layer: 5
-  m_Name: Peces
+  m_Name: Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41695,7 +41728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FISH
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcac776fa108d2e438640914976f1187, type: 2}
   m_sharedMaterial: {fileID: -213249111827129024, guid: bcac776fa108d2e438640914976f1187,
@@ -53486,7 +53519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.000076, y: 660}
+  m_AnchoredPosition: {x: -273, y: 700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929932037
@@ -53826,7 +53859,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946491778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -58316,6 +58349,11 @@ PrefabInstance:
       objectReference: {fileID: 6175393720614953707}
     - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: upgradeName
+      value: Mina3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103793839451143414, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: cookiesPerUpgrade
       value: 20
       objectReference: {fileID: 0}
@@ -58605,6 +58643,11 @@ PrefabInstance:
       objectReference: {fileID: 6175393720614953707}
     - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: upgradeName
+      value: Mina2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866486224364051866, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: cookiesPerUpgrade
       value: 15
       objectReference: {fileID: 0}
@@ -58847,6 +58890,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 6175393720614953707}
+    - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: upgradeName
+      value: Mina1
+      objectReference: {fileID: 0}
     - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: cookiesPerUpgrade
