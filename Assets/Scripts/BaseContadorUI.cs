@@ -55,11 +55,13 @@ public abstract class BaseContadorUI : MonoBehaviour
         {
             doubleIncomeTimerText.gameObject.SetActive(true);
             doubleIncomeTimerText.text = FormatTime(GameManager.Instance.doubleIncomeTimer);
+            Debug.Log("SKIBIDI");
         }
         else
         {
             doubleIncomeTimerText.gameObject.SetActive(false);
         }
+        Debug.Log("" + GameManager.Instance.doubleIncomeActive);
     }
 
     private string FormatTime(float time)

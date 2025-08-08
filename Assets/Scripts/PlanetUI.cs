@@ -30,7 +30,7 @@ public class PlanetUI : BaseContadorUI
     // Update is called once per frame
     void Update()
     {
-        
+        base.Update();
     }
     public void SpawnFloatingText(double amount)
     {

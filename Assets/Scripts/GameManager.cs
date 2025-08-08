@@ -43,6 +43,7 @@ public abstract class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         count = PlayerPrefs.GetFloat("Count", 0f);
         gems = PlayerPrefs.GetFloat("Gems", 0f);
+
     }
      void Update()
     {
