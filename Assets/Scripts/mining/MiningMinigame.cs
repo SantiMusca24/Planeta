@@ -161,6 +161,8 @@ public class MiningMinigame : MonoBehaviour
 
     public void StartMinigame()
     {
+        leftMost = 784;
+        rightMost = 1162;
         rockHits.transform.position = new Vector3(rockXPos, 800, bombHits.transform.position.z);
         bombHits.transform.position = new Vector3(rockXPos, 800, bombHits.transform.position.z);
         rockHits.SetActive(true);
