@@ -11999,7 +11999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &165064523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58105,6 +58105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1153750112681357087, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: m_text
+      value: Mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153750112681357087, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: m_fontSize
       value: 31
       objectReference: {fileID: 0}
@@ -58266,7 +58271,7 @@ PrefabInstance:
     - target: {fileID: 1988640356180091816, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_text
-      value: Bait
+      value: Ore
       objectReference: {fileID: 0}
     - target: {fileID: 1988640356180091816, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -59143,6 +59148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6844823235271444525, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
+      propertyPath: m_text
+      value: Excavation
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844823235271444525, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
       propertyPath: m_fontSize
       value: 31
       objectReference: {fileID: 0}
@@ -59430,7 +59440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Fishing
+  ID: Mine
 --- !u!1 &3948232284973399886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1234125169363425757, guid: a3f07e64b10286549ab1899a85fa23b6,
@@ -59473,7 +59483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: IPS5
+  ID: IPS11
 --- !u!114 &3948232284973399892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59486,7 +59496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Bait
+  ID: Ore
 --- !u!114 &3948232284973399893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59499,7 +59509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: IPS4
+  ID: IPS10
 --- !u!114 &3948232284973399894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59512,7 +59522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: IPS6
+  ID: IPS12
 --- !u!114 &3948232284973399895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59525,7 +59535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35f802ad61af264b8d073de63a860a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: Housing
+  ID: Excavation
 --- !u!114 &4085505901619445238
 MonoBehaviour:
   m_ObjectHideFlags: 0

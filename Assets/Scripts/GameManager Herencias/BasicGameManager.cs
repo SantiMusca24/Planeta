@@ -26,7 +26,8 @@ public class BasicGameManager : GameManager
         {
             sum += upgradeManager.CalculateIncomePerSecond();
         }
-        return sum;
+
+        return doubleIncomeActive ? sum * 2f : sum;
     }
 
     public override void OnEnable()
@@ -159,7 +160,8 @@ public class BasicGameManager : GameManager
             upgradeManager.UpdateUI();
         }
         Debug.Log("SUMA 1 BOSQUE " + sum);
-        count += sum / updatesPerSecond;
+        float multiplier = doubleIncomeActive ? 2f : 1f;
+        count += (sum * multiplier) / updatesPerSecond;
         Debug.Log("SUMA 2 BOSQUE " + sum);
         RefreshUI();
     }

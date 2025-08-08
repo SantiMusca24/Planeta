@@ -13,7 +13,8 @@ public abstract class GameManager : MonoBehaviour
     public float gems = 0;
     protected float nextTimeCheck = 1;
 
-
+    public bool doubleIncomeActive = false;
+    public float doubleIncomeTimer = 0f;
     public static GameManager Instance;
     [SerializeField] protected ContadorUI uiManager;
     [SerializeField] protected PlanetUI uiPlanet;
@@ -22,6 +23,7 @@ public abstract class GameManager : MonoBehaviour
     [SerializeField] protected GranjaUI uiGranja;
     [SerializeField] protected UpgradeManager[] upgradeManagers;
     [SerializeField] protected UpgradeManager2[] upgradeManagers2;
+
     //public GameObject sas;
 
     static public int rotatePoints = 1; 
@@ -68,6 +70,15 @@ public abstract class GameManager : MonoBehaviour
             }
             nextTimeCheck = Time.timeSinceLevelLoad + (1f / updatesPerSecond);
              
+        }
+        if (doubleIncomeActive)
+        {
+            doubleIncomeTimer -= Time.deltaTime;
+            if (doubleIncomeTimer <= 0f)
+            {
+                doubleIncomeActive = false;
+                doubleIncomeTimer = 0f;
+            }
         }
     }
     /*static public void tapped()

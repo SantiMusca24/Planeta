@@ -95,4 +95,20 @@ public class storeScript : MonoBehaviour
     {
         gemInfo.SetActive(true);
     }
+    public void BuyDoubleIncome()
+    {
+        int price = 15; 
+
+        if (GameManager.Instance.gems >= price)
+        {
+            GameManager.Instance.gems -= price;
+            GameManager.Instance.doubleIncomeActive = true;
+            GameManager.Instance.doubleIncomeTimer = 5f; 
+            Debug.Log("Ingreso doble activado por 30 minutos");
+        }
+        else
+        {
+            Debug.Log("No hay suficientes gemas para activar ingreso doble.");
+        }
+    }
 }
