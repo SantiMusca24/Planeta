@@ -14512,7 +14512,7 @@ MonoBehaviour:
   positionSmoothTime: 0.15
   rotationSmoothTime: 0.1
   blockingCanvases:
-  - {fileID: 0}
+  - {fileID: 1978513432}
   - {fileID: 1399779058}
   - {fileID: 2021813191}
   - {fileID: 248307746}
@@ -33895,6 +33895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c7717f75cd2b43bf669571b7a8e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meteoriteSpawn: {fileID: 0}
 --- !u!114 &1037485696
 MonoBehaviour:
   m_ObjectHideFlags: 0
