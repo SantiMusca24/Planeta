@@ -103,7 +103,7 @@ public class storeScript : MonoBehaviour
         {
             GameManager.Instance.gems -= price;
             GameManager.Instance.doubleIncomeActive = true;
-            GameManager.Instance.doubleIncomeTimer = 5f; 
+            GameManager.Instance.doubleIncomeTimer = 60f; 
             Debug.Log("Ingreso doble activado por 30 minutos");
         }
         else
