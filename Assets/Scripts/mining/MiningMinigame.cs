@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using static PescaUI;
 
 public class MiningMinigame : MonoBehaviour
 {
-    [SerializeField] float leftMost = -700, rightMost = 701;
-    [SerializeField] float rockXPos;
+    //private float correct = 254.3163f;
+    //public bool left;
+   // public float correct = 494.2f;
+    //public float Ycorrec = 787;
+    [SerializeField] float leftMost = 784, rightMost = 1162;
+    [SerializeField] float rockXPos = 800;
     [SerializeField] int bombRoll = 1;
     [SerializeField] bool isBomb = false;
     public GameObject minigamePanel;
     public GameObject rockHits;
     public GameObject bombHits; // this randomly replaces the rock
-    public float sliderSpeed = 1f;
+    public float sliderSpeed = 138f;
     public int cutsNeededPerLog = 1;
     public float secondsMax = 2, secondsMin = 0.5f;
 
@@ -42,10 +47,13 @@ public class MiningMinigame : MonoBehaviour
     
     private void Start()
     {
-        bombRoll = 1;
+        leftMost = 784;
+        rightMost = 1162;
+        bombRoll = 2;
         isBomb = false;
         minigamePanel.SetActive(false);
         rockHits.SetActive(false);
+        bombHits.SetActive(false);
         botton.SetActive(false);
         bottonAd.SetActive(false);
         isCounting = false;
@@ -53,40 +61,91 @@ public class MiningMinigame : MonoBehaviour
     }
     void Update()
     {
+        //a
+        //rockHits.transform.position = new Vector3(correct, Ycorrec, rockHits.transform.position.z);
         if (phase == WoodcutPhase.Cutting)
+            
         {
             if (!isCounting)
             {
                 isCounting = true;
                 rockXPos = Random.Range(leftMost, rightMost);
+                //if (left) rockXPos = leftMost;
+                //else rockXPos = rightMost;
                 rocksTimer = Random.Range(secondsMin, secondsMax);
                 bombRoll = Random.Range(1, 4);
                 if (bombRoll == 1)
                 {
                     isBomb = true;
-                    bombHits.transform.position = new Vector3(rockXPos, 700, rockHits.transform.position.z);
+                    bombHits.transform.position = new Vector3(rockXPos, 800, bombHits.transform.position.z);
                 }
                 else
                 {
                     isBomb = false;
-                    rockHits.transform.position = new Vector3(rockXPos, 700, rockHits.transform.position.z);
+                    rockHits.transform.position = new Vector3(rockXPos, 800, rockHits.transform.position.z);
                 }
                 //StartCoroutine(FishSpawn());
             }
-            //UpdateSlider();
-            timer -= Time.deltaTime;
+            else
+            {
+                if (!isBomb)
+                {
+                    //rockHits.transform.position = new Vector3(rockHits.transform.position.x, rockHits.transform.position.y - , rockHits.transform.position.z);
+                    //var dir = rockHits.transform.position - transform.position;
+                    //transform.forward = dir;
+                    rockHits.transform.position -= rockHits.transform.up * sliderSpeed * Time.deltaTime;
+                    if (rockHits.transform.position.y <= 323)
+                    {
+                        rockHits.transform.position = new Vector3(2000, 2000, rockHits.transform.position.z);
+                        isCounting = false;
+                    }
+                }
+                else
+                {
+                    bombHits.transform.position -= bombHits.transform.up * sliderSpeed * Time.deltaTime;
+                    if (bombHits.transform.position.y <= 323)
+                    {
+                        bombHits.transform.position = new Vector3(2000, 2000, rockHits.transform.position.z);
+                        isCounting = false;
+                    }
+                }
+            }
+                //UpdateSlider();
+                timer -= Time.deltaTime;
             uiManager?.UpdateMinigameUI(tiempo: timer);
 
             if (timer <= 0)
                 EndMinigame();
 
-            //if (Input.GetKeyDown(KeyCode.Mouse0))
+            /*if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
                 //AttemptCut();
+                if (Input.mousePosition)
+            }*/
+
         }
     }
     
+    public void hitRock()
+    {
+        rockHits.transform.position = new Vector3(2000, 2000, rockHits.transform.position.z);
+        //currentCuts++;
+        logsCut++;
+        sliderSpeed += 70f;
+        uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
+        uiManager?.UpdateMinigameUI(troncos: logsCut);
+        isCounting = false;
+    }
+    public void hitBomb()
+    {
+        bombHits.transform.position = new Vector3(2000, 2000, rockHits.transform.position.z);
+        if (logsCut > 0) logsCut--;
+        uiManager?.ShowCutFeedback(CutFeedbackType.Fail);
+        uiManager?.UpdateMinigameUI(troncos: logsCut);
+        isCounting = false;
+    }
 
-    private IEnumerator FishSpawn()
+    /*private IEnumerator FishSpawn()
     {
         yield return new WaitForSeconds(rocksTimer);
         if ( timer  >= 0 )
@@ -98,18 +157,23 @@ public class MiningMinigame : MonoBehaviour
         rockHits.SetActive(false);
         fishReady = false;
         isCounting = false;
-    }
+    }*/
 
     public void StartMinigame()
     {
-        
+        rockHits.transform.position = new Vector3(rockXPos, 800, bombHits.transform.position.z);
+        bombHits.transform.position = new Vector3(rockXPos, 800, bombHits.transform.position.z);
+        rockHits.SetActive(true);
+        bombHits.SetActive(true);
+        //isCounting = true;
+        //Debug.Log("ROCKS SHOULD BE ACTIVE");
         bottonInicio.SetActive(false);
         //precisionSlider.gameObject.SetActive(true);
         botton.SetActive(true);
         currentCuts = 0;
         logsCut = 0;
         timer = gameTimer;
-        sliderSpeed = 1f;
+        sliderSpeed = 138f;
         phase = WoodcutPhase.Cutting;
 
         uiManager?.ShowPanel(MinigamePanelType.Minigame);
@@ -160,7 +224,7 @@ public class MiningMinigame : MonoBehaviour
             logsCut++;
             secondsMax *= 0.9f;
             secondsMin *= 0.5f;
-            sliderSpeed *= 0.8f;
+            sliderSpeed += 70f;
             uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
         }
         else
