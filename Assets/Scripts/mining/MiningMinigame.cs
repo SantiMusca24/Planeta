@@ -73,7 +73,7 @@ public class MiningMinigame : MonoBehaviour
                 //if (left) rockXPos = leftMost;
                 //else rockXPos = rightMost;
                 rocksTimer = Random.Range(secondsMin, secondsMax);
-                bombRoll = Random.Range(1, 4);
+                bombRoll = Random.Range(1, 5);
                 if (bombRoll == 1)
                 {
                     isBomb = true;

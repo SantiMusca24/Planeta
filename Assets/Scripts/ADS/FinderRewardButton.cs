@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class FinderRewardButton : MonoBehaviour
 {
+    public meteoriteSpawn meteoriteSpawn;
     public void ExecuteRewardedAd()
     {
+        if (meteoriteSpawn != null) meteoriteSpawn.StartShower();
         AdsManager.AdRecompensa = true;
         AdsManager.Instance.ExecuteRewardedAd();
     }
     public void ExecuteRewardedAd2()
     {
+        if (meteoriteSpawn != null) meteoriteSpawn.StartShower();
         AdsManager.AdRecompensa = false;
         AdsManager.Instance.ExecuteRewardedAd();
         gameObject.SetActive(false);
