@@ -11,7 +11,7 @@ public abstract class BaseContadorUI : MonoBehaviour
     //[SerializeField] protected TMP_Text incomePerSecondText;
     //[SerializeField] protected TMP_Text GoalText;
     //[SerializeField] protected int goalPoints = 1000;
-    
+    [SerializeField] private TMP_Text doubleIncomeTimerText;
 
     [SerializeField] protected ScrollRect scrollRectToReset;
     //[SerializeField] protected string upgradeNameToTrack = "Upgrade_1";
@@ -49,7 +49,25 @@ public abstract class BaseContadorUI : MonoBehaviour
             scrollRectToReset.verticalNormalizedPosition = 1f;
         }               
     }
+    protected virtual void Update()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.doubleIncomeActive)
+        {
+            doubleIncomeTimerText.gameObject.SetActive(true);
+            doubleIncomeTimerText.text = FormatTime(GameManager.Instance.doubleIncomeTimer);
+        }
+        else
+        {
+            doubleIncomeTimerText.gameObject.SetActive(false);
+        }
+    }
 
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
     public abstract void UpdateUI();
     
     /*public enum CutFeedbackType

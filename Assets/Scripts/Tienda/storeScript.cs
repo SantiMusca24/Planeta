@@ -97,7 +97,7 @@ public class storeScript : MonoBehaviour
     }
     public void BuyDoubleIncome()
     {
-        int price = 15; 
+        int price = 20; 
 
         if (GameManager.Instance.gems >= price)
         {

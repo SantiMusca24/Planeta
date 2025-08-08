@@ -11,6 +11,7 @@ public class ContadorUI : MonoBehaviour
     [SerializeField] TMP_Text incomePerSecondText;
     [SerializeField] TMP_Text GoalText;
     [SerializeField] private int goalPoints = 1000;
+    [SerializeField] private TMP_Text doubleIncomeTimerText;
     [Header("Floating Text")]
     [SerializeField] Transform floatingTextContainer;
     [SerializeField] TMP_Text floatingTextPrefab;
@@ -54,6 +55,25 @@ public class ContadorUI : MonoBehaviour
         if (falloText != null) falloText.gameObject.SetActive(false);
         if (falloText != null) falloText.gameObject.SetActive(false);
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
+    }
+    protected virtual void Update()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.doubleIncomeActive)
+        {
+            doubleIncomeTimerText.gameObject.SetActive(true);
+            doubleIncomeTimerText.text = FormatTime(GameManager.Instance.doubleIncomeTimer);
+        }
+        else
+        {
+            doubleIncomeTimerText.gameObject.SetActive(false);
+        }
+    }
+
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void UpdateUI()
