@@ -27360,6 +27360,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 70877227049552025, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70877227049552025, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70877227049552025, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70877227049552025, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -240.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 70877227049552025, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 65.8
+      objectReference: {fileID: 0}
     - target: {fileID: 360138199605549574, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -27505,6 +27530,26 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235858762501552956, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235858762501552956, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235858762501552956, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235858762501552956, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -243.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1287043159853080059, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: unlockCost
@@ -27543,7 +27588,7 @@ PrefabInstance:
     - target: {fileID: 1617619545955277180, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1812650925160557464, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -27985,7 +28030,7 @@ PrefabInstance:
     - target: {fileID: 2886111700922562867, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3113926616188611223, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -28047,7 +28092,7 @@ PrefabInstance:
     - target: {fileID: 3376684141140126869, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2458.4998
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 3658469887165773397, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -28412,6 +28457,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 10.053208
       objectReference: {fileID: 0}
+    - target: {fileID: 4178626148242582988, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1489578450, guid: 71cf889216c90f945a92dad76a74495c,
+        type: 3}
     - target: {fileID: 4247803755035393595, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_IsActive
@@ -28600,6 +28651,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5025567534574027997, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -57151407, guid: 71cf889216c90f945a92dad76a74495c,
+        type: 3}
     - target: {fileID: 5087784819412054696, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: startPrice
@@ -29313,10 +29370,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 179011196, guid: 8fb096b13e3526641abe619601285bc5,
         type: 3}
+    - target: {fileID: 8340208202690127477, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1637579237, guid: 71cf889216c90f945a92dad76a74495c,
+        type: 3}
     - target: {fileID: 8341985541387578495, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443104181993651042, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -29342,6 +29405,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529087576272996491, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1516223
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529087576272996491, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0707
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529087576272996491, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0707
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529087576272996491, guid: a3f07e64b10286549ab1899a85fa23b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -237.3
       objectReference: {fileID: 0}
     - target: {fileID: 8831307161287347231, guid: a3f07e64b10286549ab1899a85fa23b6,
         type: 3}
@@ -36089,6 +36172,8 @@ MonoBehaviour:
   IPS: 0
   count: 0
   gems: 0
+  doubleIncomeActive: 0
+  doubleIncomeTimer: 0
   uiManager: {fileID: 1326109478}
   uiPlanet: {fileID: 0}
   uiBosque: {fileID: 0}
