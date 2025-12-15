@@ -7,12 +7,23 @@ public class storeScript : MonoBehaviour
 {
     public GameObject adInfo, goldInfo1, goldInfo2, goldInfo3, gemInfo;
     public TMP_Text gold1, gold5, gold10;
+
+    [Header("Solo asignar en escena del planeta")]
+    [SerializeField] TutorialScript tutorial;
     void Start()
     {
         
     }
     public void CloseStore()
     {
+        if (tutorial != null)
+        {
+            if (tutorial.count == 4)
+            {
+                tutorial.Tap5();
+            }
+        } 
+
         gameObject.SetActive(false);
     }
     public void RemoveAds()

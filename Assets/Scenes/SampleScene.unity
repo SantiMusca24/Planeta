@@ -2929,7 +2929,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1526342071}
-  - {fileID: 1838441132}
   - {fileID: 1690580764}
   - {fileID: 1148539176}
   - {fileID: 1087283365}
@@ -2948,6 +2947,7 @@ RectTransform:
   - {fileID: 1310742580}
   - {fileID: 1204609710}
   - {fileID: 244690482}
+  - {fileID: 1838441132}
   - {fileID: 1065242287}
   - {fileID: 1795575457}
   - {fileID: 1556215812}
@@ -4676,6 +4676,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 282541675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &282541677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7672858673859656710, guid: 844b2e969641b294b803b54c6bc9a630,
+    type: 3}
+  m_PrefabInstance: {fileID: 282541675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &297596954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,6 +6212,11 @@ PrefabInstance:
       objectReference: {fileID: 621120031}
     - target: {fileID: 7378675549851977902, guid: a6e606d94a87fb14d8a6f8e4e420a1ca,
         type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 1526342072}
+    - target: {fileID: 7378675549851977902, guid: a6e606d94a87fb14d8a6f8e4e420a1ca,
+        type: 3}
       propertyPath: storeMenu
       value: 
       objectReference: {fileID: 1253012878}
@@ -6661,7 +6672,7 @@ GameObject:
   - component: {fileID: 354740834}
   - component: {fileID: 354740833}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11323,7 +11334,7 @@ GameObject:
   - component: {fileID: 587725089}
   - component: {fileID: 587725092}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: SolarSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12791,7 +12802,7 @@ PrefabInstance:
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
@@ -12801,7 +12812,7 @@ PrefabInstance:
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
@@ -12851,12 +12862,12 @@ PrefabInstance:
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -5722.264
       objectReference: {fileID: 0}
     - target: {fileID: 2649039277294932105, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
@@ -12882,6 +12893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BuyDoubleIncome
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857476631264296153, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.899902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18500,7 +18516,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978589684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -20020,7 +20036,7 @@ GameObject:
   - component: {fileID: 1065242289}
   - component: {fileID: 1065242288}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: CoinIco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20679,7 +20695,7 @@ GameObject:
   - component: {fileID: 1087283367}
   - component: {fileID: 1087283366}
   m_Layer: 0
-  m_Name: Image
+  m_Name: CurrencyBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23965,7 +23981,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1130873057}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1130873060}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -23974,6 +23990,12 @@ MonoBehaviour:
 --- !u!224 &1130873059 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7211755870128984968, guid: 844b2e969641b294b803b54c6bc9a630,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130873057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1130873060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7672858673859656710, guid: 844b2e969641b294b803b54c6bc9a630,
     type: 3}
   m_PrefabInstance: {fileID: 1130873057}
   m_PrefabAsset: {fileID: 0}
@@ -26496,6 +26518,7 @@ MonoBehaviour:
   gold1: {fileID: 1313995565}
   gold5: {fileID: 1972469271}
   gold10: {fileID: 1086577067}
+  tutorial: {fileID: 1526342072}
 --- !u!114 &1253012880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26542,7 +26565,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 3276.1}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -32066,6 +32089,18 @@ MonoBehaviour:
   text1a: {fileID: 0}
   text2a: {fileID: 0}
   text3a: {fileID: 0}
+  icons:
+  - {fileID: 1087283364}
+  - {fileID: 1795575456}
+  - {fileID: 1556215811}
+  - {fileID: 1065242286}
+  - {fileID: 8587033035108201212}
+  - {fileID: 1130873060}
+  - {fileID: 282541677}
+  - {fileID: 1860716268}
+  - {fileID: 354740831}
+  - {fileID: 1838441131}
+  - {fileID: 587725087}
   count: 0
 --- !u!1 &1528416501
 GameObject:
@@ -32402,7 +32437,7 @@ GameObject:
   - component: {fileID: 1556215814}
   - component: {fileID: 1556215813}
   m_Layer: 0
-  m_Name: Image (2)
+  m_Name: GemIco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39611,7 +39646,7 @@ GameObject:
   - component: {fileID: 1795575459}
   - component: {fileID: 1795575458}
   m_Layer: 0
-  m_Name: Image (4)
+  m_Name: WorldIco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41505,7 +41540,7 @@ GameObject:
   - component: {fileID: 1860716271}
   - component: {fileID: 1860716270}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Store
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41829,7 +41864,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8587033035108201211}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8587033035108201212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -44195,7 +44230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047500065}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -46905,6 +46940,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844b2e969641b294b803b54c6bc9a630, type: 3}
+--- !u!1 &8587033035108201212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7672858673859656710, guid: 844b2e969641b294b803b54c6bc9a630,
+    type: 3}
+  m_PrefabInstance: {fileID: 8587033035108201211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

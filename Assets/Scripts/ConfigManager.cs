@@ -16,6 +16,9 @@ public class ConfigManager : MonoBehaviour
     [SerializeField] private Button yesButton;
     [SerializeField] private Button noButton;
     public static bool canEqualize = true;
+
+    [Header("Solo asignar en escena del planeta")]
+    [SerializeField] TutorialScript tutorial;
     private void Start()
     {
        
@@ -83,7 +86,16 @@ public class ConfigManager : MonoBehaviour
         if (storeMenu.activeSelf) storeMenu.SetActive(false);
         if (cache.activeSelf)
             cache.SetActive(false);
-
+        if (configCanvas.activeSelf)
+        {
+            if (tutorial != null)
+            {
+                if (tutorial.count == 5)
+                {
+                    tutorial.Tap6();
+                }
+            }
+        }
         configCanvas.SetActive(!configCanvas.activeSelf);
     }
     public void OpenStore()

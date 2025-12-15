@@ -48,6 +48,14 @@ public class spinDetect : MonoBehaviour
                         spinsTutorial++;
                         if (spinsTutorial >= 5)
                         {
+                            tutorial.ClickWaitMethod(2);
+                            tutorial.icons[0].SetActive(true);
+                            tutorial.icons[1].SetActive(true);
+                            tutorial.icons[2].SetActive(true);
+                            tutorial.icons[3].SetActive(true);
+                            tutorial.icons[4].SetActive(true);
+                            tutorial.icons[5].SetActive(true);
+                            tutorial.icons[6].SetActive(true);
                             tutorial.bg.SetActive(true);
                             tutorial.text3.SetActive(true);
                         }

@@ -20,6 +20,7 @@ public class ButtonClickUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     [SerializeField] private float clickDuration = 0.1f;
     [SerializeField] private Ease clickEase = Ease.OutQuad;
 
+
     private Vector3 originalScale;
 
     private void Awake()

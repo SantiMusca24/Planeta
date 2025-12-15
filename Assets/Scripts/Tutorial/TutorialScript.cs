@@ -6,44 +6,59 @@ using UnityEngine;
 public class TutorialScript : MonoBehaviour
 {
     public GameObject bg, text1, text2, text3, text4, text5, text6, text7, text8, text9, text1a, text2a, text3a;
+    public GameObject[] icons;
     public int count = 0;
+    bool canClick = true;
     private void Start()
     {
         count = 0;
+        canClick = true;
     }
     public void StartChain()
     {
+        StartCoroutine(ClickWait(1));
         bg.SetActive(true);
         text1.SetActive(true);
+        foreach (var icon in icons)
+        {
+            icon.SetActive(false);
+        }
     }
     public void Tap1()
     {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
         count++;
         text1.SetActive(false);
         text2.SetActive(true);
     }
     public void Tap2()
     {
+        if (!canClick) return;
         count++;
         text2.SetActive(false);
         bg.SetActive(false);
     }
     public void Tap3()
     {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
         count++;
         text3.SetActive(false);
         text4.SetActive(true);
     }
     public void Tap4()
     {
+        if (!canClick) return;
         count++;
         bg.SetActive(false);
         text4.SetActive(false);
-        StartCoroutine(Wait1(3, text5));
+        StartCoroutine(Wait1(3, text5, icons[7]));
     }
     public void Tap5()
     {
         count++;
+        icons[8].SetActive(true);
         text5.SetActive(false);
         text6.SetActive(true);
 
@@ -51,18 +66,22 @@ public class TutorialScript : MonoBehaviour
     public void Tap6()
     {
         count++;
+        icons[8].SetActive(true);
         bg.SetActive(false);
         text6.SetActive(false);
-        StartCoroutine(Wait1(3, text7));
+        StartCoroutine(Wait1(3, text7, icons[9]));
     }
     public void Tap7()
     {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
         count++;
         text7.SetActive(false);
         text8.SetActive(true);
     }
     public void Tap8()
     {
+        if (!canClick) return;
         count++;
         bg.SetActive(false);
         text8.SetActive(false);
@@ -70,6 +89,7 @@ public class TutorialScript : MonoBehaviour
     }
     public void Tap9()
     {
+        if (!canClick) return;
         count++;
         bg.SetActive(false);
         text9.SetActive(false);
@@ -99,10 +119,22 @@ public class TutorialScript : MonoBehaviour
         PlayerPrefs.SetInt("Tutorial2", 1);
     }
 
-    IEnumerator Wait1(int seconds, GameObject text)
+    IEnumerator Wait1(int seconds, GameObject text, GameObject icon = null)
     {
         yield return new WaitForSeconds(seconds);
         bg.SetActive(true);
+        StartCoroutine(ClickWait(1));
         text.SetActive(true);
+        if (icon != null) icon.SetActive(true);
+    }
+    public void ClickWaitMethod(int seconds)
+    {
+        StartCoroutine(ClickWait(seconds));
+    }
+    IEnumerator ClickWait(int seconds)
+    {
+        canClick = false;
+        yield return new WaitForSeconds(seconds);
+        canClick = true;
     }
 }

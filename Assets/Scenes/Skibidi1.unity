@@ -12938,7 +12938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c10ab4c9186f14383f7b12c924075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1735334340}
 --- !u!1 &769528672
 GameObject:
   m_ObjectHideFlags: 0
@@ -12980,6 +12979,7 @@ MonoBehaviour:
   gold1: {fileID: 117101416}
   gold5: {fileID: 570209995}
   gold10: {fileID: 230385330}
+  tutorial: {fileID: 0}
 --- !u!114 &769528674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12992,7 +12992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c10ab4c9186f14383f7b12c924075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 0}
 --- !u!114 &769528675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27659,6 +27658,7 @@ MonoBehaviour:
   text1a: {fileID: 269740062}
   text2a: {fileID: 1605729143}
   text3a: {fileID: 174479866}
+  icons: []
   count: 0
 --- !u!1 &1736520968
 GameObject:
@@ -29552,6 +29552,7 @@ GameObject:
   - component: {fileID: 1864405748}
   - component: {fileID: 1864405747}
   - component: {fileID: 1864405746}
+  - component: {fileID: 1864405749}
   m_Layer: 5
   m_Name: WoodGame
   m_TagString: Untagged
@@ -29642,6 +29643,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1864405749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864405744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de0e689786f0e34cb331afc25ff75de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorial: {fileID: 1735334340}
 --- !u!1 &1868640010
 GameObject:
   m_ObjectHideFlags: 0
@@ -33521,7 +33535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c10ab4c9186f14383f7b12c924075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 0}
 --- !u!114 &2062814674
 MonoBehaviour:
   m_ObjectHideFlags: 0
