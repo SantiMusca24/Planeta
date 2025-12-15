@@ -104,16 +104,27 @@ public class TutorialScript : MonoBehaviour
     }
     public void Tap1a()
     {
+        if (count != 0) return;
+        int check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) return;
+        count++;
+        StartCoroutine(ClickWait(1));
         text1a.SetActive(false);
         text2a.SetActive(true);
     }
     public void Tap2a()
     {
+        if (count != 1) return;
+        int check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) return;
+        count++;
+        StartCoroutine(ClickWait(1));
         text2a.SetActive(false);
         text3a.SetActive(true);
     }
     public void Tap3a()
     {
+        if (!canClick) return;
         bg.SetActive(false);
         text3a.SetActive(false);
         PlayerPrefs.SetInt("Tutorial2", 1);
