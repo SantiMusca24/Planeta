@@ -77,6 +77,27 @@ public class TutorialScript : MonoBehaviour
         PlayerPrefs.SetInt("Tutorial1", 1);
         PlayerPrefs.Save();
     }
+    public void StartChain2()
+    {
+        bg.SetActive(true);
+        text1a.SetActive(true);
+    }
+    public void Tap1a()
+    {
+        text1a.SetActive(false);
+        text2a.SetActive(true);
+    }
+    public void Tap2a()
+    {
+        text2a.SetActive(false);
+        text3a.SetActive(true);
+    }
+    public void Tap3a()
+    {
+        bg.SetActive(false);
+        text3a.SetActive(false);
+        PlayerPrefs.SetInt("Tutorial2", 1);
+    }
 
     IEnumerator Wait1(int seconds, GameObject text)
     {
