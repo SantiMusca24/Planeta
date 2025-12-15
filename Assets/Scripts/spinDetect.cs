@@ -11,12 +11,19 @@ public class spinDetect : MonoBehaviour
     [SerializeField] int currentCheck = 1;
     [SerializeField] static public int spins = 0;
     [SerializeField] private TMP_Text _spinsTx;
+    [SerializeField] TutorialScript tutorial;
+    int spinsTutorial = 0;
 
     public static event Action OnPlanetRotated;
     void Start()
     {
         currentCheck = 1;
         _spinsTx.text = "GIROS: " + spins;
+        int check = PlayerPrefs.GetInt("Tutorial1", 0);
+        if (check == 0)
+        {
+            tutorial.StartChain();
+        }
     }
 
     
@@ -36,6 +43,15 @@ public class spinDetect : MonoBehaviour
                     spins++;
                     _spinsTx.text = "GIROS: " + spins;
                     OnPlanetRotated?.Invoke();
+                    if (tutorial.count == 2)
+                    {
+                        spinsTutorial++;
+                        if (spinsTutorial >= 5)
+                        {
+                            tutorial.bg.SetActive(true);
+                            tutorial.text3.SetActive(true);
+                        }
+                    }
                 }
                 break;
                 /*case 3:

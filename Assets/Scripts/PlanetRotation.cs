@@ -6,7 +6,8 @@ public class PlanetRotation : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 10f;
     static public bool touch = false;
-
+    
+    
     void Update()
     {
         

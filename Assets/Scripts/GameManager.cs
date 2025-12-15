@@ -24,6 +24,9 @@ public abstract class GameManager : MonoBehaviour
     [SerializeField] protected UpgradeManager[] upgradeManagers;
     [SerializeField] protected UpgradeManager2[] upgradeManagers2;
 
+    public bool sawTutorial1 = false;
+    public bool sawTutorial2 = false;
+
     //public GameObject sas;
 
     static public int rotatePoints = 1; 
