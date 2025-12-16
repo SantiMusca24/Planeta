@@ -18,6 +18,7 @@ public class FinderRewardButton : MonoBehaviour
         Debug.Log("Ingreso doble activado por 30 minutos");
         AdsManager.AdRecompensa = true;
         AdsManager.Instance.ExecuteRewardedAd();
+        //gameObject.SetActive(false);
     }
     public void ExecuteRewardedAd2()
     {
