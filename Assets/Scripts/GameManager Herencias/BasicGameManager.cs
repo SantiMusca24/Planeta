@@ -108,10 +108,10 @@ public class BasicGameManager : GameManager
 
     public override void RotateAction()
     {
-        count += rotatePoints;
+        count += rotatePoints + cloud1.spinMult;
         RefreshUI();
 
-        if (uiPlanet != null) uiPlanet.SpawnFloatingText(rotatePoints);
+        if (uiPlanet != null) uiPlanet.SpawnFloatingText(rotatePoints + cloud1.spinMult);
     }
 
     public override void SaveProgress()

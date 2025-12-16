@@ -21,6 +21,14 @@ public class cloud1 : MonoBehaviour
     static public float maxAsteroidHeight;
     static public float minAsteroidHeight;
 
+    static public int adChance;
+    static public int fishPointMult;
+    static public int pricePenalty;
+    static public float farmGameSpeedMult;
+    static public int spinMult;
+    static public float woodGameSpeedMult;
+    static public float woodGameTime;
+
 
     private void Awake()
     {
@@ -78,6 +86,12 @@ public class cloud1 : MonoBehaviour
         maxAsteroidHeight = RemoteConfigService.Instance.appConfig.GetFloat("MaxMeteorHeight");
         minAsteroidHeight = RemoteConfigService.Instance.appConfig.GetFloat("MinMeteorHeight");
 
-
+        adChance = RemoteConfigService.Instance.appConfig.GetInt("AdChance");
+        fishPointMult = RemoteConfigService.Instance.appConfig.GetInt("FishPointMult");
+        pricePenalty = RemoteConfigService.Instance.appConfig.GetInt("PricePenalty");
+        farmGameSpeedMult = RemoteConfigService.Instance.appConfig.GetFloat("FarmGameSpeedMult");
+        spinMult = RemoteConfigService.Instance.appConfig.GetInt("SpinMult");
+        woodGameSpeedMult = RemoteConfigService.Instance.appConfig.GetFloat("WoodGameSpeedMult");
+        woodGameTime = RemoteConfigService.Instance.appConfig.GetFloat("WoodGameTIme");
     }
 }

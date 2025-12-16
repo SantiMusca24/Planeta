@@ -64,7 +64,7 @@ public class WoodMiniGame : Rewind
         botton.SetActive(true);
         //currentCuts = 0;
         //logsCut = 0;
-        timer = gameTimer;
+        timer = cloud1.woodGameTime;
         sliderSpeed = 1f;
         phase = WoodcutPhase.Cutting;
 
@@ -96,7 +96,7 @@ public class WoodMiniGame : Rewind
         }
 
         if (increasing)
-            precisionSlider.value += Time.deltaTime * sliderSpeed;
+            precisionSlider.value += Time.deltaTime * sliderSpeed * cloud1.woodGameSpeedMult;
         else
             precisionSlider.value -= Time.deltaTime * sliderSpeed;
 

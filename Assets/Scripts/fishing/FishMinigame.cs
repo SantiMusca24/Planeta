@@ -182,7 +182,7 @@ public class FishMinigame : MonoBehaviour
 
         float incomePerSecond = GameManager.Instance.GetIncomePerSecond();
 
-        int maderaGanada = Mathf.RoundToInt(logsCut * 500 * incomePerSecond);
+        int maderaGanada = Mathf.RoundToInt(logsCut * 500 * incomePerSecond * cloud1.fishPointMult);
 
 
 

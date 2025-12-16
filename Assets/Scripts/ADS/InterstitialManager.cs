@@ -8,7 +8,7 @@ public class InterstitialManager : MonoBehaviour
 
     void Awake()
     {
-        randomNum = Random.Range(0, 2);
+        randomNum = Random.Range(0, cloud1.adChance);
         if (randomNum == 0) AdsManager.Instance.ShowInterstitialAd();
     }
 }

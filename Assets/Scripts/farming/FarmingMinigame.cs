@@ -108,7 +108,7 @@ public class FarmingMinigame : MonoBehaviour
         {
             catcherProgress = 0;
             currentCuts += 1;
-            smoothMotion = smoothMotion * 0.9f;
+            smoothMotion = smoothMotion * 0.9f * cloud1.farmGameSpeedMult;
             uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
             if (currentCuts >= cutsNeededPerLog)
             {

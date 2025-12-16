@@ -78,7 +78,7 @@ public class BasicUpgradeManager : UpgradeManager
     protected override int CalculatePrice()
     {
         int price = Mathf.RoundToInt(startPrice * Mathf.Pow(upgradePriceMultiplier, level));
-        return price;
+        return price + cloud1.pricePenalty;
     }
 
     public override void AssignGameManager(GameManager gm)
