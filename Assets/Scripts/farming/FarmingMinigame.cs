@@ -97,7 +97,7 @@ public class FarmingMinigame : MonoBehaviour
 
         if (min < cowPos && cowPos < max)
         {
-            catcherProgress += catcherPower * Time.deltaTime;
+            catcherProgress += catcherPower * cloud1.farmGameSpeedMult * Time.deltaTime;
             //Debug.Log("DENTRO DE ZONA");
         }
         else
@@ -108,7 +108,7 @@ public class FarmingMinigame : MonoBehaviour
         {
             catcherProgress = 0;
             currentCuts += 1;
-            smoothMotion = smoothMotion * 0.9f * cloud1.farmGameSpeedMult;
+            smoothMotion = smoothMotion * 0.9f;
             uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
             if (currentCuts >= cutsNeededPerLog)
             {
