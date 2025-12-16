@@ -48,6 +48,10 @@ public class storeScript : MonoBehaviour
         confirmPopup.SetActive(false);
         pendingAction = null;
     }
+    public void TryBuyRemoveAds()
+    {
+        ShowConfirm(RemoveAds);
+    }
     public void RemoveAds()
     {
         //menu de dinero real
@@ -75,6 +79,10 @@ public class storeScript : MonoBehaviour
             BuyGoldGen(1);
         }
     }
+    public void TryBuyGold5()
+    {
+        ShowConfirm(BuyGold5);
+    }
     public void BuyGold5()
     {
         if (GameManager.Instance.gems >= 7)
@@ -82,6 +90,10 @@ public class storeScript : MonoBehaviour
             GameManager.Instance.gems -= 7;
             BuyGoldGen(5);
         }
+    }
+    public void TryBuyGold10()
+    {
+        ShowConfirm(BuyGold10);
     }
     public void BuyGold10()
     {
@@ -95,7 +107,10 @@ public class storeScript : MonoBehaviour
     {
         GameManager.Instance.count += GameManager.Instance.IPS * (3600 * hoursMult);
     }
-
+    public void TryBuyGems()
+    {
+        ShowConfirm(BuyGems);
+    }
     public void BuyGems()
     {
         //menu de dinero real
