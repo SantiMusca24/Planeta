@@ -1956,7 +1956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10, y: -3149.2146}
+  m_AnchoredPosition: {x: 10, y: -3149.215}
   m_SizeDelta: {x: 0, y: 6298.429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104555935
@@ -13037,7 +13037,7 @@ PrefabInstance:
     - target: {fileID: 7803443070050341543, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyDoubleIncome
+      value: TryBuyDoubleIncome
       objectReference: {fileID: 0}
     - target: {fileID: 7857476631264296153, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
         type: 3}
@@ -15274,8 +15274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 237, y: -33}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.0026855469, y: -0.0002822876}
+  m_SizeDelta: {x: -161.94, y: -99.348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772487973
 MonoBehaviour:

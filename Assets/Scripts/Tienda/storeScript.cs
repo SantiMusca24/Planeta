@@ -147,6 +147,10 @@ public class storeScript : MonoBehaviour
     {
         gemInfo.SetActive(true);
     }
+    public void TryBuyDoubleIncome()
+    {
+        ShowConfirm(BuyDoubleIncome);
+    }
     public void BuyDoubleIncome()
     {
         int price = 20; 
