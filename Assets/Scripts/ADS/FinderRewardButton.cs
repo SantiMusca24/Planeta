@@ -11,6 +11,14 @@ public class FinderRewardButton : MonoBehaviour
         AdsManager.AdRecompensa = true;
         AdsManager.Instance.ExecuteRewardedAd();
     }
+    public void ExecuteDoubleIncomeAd()
+    {
+        GameManager.Instance.doubleIncomeActive = true;
+        GameManager.Instance.doubleIncomeTimer = 60f;
+        Debug.Log("Ingreso doble activado por 30 minutos");
+        AdsManager.AdRecompensa = true;
+        AdsManager.Instance.ExecuteRewardedAd();
+    }
     public void ExecuteRewardedAd2()
     {
         if (meteoriteSpawn != null) meteoriteSpawn.StartShower();
