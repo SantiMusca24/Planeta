@@ -99,6 +99,9 @@ public class TutorialScript : MonoBehaviour
     }
     public void StartChain2()
     {
+        icons[0].SetActive(false);
+        icons[1].SetActive(false);
+        icons[2].SetActive(false);
         bg.SetActive(true);
         text1a.SetActive(true);
     }
@@ -111,6 +114,8 @@ public class TutorialScript : MonoBehaviour
         StartCoroutine(ClickWait(1));
         text1a.SetActive(false);
         text2a.SetActive(true);
+        icons[0].SetActive(true);
+        icons[1].SetActive(true);
     }
     public void Tap2a()
     {
@@ -121,6 +126,7 @@ public class TutorialScript : MonoBehaviour
         StartCoroutine(ClickWait(1));
         text2a.SetActive(false);
         text3a.SetActive(true);
+        icons[2].SetActive(true);
     }
     public void Tap3a()
     {
