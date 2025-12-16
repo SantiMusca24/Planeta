@@ -12,7 +12,14 @@ public abstract class BaseContadorUI : MonoBehaviour
     //[SerializeField] protected TMP_Text GoalText;
     //[SerializeField] protected int goalPoints = 1000;
     [SerializeField] private TMP_Text doubleIncomeTimerText;
-
+    [SerializeField] private TMP_Text doubleIncomeTimerText2;
+    [SerializeField] private TMP_Text priceText;
+    [SerializeField] private GameObject priceImage;
+    [SerializeField] private GameObject rewardAd;
+    [SerializeField] private GameObject reborde;
+    [SerializeField] private GameObject reborde2;
+    [SerializeField] private Button buttonGems;
+    [SerializeField] private GameObject imageDoubleIncome;
     [SerializeField] protected ScrollRect scrollRectToReset;
     //[SerializeField] protected string upgradeNameToTrack = "Upgrade_1";
     //[SerializeField] protected int goalLevel = 10;
@@ -54,12 +61,29 @@ public abstract class BaseContadorUI : MonoBehaviour
         if (GameManager.Instance != null && GameManager.Instance.doubleIncomeActive)
         {
             doubleIncomeTimerText.gameObject.SetActive(true);
+            doubleIncomeTimerText2.gameObject.SetActive(true);
             doubleIncomeTimerText.text = FormatTime(GameManager.Instance.doubleIncomeTimer);
+            doubleIncomeTimerText2.text = FormatTime(GameManager.Instance.doubleIncomeTimer);
+            priceText.gameObject.SetActive(false);
+            priceImage.gameObject.SetActive(false);
+            rewardAd.gameObject.SetActive(false);
+            reborde.gameObject.SetActive(true);
+            buttonGems.enabled = false;
+            imageDoubleIncome.SetActive(true);
+            reborde2.gameObject.SetActive(true);
             Debug.Log("SKIBIDI");
         }
         else
         {
             doubleIncomeTimerText.gameObject.SetActive(false);
+            doubleIncomeTimerText2.gameObject.SetActive(false);
+            priceText.gameObject.SetActive(true);
+            priceImage.gameObject.SetActive(true);
+            rewardAd.gameObject.SetActive(true);
+            reborde.gameObject.SetActive(false);
+            buttonGems.enabled = true;
+            imageDoubleIncome.SetActive(false);
+            reborde2.gameObject.SetActive(false);
         }
         Debug.Log("" + GameManager.Instance.doubleIncomeActive);
     }
