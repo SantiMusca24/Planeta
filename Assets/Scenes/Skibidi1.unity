@@ -6300,6 +6300,7 @@ MonoBehaviour:
   maxX: 100
   minY: -200
   maxY: 200
+  coinName: Coin
   audioManager: {fileID: 1899688726}
 --- !u!4 &318143228
 Transform:
@@ -13689,6 +13690,11 @@ MonoBehaviour:
   confirmPopup: {fileID: 1117617897}
   confirmText: {fileID: 656520148}
   tutorial: {fileID: 0}
+  coinCollector: {fileID: 0}
+  coinCollector2: {fileID: 0}
+  errorPopup: {fileID: 0}
+  errorText: {fileID: 0}
+  audioManager: {fileID: 1899688726}
 --- !u!114 &769528674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23840,6 +23846,14 @@ MonoBehaviour:
   countText: {fileID: 617997474}
   gemsText: {fileID: 1796128108}
   doubleIncomeTimerText: {fileID: 1100395029}
+  doubleIncomeTimerText2: {fileID: 0}
+  priceText: {fileID: 0}
+  priceImage: {fileID: 0}
+  rewardAd: {fileID: 0}
+  reborde: {fileID: 0}
+  reborde2: {fileID: 0}
+  buttonGems: {fileID: 0}
+  imageDoubleIncome: {fileID: 0}
   scrollRectToReset: {fileID: 124864430}
   incomePerSecondText: {fileID: 666510332}
   perfectoText: {fileID: 846854473}
@@ -31284,6 +31298,33 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Finish
     clip: {fileID: 8300000, guid: ec74d784cf046244bb6cbaa057145fc8, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 596f31f164fbcbe429e08fc52cfe658d, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Gem
+    clip: {fileID: 8300000, guid: 7c28db31293108e4dbb4f8b7f18ba200, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Double
+    clip: {fileID: 8300000, guid: 38705fcdf1a3c874a987f29a9fa0a655, type: 3}
     volume: 0.525
     pitch: 1
     loop: 0

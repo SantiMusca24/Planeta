@@ -13796,6 +13796,7 @@ MonoBehaviour:
   maxX: 100
   minY: -200
   maxY: 200
+  coinName: Coin
   audioManager: {fileID: 1914087463}
 --- !u!4 &318143228
 Transform:
@@ -40574,7 +40575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10, y: 649.2156}
+  m_AnchoredPosition: {x: 10, y: 649.2145}
   m_SizeDelta: {x: 0, y: 6298.429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169478770
@@ -44618,6 +44619,14 @@ MonoBehaviour:
   countText: {fileID: 937347272}
   gemsText: {fileID: 1716058577}
   doubleIncomeTimerText: {fileID: 85559477}
+  doubleIncomeTimerText2: {fileID: 0}
+  priceText: {fileID: 0}
+  priceImage: {fileID: 0}
+  rewardAd: {fileID: 0}
+  reborde: {fileID: 0}
+  reborde2: {fileID: 0}
+  buttonGems: {fileID: 0}
+  imageDoubleIncome: {fileID: 0}
   scrollRectToReset: {fileID: 124864430}
   incomePerSecondText: {fileID: 981252189}
   perfectoText: {fileID: 846854473}
@@ -52520,6 +52529,11 @@ MonoBehaviour:
   confirmPopup: {fileID: 0}
   confirmText: {fileID: 0}
   tutorial: {fileID: 0}
+  coinCollector: {fileID: 0}
+  coinCollector2: {fileID: 0}
+  errorPopup: {fileID: 0}
+  errorText: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &1756422209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54782,6 +54796,33 @@ MonoBehaviour:
     isMusic: 0
     mute: 0
     source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 596f31f164fbcbe429e08fc52cfe658d, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Gem
+    clip: {fileID: 8300000, guid: 7c28db31293108e4dbb4f8b7f18ba200, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Double
+    clip: {fileID: 8300000, guid: 38705fcdf1a3c874a987f29a9fa0a655, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
   audioManager: {fileID: 1914087463}
 --- !u!4 &1914087464
 Transform:
@@ -56079,6 +56120,11 @@ MonoBehaviour:
   confirmPopup: {fileID: 1236511383}
   confirmText: {fileID: 1280992033}
   tutorial: {fileID: 0}
+  coinCollector: {fileID: 0}
+  coinCollector2: {fileID: 0}
+  errorPopup: {fileID: 0}
+  errorText: {fileID: 0}
+  audioManager: {fileID: 1914087463}
 --- !u!114 &1978513434
 MonoBehaviour:
   m_ObjectHideFlags: 0

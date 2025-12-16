@@ -17,6 +17,8 @@ public class storeScript : MonoBehaviour
     [SerializeField] private CollectingCoin coinCollector2;
     public GameObject errorPopup;
     public TMP_Text errorText;
+
+    public AudioManager audioManager;
     void Start()
     {
 
@@ -72,6 +74,7 @@ public class storeScript : MonoBehaviour
             ShowError();
             return;
         }
+
         ShowConfirm(RemoveAds);
     }
     public void RemoveAds()
@@ -81,6 +84,8 @@ public class storeScript : MonoBehaviour
         {
             GameManager.Instance.gems -= 100;
             AdsManager.adsAllowed = false;
+            if (audioManager != null)
+                audioManager.Play("Buy");
             AdsManager.Instance.bannerAd.HideBannerAd();
         }
         else if (!AdsManager.adsAllowed)
@@ -145,6 +150,8 @@ public class storeScript : MonoBehaviour
     }
     public void BuyGoldGen(float hoursMult)
     {
+        if (audioManager != null)
+            audioManager.Play("Buy");
         GameManager.Instance.count += GameManager.Instance.IPS * (3600 * hoursMult);
     }
     public void TryBuyGems()
@@ -156,6 +163,8 @@ public class storeScript : MonoBehaviour
     {
         //menu de dinero real
         int gemasASumar = 5;
+        if (audioManager != null)
+            audioManager.Play("Buy");
         StartCoroutine(SumarGemasExponencialmente(gemasASumar));
         coinCollector.CollectCoin();
     }
@@ -209,6 +218,8 @@ public class storeScript : MonoBehaviour
             GameManager.Instance.gems -= price;
             GameManager.Instance.doubleIncomeActive = true;
             GameManager.Instance.doubleIncomeTimer = 60f;
+            if (audioManager != null)
+                audioManager.Play("Double");
             Debug.Log("Ingreso doble activado por 30 minutos");
         }
         else

@@ -21,6 +21,8 @@ public class CollectingCoin : MonoBehaviour
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
 
+    [SerializeField] private string coinName = "Coin";
+
     public AudioManager audioManager;
 
     List<GameObject> coins = new List<GameObject>();
@@ -77,7 +79,7 @@ public class CollectingCoin : MonoBehaviour
     {
         yield return coinInstance.transform.DOMove(endPosition.position, duration).SetEase(Ease.InBack).WaitForCompletion();
         if (audioManager != null)
-            audioManager.Play("Coin");
+            audioManager.Play(coinName);
         Destroy(coinInstance);
         StartCoroutine(ReactToCollectionCoin());
     }

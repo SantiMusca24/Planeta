@@ -32,6 +32,8 @@ public abstract class GameManager : MonoBehaviour
     static public int rotatePoints = 1; 
 
     [SerializeField] protected int updatesPerSecond = 10;
+
+    [SerializeField] public AudioManager audioManager;
    
     private void Awake()
     {
@@ -56,6 +58,8 @@ public abstract class GameManager : MonoBehaviour
         if (tapped)
         {
             tapped = false;
+            if (audioManager != null)
+                audioManager.Play("Rock");
             count += (1 + UpgradeManager2.level1) * cloud1.meteorReward;
         }
 

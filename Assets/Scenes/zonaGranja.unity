@@ -4715,6 +4715,7 @@ MonoBehaviour:
   maxX: 100
   minY: -200
   maxY: 200
+  coinName: Coin
   audioManager: {fileID: 708177151}
 --- !u!4 &318143228
 Transform:
@@ -13185,6 +13186,33 @@ MonoBehaviour:
     isMusic: 0
     mute: 0
     source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 596f31f164fbcbe429e08fc52cfe658d, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Gem
+    clip: {fileID: 8300000, guid: 7c28db31293108e4dbb4f8b7f18ba200, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Double
+    clip: {fileID: 8300000, guid: 38705fcdf1a3c874a987f29a9fa0a655, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
   audioManager: {fileID: 708177151}
 --- !u!4 &708177152
 Transform:
@@ -21411,6 +21439,11 @@ MonoBehaviour:
   confirmPopup: {fileID: 1760311692}
   confirmText: {fileID: 1420643099}
   tutorial: {fileID: 0}
+  coinCollector: {fileID: 0}
+  coinCollector2: {fileID: 0}
+  errorPopup: {fileID: 0}
+  errorText: {fileID: 0}
+  audioManager: {fileID: 708177151}
 --- !u!114 &1278197248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23849,6 +23882,14 @@ MonoBehaviour:
   countText: {fileID: 1841557462}
   gemsText: {fileID: 1468573363}
   doubleIncomeTimerText: {fileID: 412948072}
+  doubleIncomeTimerText2: {fileID: 0}
+  priceText: {fileID: 0}
+  priceImage: {fileID: 0}
+  rewardAd: {fileID: 0}
+  reborde: {fileID: 0}
+  reborde2: {fileID: 0}
+  buttonGems: {fileID: 0}
+  imageDoubleIncome: {fileID: 0}
   scrollRectToReset: {fileID: 124864430}
   incomePerSecondText: {fileID: 1268052869}
   perfectoText: {fileID: 846854473}
@@ -31460,6 +31501,11 @@ MonoBehaviour:
   confirmPopup: {fileID: 0}
   confirmText: {fileID: 0}
   tutorial: {fileID: 0}
+  coinCollector: {fileID: 0}
+  coinCollector2: {fileID: 0}
+  errorPopup: {fileID: 0}
+  errorText: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &1829285432
 MonoBehaviour:
   m_ObjectHideFlags: 0

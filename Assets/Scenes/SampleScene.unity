@@ -1969,7 +1969,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 10, y: 649.21484}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 6298.429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104555935
 MonoBehaviour:
@@ -7714,6 +7714,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
         type: 3}
+      propertyPath: coinName
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
+        type: 3}
       propertyPath: coinParent
       value: 
       objectReference: {fileID: 6951653370552380700}
@@ -7728,6 +7733,11 @@ PrefabInstance:
       propertyPath: endPosition
       value: 
       objectReference: {fileID: 3610602546854484547}
+    - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 2115791622}
     - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
         type: 3}
       propertyPath: spawnLocation
@@ -18999,9 +19009,9 @@ RectTransform:
   - {fileID: 483187966}
   m_Father: {fileID: 104555934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -2425.769}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &949254287
@@ -27806,9 +27816,9 @@ RectTransform:
   - {fileID: 1564589024}
   m_Father: {fileID: 104555934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -4060.934}
   m_SizeDelta: {x: 174.091, y: 152.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1243449465
@@ -27945,7 +27955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1253012879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27973,6 +27983,7 @@ MonoBehaviour:
   coinCollector2: {fileID: 53784867}
   errorPopup: {fileID: 1765470165}
   errorText: {fileID: 612035631}
+  audioManager: {fileID: 2115791622}
 --- !u!114 &1253012880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31057,6 +31068,7 @@ MonoBehaviour:
   sawTutorial1: 0
   sawTutorial2: 0
   updatesPerSecond: 10
+  audioManager: {fileID: 2115791622}
 --- !u!1 &1394121455
 GameObject:
   m_ObjectHideFlags: 0
@@ -34480,6 +34492,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
         type: 3}
+      propertyPath: coinName
+      value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
+        type: 3}
       propertyPath: coinAmount
       value: 5
       objectReference: {fileID: 0}
@@ -34499,6 +34516,11 @@ PrefabInstance:
       propertyPath: endPosition
       value: 
       objectReference: {fileID: 8290509551842576973}
+    - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 2115791622}
     - target: {fileID: 2117876695033953602, guid: c79e238b16e15704daa55fa01c6bda7d,
         type: 3}
       propertyPath: spawnLocation
@@ -37660,6 +37682,7 @@ MonoBehaviour:
   currentCheck: 1
   _spinsTx: {fileID: 1148539177}
   tutorial: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!65 &1580304221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38983,9 +39006,9 @@ RectTransform:
   - {fileID: 820741803}
   m_Father: {fileID: 104555934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -788.8845}
   m_SizeDelta: {x: 298.417, y: 155.769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630089521
@@ -45496,6 +45519,7 @@ MonoBehaviour:
   currentCheck: 1
   _spinsTx: {fileID: 1148539177}
   tutorial: {fileID: 1526342072}
+  audioManager: {fileID: 2115791622}
 --- !u!65 &1990911007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47551,6 +47575,51 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: feeb440462325df4998e2a3926803744, type: 3}
     volume: 0.525
     pitch: 1.67
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 596f31f164fbcbe429e08fc52cfe658d, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Gem
+    clip: {fileID: 8300000, guid: 7c28db31293108e4dbb4f8b7f18ba200, type: 3}
+    volume: 0.646
+    pitch: 0.94
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Double
+    clip: {fileID: 8300000, guid: 38705fcdf1a3c874a987f29a9fa0a655, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Rock
+    clip: {fileID: 8300000, guid: 834763b003152834083c4750cf4dd910, type: 3}
+    volume: 0.537
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Ding
+    clip: {fileID: 8300000, guid: 997657889ee7f0e439a5332689b29d75, type: 3}
+    volume: 0.3
+    pitch: 1
     loop: 0
     isSFX: 1
     isMusic: 0

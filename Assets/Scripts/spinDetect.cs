@@ -13,7 +13,7 @@ public class spinDetect : MonoBehaviour
     [SerializeField] private TMP_Text _spinsTx;
     [SerializeField] TutorialScript tutorial;
     int spinsTutorial = 0;
-
+    public AudioManager audioManager;
     public static event Action OnPlanetRotated;
     void Start()
     {
@@ -41,6 +41,10 @@ public class spinDetect : MonoBehaviour
                 {
                     currentCheck = 1;
                     spins++;
+                    if (audioManager != null)
+                    {
+                        audioManager.Play("Ding");
+                    }
                     _spinsTx.text = "GIROS: " + spins;
                     OnPlanetRotated?.Invoke();
                     if (tutorial.count == 2)
