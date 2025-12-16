@@ -58,6 +58,7 @@ public class FarmingMinigame : MonoBehaviour
     [SerializeField] float catcherProgressDegradationPower = 0.1f;
 
     [SerializeField] Transform progressBarContainer;
+    public AudioManager audioManager;
 
     private void Start()
     {
@@ -110,6 +111,8 @@ public class FarmingMinigame : MonoBehaviour
             currentCuts += 1;
             smoothMotion = smoothMotion * 0.9f;
             uiManager?.ShowCutFeedback(CutFeedbackType.Perfect);
+            if (audioManager != null)
+                audioManager.Play("Cow");
             if (currentCuts >= cutsNeededPerLog)
             {
                 logsCut++;
@@ -184,6 +187,8 @@ public class FarmingMinigame : MonoBehaviour
     }
     void EndMinigame()
     {
+        if (audioManager != null)
+            audioManager.Play("Finish");
         phase = WoodcutPhase.Summary;
         minigamePanel.SetActive(false);
         //precisionSlider.gameObject.SetActive(false);

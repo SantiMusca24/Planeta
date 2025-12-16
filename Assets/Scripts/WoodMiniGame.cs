@@ -30,6 +30,8 @@ public class WoodMiniGame : Rewind
     public BosqueUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
 
+    public AudioManager audioManager;
+
     private void Start()
     {
         currentCuts = 0;
@@ -113,6 +115,9 @@ public class WoodMiniGame : Rewind
 
         float val = precisionSlider.value;
 
+        if (audioManager != null)
+            audioManager.Play("Log");
+
         if (Mathf.Abs(val - 0.55f) < 0.1f)
         {
             currentCuts += 2;
@@ -147,7 +152,8 @@ public class WoodMiniGame : Rewind
     void EndMinigame()
     {
         StartToRec();
-        
+        if (audioManager != null)
+            audioManager.Play("Finish");
         phase = WoodcutPhase.Summary;
         
         precisionSlider.gameObject.SetActive(false);

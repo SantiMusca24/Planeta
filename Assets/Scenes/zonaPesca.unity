@@ -27058,6 +27058,7 @@ MonoBehaviour:
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 0}
   coinCollector: {fileID: 318143227}
+  audioManager: {fileID: 0}
 --- !u!114 &943676525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27084,6 +27085,7 @@ MonoBehaviour:
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 1451424511}
   coinCollector: {fileID: 318143227}
+  audioManager: {fileID: 1914087463}
 --- !u!1 &953018639
 GameObject:
   m_ObjectHideFlags: 0
@@ -54756,6 +54758,24 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: feeb440462325df4998e2a3926803744, type: 3}
     volume: 0.525
     pitch: 1.67
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Finish
+    clip: {fileID: 8300000, guid: ec74d784cf046244bb6cbaa057145fc8, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Fish
+    clip: {fileID: 8300000, guid: 1d3b7630f18b9594889930c7921f7340, type: 3}
+    volume: 0.525
+    pitch: 1
     loop: 0
     isSFX: 1
     isMusic: 0

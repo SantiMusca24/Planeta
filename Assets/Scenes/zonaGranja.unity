@@ -588,6 +588,7 @@ MonoBehaviour:
   catcherGravityPower: 0.005
   catcherProgressDegradationPower: 0.1
   progressBarContainer: {fileID: 1216836482}
+  audioManager: {fileID: 0}
 --- !u!1 &43048941
 GameObject:
   m_ObjectHideFlags: 0
@@ -13165,6 +13166,24 @@ MonoBehaviour:
     isMusic: 0
     mute: 0
     source: {fileID: 0}
+  - name: Finish
+    clip: {fileID: 8300000, guid: ec74d784cf046244bb6cbaa057145fc8, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Cow
+    clip: {fileID: 8300000, guid: d3bca5e9ecce272488e2324b13a53b3d, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
   audioManager: {fileID: 708177151}
 --- !u!4 &708177152
 Transform:
@@ -17607,6 +17626,7 @@ MonoBehaviour:
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 0}
   coinCollector: {fileID: 318143227}
+  audioManager: {fileID: 0}
 --- !u!114 &943676525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17633,6 +17653,7 @@ MonoBehaviour:
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 0}
   coinCollector: {fileID: 318143227}
+  audioManager: {fileID: 0}
 --- !u!114 &943676526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17669,6 +17690,7 @@ MonoBehaviour:
   catcherGravityPower: 0.005
   catcherProgressDegradationPower: 0.1
   progressBarContainer: {fileID: 1216836482}
+  audioManager: {fileID: 708177151}
 --- !u!1 &944682813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 580c2f462194bf84a937b5da94a198e2,

@@ -16014,6 +16014,7 @@ MonoBehaviour:
   bottonInicio: {fileID: 1360755611}
   uiManager: {fileID: 1451424511}
   coinCollector: {fileID: 318143227}
+  audioManager: {fileID: 1899688726}
 --- !u!1 &944316202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1303c4e8dfa28944c82b7eb4aea1327c,
@@ -31266,6 +31267,24 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: feeb440462325df4998e2a3926803744, type: 3}
     volume: 0.525
     pitch: 1.67
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Log
+    clip: {fileID: 8300000, guid: d0f18c7ec397acc4086a9ef87f4e4a77, type: 3}
+    volume: 0.525
+    pitch: 1
+    loop: 0
+    isSFX: 1
+    isMusic: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Finish
+    clip: {fileID: 8300000, guid: ec74d784cf046244bb6cbaa057145fc8, type: 3}
+    volume: 0.525
+    pitch: 1
     loop: 0
     isSFX: 1
     isMusic: 0

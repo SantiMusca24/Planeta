@@ -35,7 +35,8 @@ public class FishMinigame : MonoBehaviour
 
     public PescaUI uiManager;
     [SerializeField] private CollectingCoin coinCollector;
-    
+    public AudioManager audioManager;
+
     private void Start()
     {
         minigamePanel.SetActive(false);
@@ -73,6 +74,8 @@ public class FishMinigame : MonoBehaviour
         yield return new WaitForSeconds(fishTimer);
         if ( timer  >= 0 )
         {
+            if (audioManager != null)
+                audioManager.Play("Fish");
             fishBites.SetActive(true);
             fishReady = true;
         }
@@ -141,6 +144,8 @@ public class FishMinigame : MonoBehaviour
 
         if (fishReady)
         {
+            if (audioManager != null)
+                audioManager.Play("Coin");
             fishReady = false;
             fishBites.SetActive(false);            
             currentCuts += 1;
@@ -172,7 +177,8 @@ public class FishMinigame : MonoBehaviour
 
     void EndMinigame()
     {
-        
+        if (audioManager != null)
+            audioManager.Play("Finish");
         phase = WoodcutPhase.Summary;
 
         //precisionSlider.gameObject.SetActive(false);
