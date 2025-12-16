@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using System;
 public class storeScript : MonoBehaviour
 {
     public GameObject adInfo, goldInfo1, goldInfo2, goldInfo3, gemInfo;
     public TMP_Text gold1, gold5, gold10;
-
+    public GameObject confirmPopup;
+    public TMP_Text confirmText;
+    private Action pendingAction;
     [Header("Solo asignar en escena del planeta")]
     [SerializeField] TutorialScript tutorial;
     void Start()
@@ -26,6 +28,26 @@ public class storeScript : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+    public void ShowConfirm( Action accion)
+    {
+       
+        pendingAction = accion;
+        confirmPopup.SetActive(true);
+    }
+    public void OnConfirmYes()
+    {
+        if (pendingAction != null)
+            pendingAction();
+
+        confirmPopup.SetActive(false);
+        pendingAction = null;
+    }
+
+    public void OnConfirmNo()
+    {
+        confirmPopup.SetActive(false);
+        pendingAction = null;
+    }
     public void RemoveAds()
     {
         //menu de dinero real
@@ -41,13 +63,17 @@ public class storeScript : MonoBehaviour
             AdsManager.adsAllowed = true;
         }
     }
+    public void TryBuyGold1()
+    {
+        ShowConfirm(BuyGold1);
+    }
     public void BuyGold1()
     {
         if (GameManager.Instance.gems >= 5)
         {
-            GameManager.Instance.gems -= 5;            
+            GameManager.Instance.gems -= 5;
             BuyGoldGen(1);
-        }        
+        }
     }
     public void BuyGold5()
     {
