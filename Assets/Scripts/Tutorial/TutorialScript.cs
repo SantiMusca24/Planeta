@@ -29,14 +29,20 @@ public class TutorialScript : MonoBehaviour
         if (!canClick) return;
         StartCoroutine(ClickWait(1));
         count++;
+        count++;
+        icons[0].SetActive(true);
+        icons[11].SetActive(true);
+        icons[3].SetActive(true);
+        icons[4].SetActive(true);
         text1.SetActive(false);
         text2.SetActive(true);
     }
     public void Tap2()
     {
-        if (!canClick) return;
-        count++;
+        //if (!canClick) return;
+        //count++;
         text2.SetActive(false);
+        text3.SetActive(true);
         bg.SetActive(false);
     }
     public void Tap3()
@@ -52,8 +58,10 @@ public class TutorialScript : MonoBehaviour
         if (!canClick) return;
         count++;
         bg.SetActive(false);
+        StartCoroutine(ClickWait(1));
         text4.SetActive(false);
-        StartCoroutine(Wait1(3, text5, icons[7]));
+        text9.SetActive(true);
+        //StartCoroutine(Wait1(3, text5, icons[7]));
     }
     public void Tap5()
     {

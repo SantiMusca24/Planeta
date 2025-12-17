@@ -53,17 +53,38 @@ public class spinDetect : MonoBehaviour
                         if (spinsTutorial >= 5)
                         {
                             tutorial.ClickWaitMethod(2);
-                            tutorial.icons[0].SetActive(true);
-                            tutorial.icons[1].SetActive(true);
-                            tutorial.icons[2].SetActive(true);
-                            tutorial.icons[11].SetActive(true);
-                            tutorial.icons[3].SetActive(true);
-                            tutorial.icons[12].SetActive(true);
-                            tutorial.icons[4].SetActive(true);
-                            tutorial.icons[5].SetActive(true);
-                            tutorial.icons[6].SetActive(true);
-                            tutorial.bg.SetActive(true);
-                            tutorial.text3.SetActive(true);
+                            
+                            // ACTIVATE GEMS AND WORLD TOKENS
+                            //tutorial.icons[1].SetActive(true);
+                            //tutorial.icons[2].SetActive(true);
+                            //tutorial.icons[12].SetActive(true);
+                            //tutorial.icons[5].SetActive(true);
+                            //tutorial.icons[6].SetActive(true);
+
+                            //tutorial.bg.SetActive(true);
+
+                            //tutorial.text3.SetActive(true);
+                            tutorial.Tap2();
+                            spinsTutorial = 0;
+                        }
+                    }
+                    else if (tutorial.count == 3)
+                    {
+                        spinsTutorial++;
+                        if (spinsTutorial >= 15)
+                        {
+                            //tutorial.ClickWaitMethod(2);
+
+                            // ACTIVATE GEMS AND WORLD TOKENS
+                            //tutorial.icons[1].SetActive(true);
+                            //tutorial.icons[2].SetActive(true);
+                            //tutorial.icons[12].SetActive(true);
+                            //tutorial.icons[5].SetActive(true);
+                            //tutorial.icons[6].SetActive(true);
+
+                            //tutorial.bg.SetActive(true);
+
+                            tutorial.Tap4();
                         }
                     }
                 }

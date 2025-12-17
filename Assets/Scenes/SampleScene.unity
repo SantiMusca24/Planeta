@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269295215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4220,7 +4220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269295215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4770,7 +4770,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297596954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4826,7 +4826,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297596954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9598,7 +9598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -83}
+  m_AnchoredPosition: {x: -0.000061035156, y: -53}
   m_SizeDelta: {x: 220.01, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483582612
@@ -12445,14 +12445,14 @@ RectTransform:
   m_GameObject: {fileID: 602430508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 28.230227, y: 28.230227, z: 28.230227}
+  m_LocalScale: {x: 51.184223, y: 51.184223, z: 51.184223}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1651207755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96, y: -534}
+  m_AnchoredPosition: {x: 186, y: -798}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602430510
@@ -12468,7 +12468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.85490197}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14436,7 +14436,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.00012207031}
-  m_SizeDelta: {x: 326.6, y: 50}
+  m_SizeDelta: {x: 288.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719757044
 MonoBehaviour:
@@ -14458,11 +14458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold will let you buy most upgrades for your planet
-
-
-    Gems and Tokens
-    will be useful later for special upgrades, so spend them wisely!'
+  m_text: Try earning some more gold now
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcac776fa108d2e438640914976f1187, type: 2}
   m_sharedMaterial: {fileID: -213249111827129024, guid: bcac776fa108d2e438640914976f1187,
@@ -15846,7 +15842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &749428407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15863,7 +15859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313.00006, y: -770}
+  m_AnchoredPosition: {x: 313.00006, y: -1102}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749428408
@@ -18514,8 +18510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: 30.000015}
-  m_SizeDelta: {x: 299.9, y: 50}
+  m_AnchoredPosition: {x: -0.000061035156, y: 56}
+  m_SizeDelta: {x: 347.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &875526678
 MonoBehaviour:
@@ -18537,7 +18533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Up here you can see your gold, gems and world tokens
+  m_text: "This is your gold. \nYou will earn more for every planet spin"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcac776fa108d2e438640914976f1187, type: 2}
   m_sharedMaterial: {fileID: -213249111827129024, guid: bcac776fa108d2e438640914976f1187,
@@ -18717,14 +18713,14 @@ RectTransform:
   m_GameObject: {fileID: 879204086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 82.126175, y: 82.126175, z: 82.126175}
+  m_LocalScale: {x: 35.860733, y: 35.860733, z: 35.860733}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 281868737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313, y: -770}
+  m_AnchoredPosition: {x: 133, y: -298}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879204088
@@ -28657,7 +28653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 325}
+  m_AnchoredPosition: {x: 0, y: 428}
   m_SizeDelta: {x: 326.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1253909108
@@ -32228,8 +32224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 17}
-  m_SizeDelta: {x: 272.1, y: 50}
+  m_AnchoredPosition: {x: 4, y: 68}
+  m_SizeDelta: {x: 345.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441243470
 MonoBehaviour:
@@ -32251,7 +32247,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now try unlocking the first area for 100 gold, then tap on it to enter
+  m_text: 'Well done!
+
+    Now, try entering your first area.
+
+
+
+
+
+
+
+
+
+
+
+
+    Tap
+    on the highlighted face of your planet'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcac776fa108d2e438640914976f1187, type: 2}
   m_sharedMaterial: {fileID: -213249111827129024, guid: bcac776fa108d2e438640914976f1187,
@@ -47108,7 +47120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047500065}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
