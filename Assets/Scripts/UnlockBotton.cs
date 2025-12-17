@@ -39,6 +39,11 @@ public class UnlockBotton : MonoBehaviour
 
     private void TryUnlockUpgrade()
     {
+        if (GameManager.Instance != null)
+        {
+            if (!GameManager.Instance.sawTutorial1) return;
+            if (!GameManager.Instance.sawTutorial2 && unlockCost != 100) return; 
+        }
         if (GameManager.Instance.count >= unlockCost)
         {
             GameManager.Instance.count -= unlockCost;

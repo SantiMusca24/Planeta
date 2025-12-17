@@ -56,7 +56,9 @@ public class spinDetect : MonoBehaviour
                             tutorial.icons[0].SetActive(true);
                             tutorial.icons[1].SetActive(true);
                             tutorial.icons[2].SetActive(true);
+                            tutorial.icons[11].SetActive(true);
                             tutorial.icons[3].SetActive(true);
+                            tutorial.icons[12].SetActive(true);
                             tutorial.icons[4].SetActive(true);
                             tutorial.icons[5].SetActive(true);
                             tutorial.icons[6].SetActive(true);
