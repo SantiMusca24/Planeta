@@ -1950,11 +1950,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -11.08
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &111964710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,11 +3733,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -10.66509
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &187518645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,11 +3834,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -8.155086
+  fallDistance: 10
   duration: 1
-  minScale: {x: 0.6994799, y: 0.1, z: 0.6994799}
-  maxScale: {x: 0.6994799, y: 0.69948, z: 0.6994799}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &193474889
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,6 +4527,18 @@ MonoBehaviour:
   pressedScale: 1.1
   clickDuration: 0.1
   clickEase: 6
+--- !u!4 &233749839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+    type: 3}
+  m_PrefabInstance: {fileID: 325659896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &233749841 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 742862819160107785, guid: 5ee502a6546655a4f9802d0fff7812da,
+    type: 3}
+  m_PrefabInstance: {fileID: 325659896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &234478785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5460,11 +5472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -12.92167
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1.240516, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &269740062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6684,6 +6696,84 @@ MonoBehaviour:
   extraImage: {fileID: 324535562}
   onScreenSprite: {fileID: -1809680568, guid: cdc9c54b4105f9b49a484e90e65df7ff, type: 3}
   offScreenSprite: {fileID: 179011196, guid: 8fb096b13e3526641abe619601285bc5, type: 3}
+--- !u!1001 &325659896
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 341742432}
+    m_Modifications:
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 742862819160107785, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0556108
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.398
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ee502a6546655a4f9802d0fff7812da, type: 3}
 --- !u!1 &336181808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6833,6 +6923,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Carpentry
+--- !u!1 &341742431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341742432}
+  m_Layer: 0
+  m_Name: particulas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341742432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341742431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.22561133, y: 0.5413059, z: 13.759827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1099608846}
+  - {fileID: 233749839}
+  - {fileID: 954564807}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &349179011 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5584868285006994377, guid: 115de29f2b1873b4fa7614995efaaecd,
@@ -10195,7 +10319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 612905857}
-  - component: {fileID: 612905858}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -10232,23 +10355,6 @@ Transform:
   - {fileID: 269624670}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &612905858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612905856}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
-  duration: 1
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
 --- !u!1 &617097309
 GameObject:
   m_ObjectHideFlags: 0
@@ -13599,11 +13705,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &751395732
 GameObject:
   m_ObjectHideFlags: 0
@@ -14566,11 +14672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -11.23
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 233749841}
+  particleDelay: 0.3
 --- !u!1 &776472677
 GameObject:
   m_ObjectHideFlags: 0
@@ -16386,11 +16492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &876083180
 GameObject:
   m_ObjectHideFlags: 0
@@ -17058,6 +17164,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: RemoveAds
+--- !u!4 &954564807 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1092523008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &960886696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b066a6461d02174bb72bdb0228ac0e9,
@@ -17097,11 +17209,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &961916034
 GameObject:
   m_ObjectHideFlags: 0
@@ -18080,11 +18192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &990650436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18094,6 +18206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990650437}
+  - component: {fileID: 990650438}
   m_Layer: 0
   m_Name: arbol caido-1 (1)
   m_TagString: Untagged
@@ -18117,6 +18230,23 @@ Transform:
   - {fileID: 1878558213}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990650438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990650436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &996376819
 GameObject:
   m_ObjectHideFlags: 0
@@ -19271,6 +19401,7 @@ GameObject:
   - component: {fileID: 1057147813}
   - component: {fileID: 1057147815}
   - component: {fileID: 1057147814}
+  - component: {fileID: 1057147816}
   m_Layer: 0
   m_Name: default (1)
   m_TagString: Untagged
@@ -19343,6 +19474,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057147812}
   m_Mesh: {fileID: -2432090755550338912, guid: fd69c3f45fc19664195686b8b1a48eca, type: 3}
+--- !u!114 &1057147816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057147812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!114 &1074034341 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6615547972019905226, guid: 9fbb27d10b7affa45a20b45a0c48e29f,
@@ -19394,11 +19542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1079629434
 GameObject:
   m_ObjectHideFlags: 0
@@ -19483,6 +19631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084248967}
+  - component: {fileID: 1084248968}
   m_Layer: 0
   m_Name: caja-1 (4)
   m_TagString: Untagged
@@ -19506,6 +19655,101 @@ Transform:
   - {fileID: 1331200853}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084248968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084248966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
+--- !u!1001 &1092523008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 341742432}
+    m_Modifications:
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 742862819160107785, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.787
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.651
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ee502a6546655a4f9802d0fff7812da, type: 3}
 --- !u!1001 &1092523224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19666,11 +19910,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1095046728
 GameObject:
   m_ObjectHideFlags: 0
@@ -19974,6 +20218,18 @@ MonoBehaviour:
   duration: 0.5
   startScale: {x: 0.5, y: 0.5, z: 0.5}
   easeType: 27
+--- !u!4 &1099608846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1482720095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1099608848 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 742862819160107785, guid: 5ee502a6546655a4f9802d0fff7812da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1482720095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1100395027
 GameObject:
   m_ObjectHideFlags: 0
@@ -20623,11 +20879,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1143229860
 GameObject:
   m_ObjectHideFlags: 0
@@ -21089,11 +21345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1196711418
 GameObject:
   m_ObjectHideFlags: 0
@@ -21343,11 +21599,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1221510609
 GameObject:
   m_ObjectHideFlags: 0
@@ -21974,11 +22230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -8.515086
+  fallDistance: 10
   duration: 1
-  minScale: {x: 0.7436699, y: 0.1, z: 0.7436699}
-  maxScale: {x: 0.7436699, y: 0.74367, z: 0.7436699}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &1240561295
 GameObject:
   m_ObjectHideFlags: 0
@@ -23212,11 +23468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1345395109
 GameObject:
   m_ObjectHideFlags: 0
@@ -26141,6 +26397,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: IPS3
+--- !u!1001 &1482720095
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 341742432}
+    m_Modifications:
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 584634272393458340, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 742862819160107785, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.51886857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41030586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2037525
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601056456375973418, guid: 5ee502a6546655a4f9802d0fff7812da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ee502a6546655a4f9802d0fff7812da, type: 3}
 --- !u!1 &1487308312
 GameObject:
   m_ObjectHideFlags: 0
@@ -26370,11 +26704,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -8.365086
+  fallDistance: 10
   duration: 1
-  minScale: {x: 0.6994799, y: 0.1, z: 0.6994799}
-  maxScale: {x: 0.6994799, y: 0.69948, z: 0.6994799}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &1503078857
 GameObject:
   m_ObjectHideFlags: 0
@@ -26584,11 +26918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1521968780
 GameObject:
   m_ObjectHideFlags: 0
@@ -27621,11 +27955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1573837517
 GameObject:
   m_ObjectHideFlags: 0
@@ -29160,11 +29494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -12.89686
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1.240516, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &1649012664
 GameObject:
   m_ObjectHideFlags: 0
@@ -29279,11 +29613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1663811908
 GameObject:
   m_ObjectHideFlags: 0
@@ -29380,11 +29714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -8.365086
+  fallDistance: 10
   duration: 1
-  minScale: {x: 0.6994799, y: 0.1, z: 0.6994799}
-  maxScale: {x: 0.6994799, y: 0.69948, z: 0.6994799}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!114 &1667611933 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1677276493296338236, guid: 115de29f2b1873b4fa7614995efaaecd,
@@ -29853,11 +30187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!114 &1719886849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30623,11 +30957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -2
-  maxY: 0
+  fallDistance: 2
   duration: 1.5
-  minScale: {x: 0.5, y: 0.5, z: 0.5}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1761120486
 GameObject:
   m_ObjectHideFlags: 0
@@ -30877,11 +31211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -12.95
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1.240516, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &1778560976
 GameObject:
   m_ObjectHideFlags: 0
@@ -31648,6 +31982,7 @@ GameObject:
   - component: {fileID: 1835419380}
   - component: {fileID: 1835419382}
   - component: {fileID: 1835419381}
+  - component: {fileID: 1835419383}
   m_Layer: 0
   m_Name: default (2)
   m_TagString: Untagged
@@ -31720,6 +32055,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835419379}
   m_Mesh: {fileID: -2432090755550338912, guid: b9952a5ea2818594394c13425be9e916, type: 3}
+--- !u!114 &1835419383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835419379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1835672384
 GameObject:
   m_ObjectHideFlags: 0
@@ -33706,11 +34058,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -8.515086
+  fallDistance: 10
   duration: 1
-  minScale: {x: 0.7436699, y: 0.1, z: 0.7436699}
-  maxScale: {x: 0.7436699, y: 0.74367, z: 0.7436699}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!1 &1951461648
 GameObject:
   m_ObjectHideFlags: 0
@@ -35169,6 +35521,7 @@ GameObject:
   - component: {fileID: 1971704214}
   - component: {fileID: 1971704216}
   - component: {fileID: 1971704215}
+  - component: {fileID: 1971704217}
   m_Layer: 0
   m_Name: default (1)
   m_TagString: Untagged
@@ -35241,6 +35594,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971704213}
   m_Mesh: {fileID: -2432090755550338912, guid: b9952a5ea2818594394c13425be9e916, type: 3}
+--- !u!114 &1971704217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971704213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &1979743761
 GameObject:
   m_ObjectHideFlags: 0
@@ -37206,6 +37576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728012485592563952}
+  - component: {fileID: 728012485592563953}
   m_Layer: 0
   m_Name: tronco-1 (2)
   m_TagString: Untagged
@@ -37399,6 +37770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 643621466085840429}
+  - component: {fileID: 643621466085840430}
   m_Layer: 0
   m_Name: caja-1 (3)
   m_TagString: Untagged
@@ -37573,6 +37945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224576517135639887}
+  - component: {fileID: 600680294385975286}
   m_Layer: 0
   m_Name: caja-1
   m_TagString: Untagged
@@ -37580,6 +37953,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &600680294385975286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600680294385975285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &602218299002804753
 GameObject:
   m_ObjectHideFlags: 0
@@ -37622,6 +38012,23 @@ Transform:
   - {fileID: 44664784419940213}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &643621466085840430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262698602372828311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!4 &667659250364699481
 Transform:
   m_ObjectHideFlags: 0
@@ -37646,6 +38053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149459416964854625}
+  - component: {fileID: 673618138880190940}
   m_Layer: 0
   m_Name: sierra
   m_TagString: Untagged
@@ -37653,6 +38061,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &673618138880190940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673618138880190939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!4 &676758801459684737
 Transform:
   m_ObjectHideFlags: 0
@@ -37744,6 +38169,23 @@ Transform:
   - {fileID: 174056320683897256}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &728012485592563953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95063582088829514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &747509669481860707
 GameObject:
   m_ObjectHideFlags: 0
@@ -37753,6 +38195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 77793445033448665}
+  - component: {fileID: 747509669481860708}
   m_Layer: 0
   m_Name: carreta-1
   m_TagString: Untagged
@@ -37760,6 +38203,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &747509669481860708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747509669481860707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!4 &748381210594230841
 Transform:
   m_ObjectHideFlags: 0
@@ -37784,6 +38244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86752290831131137}
+  - component: {fileID: 756574033427871932}
   m_Layer: 0
   m_Name: arbol mediano-1
   m_TagString: Untagged
@@ -37791,6 +38252,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &756574033427871932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756574033427871931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &785435489154025380
 GameObject:
   m_ObjectHideFlags: 0
@@ -38532,6 +39010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187781265743710432}
+  - component: {fileID: 1959075080763134555}
   m_Layer: 0
   m_Name: arbol cortado-1
   m_TagString: Untagged
@@ -38539,6 +39018,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1959075080763134555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959075080763134554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!23 &1988561544614997110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39202,6 +39698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2572557738147951546}
+  - component: {fileID: 2952214072039172353}
   m_Layer: 0
   m_Name: casa
   m_TagString: Untagged
@@ -39209,6 +39706,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2952214072039172353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952214072039172352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &3020150672826524290
 GameObject:
   m_ObjectHideFlags: 0
@@ -40810,6 +41324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5222657196686905494}
+  - component: {fileID: 5222657196686905495}
   m_Layer: 0
   m_Name: caja-1 (1)
   m_TagString: Untagged
@@ -40933,6 +41448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5521958447207171854}
+  - component: {fileID: 5521958447207171855}
   m_Layer: 0
   m_Name: arbol mediano
   m_TagString: Untagged
@@ -40956,6 +41472,23 @@ Transform:
   - {fileID: 4614693449128747470}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5222657196686905495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841734225681533484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &5265384057992467201
 GameObject:
   m_ObjectHideFlags: 0
@@ -41132,6 +41665,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5521958447207171855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182024002338561460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!4 &5551377822123564753
 Transform:
   m_ObjectHideFlags: 0
@@ -41707,6 +42257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6768104549069193329}
+  - component: {fileID: 6768104549069193330}
   m_Layer: 0
   m_Name: caja-1 (2)
   m_TagString: Untagged
@@ -42038,6 +42589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6202768332164582322}
+  - component: {fileID: 6728228600359031049}
   m_Layer: 0
   m_Name: arbol caido-1
   m_TagString: Untagged
@@ -42045,6 +42597,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6728228600359031049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728228600359031048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!23 &6745358024788079534
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42145,6 +42714,23 @@ Transform:
   - {fileID: 6169112391175156009}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6768104549069193330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243945762779683531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!4 &6801733812389378794
 Transform:
   m_ObjectHideFlags: 0
@@ -42406,6 +42992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7623180009632337819}
+  - component: {fileID: 7623180009632337820}
   m_Layer: 0
   m_Name: arbol chico
   m_TagString: Untagged
@@ -42702,6 +43289,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7623180009632337820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098000086546699553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!33 &7627037595642967287
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42804,11 +43408,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -10.82509
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!33 &7808456168598987925
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43398,6 +44002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8944278768463242695}
+  - component: {fileID: 8944278768463242696}
   m_Layer: 0
   m_Name: tronco-1
   m_TagString: Untagged
@@ -43454,11 +44059,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -12.47509
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1.240516, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.3
 --- !u!4 &8646366882863313267
 Transform:
   m_ObjectHideFlags: 0
@@ -43528,11 +44133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -13.63
-  maxY: -10.31
+  fallDistance: 10
   duration: 1
-  minScale: {x: 1, y: 0.1, z: 1}
-  maxScale: {x: 1, y: 1, z: 1}
+  easing: 30
+  particleOnLand: {fileID: 1099608848}
+  particleDelay: 0.3
 --- !u!4 &8712705058966575653
 Transform:
   m_ObjectHideFlags: 0
@@ -43680,6 +44285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8113669192281926525}
+  - component: {fileID: 8922294455546868168}
   m_Layer: 0
   m_Name: tronco-1 (1)
   m_TagString: Untagged
@@ -43687,6 +44293,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8922294455546868168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922294455546868167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!33 &8939726164754338527
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43711,6 +44334,23 @@ Transform:
   - {fileID: 8381271560620397727}
   m_Father: {fileID: 7675026074057766682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8944278768463242696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8605154625544372093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fed3980bb4624d4ebdb1143991785c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDistance: 10
+  duration: 1
+  easing: 30
+  particleOnLand: {fileID: 0}
+  particleDelay: 0.7
 --- !u!1 &8997189521142997651
 GameObject:
   m_ObjectHideFlags: 0
@@ -43913,3 +44553,4 @@ SceneRoots:
   - {fileID: 193474891}
   - {fileID: 163084012}
   - {fileID: 273208948}
+  - {fileID: 341742432}

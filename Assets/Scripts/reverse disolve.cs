@@ -4,25 +4,33 @@ using UnityEngine;
 using DG.Tweening;
 public class reversedisolve : MonoBehaviour
 {
-    [SerializeField] private float minY = -2f;
-    [SerializeField] private float maxY = 0f;
+    [SerializeField] private float fallDistance = 2f;
     [SerializeField] private float duration = 1f;
-    [SerializeField] private Vector3 minScale = new Vector3(0.5f, 0.5f, 0.5f);
-    [SerializeField] private Vector3 maxScale = new Vector3(1f, 1f, 1f);
+    [SerializeField] private Ease easing = Ease.OutBounce;
+    [SerializeField] private ParticleSystem particleOnLand;
+    [SerializeField] private float particleDelay = 0.7f; 
+
+    private Vector3 originalLocalPosition;
+
+    void Awake()
+    {
+        originalLocalPosition = transform.localPosition;
+    }
 
     public void OnEnable()
     {
-        Debug.Log("llamada");
-        Vector3 startPos = transform.localPosition;
-        startPos.y = minY;
+        Vector3 startPos = originalLocalPosition;
+        startPos.y += fallDistance;
         transform.localPosition = startPos;
 
-        
-        transform.localScale = minScale;
+        transform.DOLocalMoveY(originalLocalPosition.y, duration).SetEase(easing);
 
-        
-        Sequence seq = DOTween.Sequence();
-        seq.Append(transform.DOLocalMoveY(maxY, duration));
-        seq.Join(transform.DOScale(maxScale, duration));
+        Invoke(nameof(ActivateLandParticle), particleDelay); 
+    }
+
+    private void ActivateLandParticle()
+    {
+        if (particleOnLand != null)
+            particleOnLand.Play();
     }
 }
