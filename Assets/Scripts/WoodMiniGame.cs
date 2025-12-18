@@ -7,6 +7,8 @@ using static BosqueUI;
 
 public class WoodMiniGame : Rewind
 {
+    public TutorialScript tutorial;
+
     public GameObject minigamePanel;
     public Slider precisionSlider;
     public float sliderSpeed = 2f;
@@ -190,6 +192,8 @@ public class WoodMiniGame : Rewind
         }
         logsCut = 0;
         currentCuts = 0;
+
+        if (tutorial.count == 3) tutorial.Tap4a();
     }
     private IEnumerator BottomCooldowm(float segundos)
     {

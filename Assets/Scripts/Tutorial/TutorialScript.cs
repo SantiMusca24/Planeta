@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
-    public GameObject bg, text1, text2, text3, text4, text5, text6, text7, text8, text9, text1a, text2a, text3a;
+    public GameObject bg, text1, text2, text3, text4, text5, text6, text7, text8, text9, text1a, text2a, text3a, text4a, text5a, text6a;
     public GameObject[] icons;
     public int count = 0;
     bool canClick = true;
@@ -107,10 +107,11 @@ public class TutorialScript : MonoBehaviour
     }
     public void StartChain2()
     {
-        icons[0].SetActive(false);
-        icons[1].SetActive(false);
-        icons[2].SetActive(false);
-        bg.SetActive(true);
+        foreach (var icon in icons)
+        {
+            icon.SetActive(false);
+        }
+        //bg.SetActive(true);
         text1a.SetActive(true);
     }
     public void Tap1a()
@@ -119,11 +120,10 @@ public class TutorialScript : MonoBehaviour
         int check = PlayerPrefs.GetInt("Tutorial2", 0);
         if (check != 0) return;
         count++;
-        StartCoroutine(ClickWait(1));
         text1a.SetActive(false);
         text2a.SetActive(true);
-        icons[0].SetActive(true);
-        icons[1].SetActive(true);
+        //icons[0].SetActive(true); MINIGAME
+        //icons[1].SetActive(true); AD
     }
     public void Tap2a()
     {
@@ -134,16 +134,51 @@ public class TutorialScript : MonoBehaviour
         StartCoroutine(ClickWait(1));
         text2a.SetActive(false);
         text3a.SetActive(true);
-        icons[2].SetActive(true);
+        //icons[2].SetActive(true); PLANET ICON
     }
     public void Tap3a()
     {
+        if (count != 2) return;
         if (!canClick) return;
+        count++;
         bg.SetActive(false);
         text3a.SetActive(false);
-        PlayerPrefs.SetInt("Tutorial2", 1);
+        text4a.SetActive(true);
+        icons[0].SetActive(true); // MINIGAME
     }
-
+    public void Tap4a()
+    {
+        if (count != 3) return;
+        int check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) return;
+        count++;
+        StartCoroutine(ClickWait(1));
+        text4a.SetActive(false);
+        text5a.SetActive(true);
+        icons[1].SetActive(true); // AD
+        //icons[2].SetActive(true); PLANET ICON
+    }
+    public void Tap5a()
+    {
+        if (count != 4) return;
+        int check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) return;
+        count++;
+        //StartCoroutine(ClickWait(1));
+        text5a.SetActive(false);
+        text6a.SetActive(true);
+        icons[2].SetActive(true); // PLANET ICON
+    }
+    public void Tap6a()
+    {
+        PlayerPrefs.SetInt("Tutorial2", 1);
+        if (count != 5) return;
+        int check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) return;
+        count++;
+        text6a.SetActive(false);
+        //icons[2].SetActive(true); PLANET ICON
+    }
     IEnumerator Wait1(int seconds, GameObject text, GameObject icon = null)
     {
         yield return new WaitForSeconds(seconds);

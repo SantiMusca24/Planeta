@@ -29,9 +29,10 @@ public class changeScene : MonoBehaviour
 
     }
     public void LoadLevelFromUI()
-{
+    {
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1");
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + structure));
-}
+    }
     public void ActivateUI()
     {
         foreach (GameObject img in uiImages)
@@ -42,9 +43,10 @@ public class changeScene : MonoBehaviour
     }
     IEnumerator LoadLevel(int levelIndex)
     {
-        if (!GameManager.Instance.sawTutorial1) yield break;
-        if (!GameManager.Instance.sawTutorial2 && levelIndex != 1) yield break;
-
+        int check = PlayerPrefs.GetInt("Tutorial1", 0);
+        int check2 = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check == 0) yield break;
+        if (check2 == 0 && levelIndex != 1) yield break;
         yield return new WaitForSeconds(0.1f);
 
         foreach (GameObject img in uiImages)

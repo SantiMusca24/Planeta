@@ -19,7 +19,6 @@ public class UnlockBotton : MonoBehaviour
 
     private void Start()
     {
-       
         if (PlayerPrefs.GetInt(unlockID, 0) == 1)
         {
             imagen.SetActive(false);
@@ -39,11 +38,10 @@ public class UnlockBotton : MonoBehaviour
 
     private void TryUnlockUpgrade()
     {
-        if (GameManager.Instance != null)
-        {
-            if (!GameManager.Instance.sawTutorial1) return;
-            if (!GameManager.Instance.sawTutorial2 && unlockCost != 100) return; 
-        }
+        int check = PlayerPrefs.GetInt("Tutorial1", 0);
+        int check2 = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check == 0) return;
+        if (check2 == 0 && unlockCost != 100) return; 
         if (GameManager.Instance.count >= unlockCost)
         {
             GameManager.Instance.count -= unlockCost;
