@@ -22,6 +22,10 @@ public class BosqueUI : BaseContadorUI
     [SerializeField] protected GameObject minigamePanel;
     [SerializeField] protected GameObject resumenPanel;
     [SerializeField] public TMP_Text cooldownTimerText;
+    [SerializeField] public GameObject cartel1;
+    [SerializeField] public GameObject cartel2;
+    [SerializeField] public GameObject cartel3;
+    [SerializeField] public GameObject cartelResumen;
     new void Start()
     {
         base.Start();
@@ -33,12 +37,17 @@ public class BosqueUI : BaseContadorUI
         if (cortesText2 != null) cortesText2.gameObject.SetActive(false);
         if (troncosText2 != null) troncosText2.gameObject.SetActive(false);
         if (resumenText != null) resumenText2.gameObject.SetActive(false);
+        if (cartel1 != null) cartel1.gameObject.SetActive(false);
+        if (cartel2 != null) cartel2.gameObject.SetActive(false);
+        if (cartel3 != null) cartel3.gameObject.SetActive(false);
+        if (cartelResumen != null) cartelResumen.gameObject.SetActive(false);
     }
     
     public override void OcultarMinigameTextos()
     {
         if (resumenText != null) resumenText.gameObject.SetActive(false);
         resumenText2.gameObject.SetActive(false);
+        if (cartelResumen != null) cartelResumen.gameObject.SetActive(false);
     }
 
     public override void OcultarMinigameTextos2()
@@ -46,7 +55,10 @@ public class BosqueUI : BaseContadorUI
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
         if (cortesText != null) cortesText.gameObject.SetActive(false);
         if (troncosText != null) troncosText.gameObject.SetActive(false);
-        
+        if (cartel1 != null) cartel1.gameObject.SetActive(false);
+        if (cartel2 != null) cartel2.gameObject.SetActive(false);
+        if (cartel3 != null) cartel3.gameObject.SetActive(false);
+
     }
     public enum MinigamePanelType
     {
@@ -64,6 +76,7 @@ public class BosqueUI : BaseContadorUI
         {
             resumenText.text = resumen;
             resumenText2.gameObject.SetActive(true);
+            cartelResumen.gameObject.SetActive(true);
         }
     }
 
@@ -81,6 +94,9 @@ public class BosqueUI : BaseContadorUI
 
         if (tiempo.HasValue && tiempoText != null)
             tiempoText.text = $" {tiempo.Value:F1}s";
+        cartel1.gameObject.SetActive(true);
+        cartel2.gameObject.SetActive(true);
+        cartel3.gameObject.SetActive(true);
     }
 
     public enum CutFeedbackType
