@@ -22,6 +22,10 @@ public class GranjaUI : BaseContadorUI
     [SerializeField] protected GameObject minigamePanel;
     [SerializeField] protected GameObject resumenPanel;
     [SerializeField] public TMP_Text cooldownTimerText;
+    [SerializeField] protected GameObject textoPanel;
+    [SerializeField] protected GameObject textoVacas;
+    [SerializeField] protected GameObject textoEstablos;
+    [SerializeField] protected GameObject panelResumen;
 
     new void Start()
     {
@@ -34,17 +38,25 @@ public class GranjaUI : BaseContadorUI
         if (cortesText2 != null) cortesText2.gameObject.SetActive(false);
         if (troncosText2 != null) troncosText2.gameObject.SetActive(false);
         if (resumenText != null) resumenText2.gameObject.SetActive(false);
+        if (textoPanel != null) textoPanel.gameObject.SetActive(false);
+        if (textoVacas != null) textoVacas.gameObject.SetActive(false);
+        if (textoEstablos != null) textoEstablos.gameObject.SetActive(false);
+        if (panelResumen != null) panelResumen.gameObject.SetActive(false);
     }
     public override void OcultarMinigameTextos()
     {
         if (resumenText != null) resumenText.gameObject.SetActive(false);
         resumenText2.gameObject.SetActive(false);
+        panelResumen.gameObject.SetActive(false);
     }
     public override void OcultarMinigameTextos2()
     {
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
         if (cortesText != null) cortesText.gameObject.SetActive(false);
         if (troncosText != null) troncosText.gameObject.SetActive(false);
+        if (textoPanel != null) textoPanel.gameObject.SetActive(false);
+        if (textoVacas != null) textoVacas.gameObject.SetActive(false);
+        if (textoEstablos != null) textoEstablos.gameObject.SetActive(false);
     }
     public enum MinigamePanelType
     {
@@ -61,6 +73,7 @@ public class GranjaUI : BaseContadorUI
         {
             resumenText.text = resumen;
             resumenText2.gameObject.SetActive(true);
+            panelResumen.gameObject.SetActive(true);
         }
     }
     public override void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
@@ -78,6 +91,9 @@ public class GranjaUI : BaseContadorUI
 
         if (tiempo.HasValue && tiempoText != null)
             tiempoText.text = $" {tiempo.Value:F1}s";
+        if (textoPanel != null) textoPanel.gameObject.SetActive(true);
+        if (textoVacas != null) textoVacas.gameObject.SetActive(true);
+        if (textoEstablos != null) textoEstablos.gameObject.SetActive(true);
     }
     public enum CutFeedbackType
     {
