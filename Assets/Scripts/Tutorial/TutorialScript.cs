@@ -247,10 +247,15 @@ public class TutorialScript : MonoBehaviour
         if (check != 0) return;
         count++;
         StartCoroutine(ClickWait(1));
-        text4a.SetActive(false);
+        //text4a.SetActive(false);
         text5a.SetActive(true);
         icons[1].SetActive(true); // AD
         //icons[2].SetActive(true); PLANET ICON
+    }
+    public void TapExtra()
+    {
+        if (count != 3) return;
+        text4a.SetActive(false);
     }
     public void Tap5a()
     {

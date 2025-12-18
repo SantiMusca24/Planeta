@@ -50,6 +50,10 @@ public abstract class GameManager : MonoBehaviour
         gems = PlayerPrefs.GetFloat("Gems", 0f);
 
     }
+    public void DebugMoney(int num = 10000000)
+    {
+        count += num;
+    }
      void Update()
     {
         rotatePoints = (UpgradeManager2.level1 + 1) * (UpgradeManager2.level2 + 1) * (UpgradeManager2.level3 + 1);
