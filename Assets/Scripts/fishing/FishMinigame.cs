@@ -11,6 +11,7 @@ public class FishMinigame : MonoBehaviour
     
     public GameObject minigamePanel;
     public GameObject fishBites;
+    public GameObject fishCane;
     public float sliderSpeed = 1f;
     public int cutsNeededPerLog = 3;
     public float secondsMax = 3, secondsMin = 1;
@@ -43,6 +44,7 @@ public class FishMinigame : MonoBehaviour
         fishBites.SetActive(false);
         botton.SetActive(false);
         bottonAd.SetActive(false);
+        fishCane.SetActive(false);
         isCounting = false;
         
     }
@@ -81,6 +83,7 @@ public class FishMinigame : MonoBehaviour
         }
         yield return new WaitForSeconds(sliderSpeed);
         fishBites.SetActive(false);
+        fishCane.SetActive(false);
         fishReady = false;
         isCounting = false;
     }
@@ -147,7 +150,8 @@ public class FishMinigame : MonoBehaviour
             if (audioManager != null)
                 audioManager.Play("Coin");
             fishReady = false;
-            fishBites.SetActive(false);            
+            fishBites.SetActive(false);
+            fishCane.SetActive(true);
             currentCuts += 1;
             secondsMax *= 0.9f;
             secondsMin *= 0.5f;

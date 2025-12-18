@@ -22,6 +22,14 @@ public class PescaUI : BaseContadorUI
     [SerializeField] protected GameObject minigamePanel;
     [SerializeField] protected GameObject resumenPanel;
     [SerializeField] public TMP_Text cooldownTimerText;
+    [SerializeField] public GameObject lago1;
+    [SerializeField] public GameObject lago2;
+    [SerializeField] public GameObject lago3;
+    [SerializeField] public GameObject lago4;
+    [SerializeField] public GameObject cartel1;
+    [SerializeField] public GameObject cartel2;
+    [SerializeField] public GameObject cartel3;
+    [SerializeField] public GameObject cartelResumen;
     new void Start()
     {
         base.Start();
@@ -33,17 +41,33 @@ public class PescaUI : BaseContadorUI
         if (cortesText2 != null) cortesText2.gameObject.SetActive(false);
         if (troncosText2 != null) troncosText2.gameObject.SetActive(false);
         if (resumenText != null) resumenText2.gameObject.SetActive(false);
+        if (lago1 != null) lago1.gameObject.SetActive(false);
+        if (lago2 != null) lago2.gameObject.SetActive(false);
+        if (lago3 != null) lago3.gameObject.SetActive(false);
+        if (lago4 != null) lago4.gameObject.SetActive(false);
+        if (cartel1 != null) cartel1.gameObject.SetActive(false);
+        if (cartel2 != null) cartel2.gameObject.SetActive(false);
+        if (cartel3 != null) cartel3.gameObject.SetActive(false);
+        if(cartelResumen!= null) cartelResumen.gameObject.SetActive(false);
     }
     public override void OcultarMinigameTextos()
     {
         if (resumenText != null) resumenText.gameObject.SetActive(false);
         resumenText2.gameObject.SetActive(false);
+        if (cartelResumen != null) cartelResumen.gameObject.SetActive(false);
     }
     public override void OcultarMinigameTextos2()
     {
         if (tiempoText != null) tiempoText.gameObject.SetActive(false);
         if (cortesText != null) cortesText.gameObject.SetActive(false);
         if (troncosText != null) troncosText.gameObject.SetActive(false);
+        lago1.gameObject.SetActive(false);
+        lago2.gameObject.SetActive(false);
+        lago3.gameObject.SetActive(false);
+        lago4.gameObject.SetActive(false);
+        if (cartel1 != null) cartel1.gameObject.SetActive(false);
+        if (cartel2 != null) cartel2.gameObject.SetActive(false);
+        if (cartel3 != null) cartel3.gameObject.SetActive(false);
     }
     public enum MinigamePanelType
     {
@@ -60,6 +84,7 @@ public class PescaUI : BaseContadorUI
         {
             resumenText.text = resumen;
             resumenText2.gameObject.SetActive(true);
+            cartelResumen.gameObject.SetActive(true);
         }
     }
     public override void UpdateMinigameUI(int? cortes = null, int? troncos = null, float? tiempo = null, int? cortesNecesarios = null)
@@ -77,6 +102,13 @@ public class PescaUI : BaseContadorUI
 
         if (tiempo.HasValue && tiempoText != null)
             tiempoText.text = $" {tiempo.Value:F1}s";
+        lago1.gameObject.SetActive(true);
+        lago2.gameObject.SetActive(true);
+        lago3.gameObject.SetActive(true);
+        lago4.gameObject.SetActive(true);
+        cartel1.gameObject.SetActive(true);
+        cartel2.gameObject.SetActive(true);
+        cartel3.gameObject.SetActive(true);
     }
     public enum CutFeedbackType
     {
