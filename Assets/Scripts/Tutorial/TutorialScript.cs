@@ -6,12 +6,15 @@ using UnityEngine;
 public class TutorialScript : MonoBehaviour
 {
     public GameObject bg, text1, text2, text3, text4, text5, text6, text7, text8, text9, text1a, text2a, text3a, text4a, text5a, text6a;
+    public GameObject text10, text11, text12, text13, text14, text15;
     public GameObject[] icons;
     public int count = 0;
+    public int count2 = 0;
     bool canClick = true;
     private void Start()
     {
         count = 0;
+        count2 = 0;
         canClick = true;
     }
     public void StartChain()
@@ -23,6 +26,22 @@ public class TutorialScript : MonoBehaviour
         {
             icon.SetActive(false);
         }
+    }
+    public void StartChain3()
+    {
+        StartCoroutine(ClickWait(1));
+        bg.SetActive(true);
+        text10.SetActive(true);
+        icons[1].SetActive(false);
+        icons[2].SetActive(false);
+        icons[12].SetActive(false);
+        icons[5].SetActive(false);
+        icons[6].SetActive(false);
+
+        icons[7].SetActive(false); // store
+        icons[8].SetActive(false); // options
+        icons[9].SetActive(false); // ad
+        icons[10].SetActive(false); // solar system
     }
     public void Tap1()
     {
@@ -103,6 +122,81 @@ public class TutorialScript : MonoBehaviour
         text9.SetActive(false);
         GameManager.Instance.sawTutorial1 = true;
         PlayerPrefs.SetInt("Tutorial1", 1);
+        PlayerPrefs.Save();
+    }
+    public void Tap10()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text10.SetActive(false);
+        text11.SetActive(true);
+        icons[9].SetActive(true); // ad
+        //GameManager.Instance.sawTutorial1 = true;
+        //PlayerPrefs.SetInt("Tutorial1", 1);
+        //PlayerPrefs.Save();
+    }
+    public void Tap11()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text11.SetActive(false);
+        text12.SetActive(true);
+        // gems and world coins
+        icons[1].SetActive(true);
+        icons[2].SetActive(true);
+        icons[12].SetActive(true);
+        icons[5].SetActive(true);
+        icons[6].SetActive(true);
+        //GameManager.Instance.sawTutorial1 = true;
+        //PlayerPrefs.SetInt("Tutorial1", 1);
+        //PlayerPrefs.Save();
+    }
+    public void Tap12()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text12.SetActive(false);
+        text13.SetActive(true);
+        icons[7].SetActive(true); // store
+        icons[8].SetActive(true); // options
+        //GameManager.Instance.sawTutorial1 = true;
+        //PlayerPrefs.SetInt("Tutorial1", 1);
+        //PlayerPrefs.Save();
+    }
+    public void Tap13()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text13.SetActive(false);
+        text14.SetActive(true);
+        icons[10].SetActive(true); // solar system
+        //GameManager.Instance.sawTutorial1 = true;
+        //PlayerPrefs.SetInt("Tutorial1", 1);
+        //PlayerPrefs.Save();
+    }
+    public void Tap14()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text14.SetActive(false);
+        text15.SetActive(true);
+        //GameManager.Instance.sawTutorial1 = true;
+        //PlayerPrefs.SetInt("Tutorial1", 1);
+        //PlayerPrefs.Save();
+    }
+    public void Tap15()
+    {
+        if (!canClick) return;
+        StartCoroutine(ClickWait(1));
+        count2++;
+        text15.SetActive(false);
+        //GameManager.Instance.sawTutorial1 = true;
+        PlayerPrefs.SetInt("Tutorial3", 1);
         PlayerPrefs.Save();
     }
     public void StartChain2()

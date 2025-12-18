@@ -13,7 +13,7 @@ public class meteoriteSpawn : MonoBehaviour
     [SerializeField] bool showerActive = false;
     [SerializeField] Transform canvas;
     public int seconds = 60;
-
+    int check;
     public float x;
     //[SerializeField] float minSeconds = 3, maxSeconds = 10;
 
@@ -51,7 +51,8 @@ public class meteoriteSpawn : MonoBehaviour
         transform.position = new Vector3(x, Random.Range(cloud1.minAsteroidHeight + 5, cloud1.maxAsteroidHeight + 5), -3.53f);
         if (!showerActive) yield return new WaitForSeconds(randomSeconds);
         else yield return new WaitForSeconds(1);
-        Instantiate(meteor, metSpawner.transform.position, metSpawner.transform.rotation, canvas);
+        check = PlayerPrefs.GetInt("Tutorial2", 0);
+        if (check != 0) Instantiate(meteor, metSpawner.transform.position, metSpawner.transform.rotation, canvas);
         canSpawn = true;
     }
     public IEnumerator Shower()

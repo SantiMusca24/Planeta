@@ -20,10 +20,13 @@ public class spinDetect : MonoBehaviour
         currentCheck = 1;
         _spinsTx.text = "GIROS: " + spins;
         int check = PlayerPrefs.GetInt("Tutorial1", 0);
+        int check2 = PlayerPrefs.GetInt("Tutorial2", 0);
+        int check3 = PlayerPrefs.GetInt("Tutorial3", 0);
         if (check == 0)
         {
             tutorial.StartChain();
         }
+        else if (check2 != 0 && check3 == 0) tutorial.StartChain3();
     }
 
     
