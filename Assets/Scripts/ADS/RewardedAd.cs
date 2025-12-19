@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.SceneManagement;
 
 public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
@@ -66,7 +67,8 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
         {
             if (showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
             {
-                if(AdsManager.AdRecompensa == true)
+                //int y = SceneManager.GetActiveScene().buildIndex;
+                if (AdsManager.AdRecompensa == true)
                 {
 
                     
@@ -75,18 +77,18 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
                     PlayerPrefs.Save();
                     Debug.Log("RECOMPENSA FULL");
                 }
-                else if (sceneName == 1) 
+                else if (sceneName == 3) 
                 {
 
                     fishMinigame.CancelarCooldown();
                     imagen2.SetActive(true);
                 }
-                else if (sceneName == 2)
+                else if (sceneName == 1)
                 {
                     woodMinigame.CancelarCooldown();
                     imagen2.SetActive(true);
                 }
-                else if (sceneName == 3)
+                else if (sceneName == 4)
                 {
                     farmMinigame.CancelarCooldown();
                     //imagen2.SetActive(true);
